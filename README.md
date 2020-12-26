@@ -22,6 +22,24 @@ label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
 label.text = "Wallet"
 label.textColor = .bitcoinOrange
 ```
+### Icons
+
+SwiftUI
+
+```swift
+BitcoinImage(named: "Github")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+```
+
+UIKit
+
+```swift
+let image = BitcoinUIImage(named: "Github")
+let imageView = UIImageView(image: image)
+imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+view.addSubview(imageView)
+```
 
 ## Requirements
 
