@@ -2,6 +2,27 @@
 
 An iOS implementation of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)), with example code implementations via Swift Previews.
 
+## Basic Usage
+
+### Colors
+
+SwiftUI
+```swift
+Text("Neutral 5")
+    .font(.caption)
+    .foregroundColor(Color(UIColor.bitcoinNeutral5))
+    .multilineTextAlignment(.center)
+```
+
+UIKit
+
+```swift
+let label = UILabel()
+label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
+label.text = "Wallet"
+label.textColor = .bitcoinOrange
+```
+
 ## Requirements
 
 WalletUI currently requires minimum deployment targets of iOS 14.
