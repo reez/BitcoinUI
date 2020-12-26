@@ -41,6 +41,19 @@ imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
 view.addSubview(imageView)
 ```
 
+## Examples
+
+Included are Swift Previews with code for implemention examples.
+
+### Elements
+
+- `Colors.swift` 
+- `Icons.swift` 
+
+### Screens
+
+- `OnboardingView.swift`
+
 ## Requirements
 
 WalletUI currently requires minimum deployment targets of iOS 14.
