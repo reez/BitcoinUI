@@ -53,6 +53,7 @@ Included are Swift Previews with code for implemention examples.
 ### Screens
 
 - `OnboardingView.swift`
+- `SendView.swift`
 
 ## Requirements
 
