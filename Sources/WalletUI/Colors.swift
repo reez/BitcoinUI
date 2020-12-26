@@ -164,4 +164,78 @@ extension UIColor {
     
 }
 
+struct ColorView: View {
+    let color: Color
+    let colorLabel: String
+    
+    var body: some View {
+        VStack {
+            Circle()
+                .foregroundColor(color)
+            Text(colorLabel)
+                .font(.caption)
+                .foregroundColor(Color(UIColor.bitcoinNeutral5))
+                .multilineTextAlignment(.center)
+        }
+    }
+    
+}
+
+struct ColorsView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.bitcoinWhite)
+            
+            VStack {
+                
+                Text("Colors")
+                    .underline()
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding()
+                    .padding(.top, 40.0)
+                
+                HStack {
+                    ColorView(color: Color(UIColor.bitcoinWhite), colorLabel: "White")
+                    ColorView(color: Color(UIColor.bitcoinNeutral1), colorLabel: "Neutral1")
+                    ColorView(color: Color(UIColor.bitcoinNeutral2), colorLabel: "Neutral2")
+                    ColorView(color: Color(UIColor.bitcoinNeutral3), colorLabel: "Neutral3")
+                    ColorView(color: Color(UIColor.bitcoinNeutral4), colorLabel: "Neutral4")
+                }
+                .padding()
+                
+                HStack {
+                    ColorView(color: Color(UIColor.bitcoinNeutral5), colorLabel: "Neutral5")
+                    ColorView(color: Color(UIColor.bitcoinNeutral6), colorLabel: "Neutral6")
+                    ColorView(color: Color(UIColor.bitcoinNeutral7), colorLabel: "Neutral7")
+                    ColorView(color: Color(UIColor.bitcoinNeutral8), colorLabel: "Neutral8")
+                    ColorView(color: Color(UIColor.bitcoinBlack), colorLabel: "Black")
+                }
+                .padding()
+                
+                HStack {
+                    ColorView(color: Color(UIColor.bitcoinOrange), colorLabel: "Orange")
+                    ColorView(color: Color(UIColor.bitcoinRed), colorLabel: "Red")
+                    ColorView(color: Color(UIColor.bitcoinGreen), colorLabel: "Green")
+                    ColorView(color: Color(UIColor.bitcoinBlue), colorLabel: "Blue")
+                    ColorView(color: Color(UIColor.bitcoinPurple), colorLabel: "Purple")
+                }
+                .padding()
+                
+            }
+            .padding()
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+struct ColorsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ColorsView()
+    }
+}
+
 #endif
