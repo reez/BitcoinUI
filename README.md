@@ -54,6 +54,7 @@ Included are Swift Previews with code for implemention examples.
 
 - `OnboardingView.swift`
 - `SendView.swift`
+- `TransactionView.swift`
 
 ## Requirements
 
