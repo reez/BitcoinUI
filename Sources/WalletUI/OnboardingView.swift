@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 @available(OSX 10.15, *)
 struct NumberWordView: View {
     let number: String
@@ -119,3 +121,5 @@ struct OnboardingView_Previews: PreviewProvider {
         OnboardingView()
     }
 }
+
+#endif

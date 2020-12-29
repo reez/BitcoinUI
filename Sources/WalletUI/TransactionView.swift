@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 @available(OSX 10.15, *)
 struct TransactionView: View {
     let imageName: String
@@ -146,3 +148,5 @@ struct TransactionsView_Previews: PreviewProvider {
         TransactionsView()
     }
 }
+
+#endif
