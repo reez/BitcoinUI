@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, *)
 struct NumberWordView: View {
     let number: String
     let word: String

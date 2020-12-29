@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, *)
 struct TransactionView: View {
     let imageName: String
     let title: String
