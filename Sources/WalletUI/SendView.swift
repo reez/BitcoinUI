@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
+@available(OSX 10.15, *)
 struct FeeView: View {
     let image: String
     let priority: String
@@ -151,3 +154,5 @@ struct SendView_Previews: PreviewProvider {
         SendView()
     }
 }
+
+#endif
