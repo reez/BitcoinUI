@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import WalletUI
 
 final class WalletUITests: XCTestCase {
@@ -10,6 +11,6 @@ final class WalletUITests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }
