@@ -2,7 +2,37 @@
 
 An iOS implementation of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)), with example code implementations via Swift Previews.
 
+*Both WalletUI and its reference [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) are Work In Progress.*
+
+[Elements](#elements)<br>
+[Basic Usage](#basic-usage)<br>
+[Examples](#examples)<br>
+[Requirements](#requirements)<br>
+[Installation](#installation)<br>
+
+## Elements
+
+Side by side view of code interface and implementation example via Swift Previews.
+
+### Colors
+
+<p align='left'>
+    <a href='https://matthewramsden.com'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-code-preview.png?raw=true' height='400' alt='colors-code-preview' />
+    </a>
+</p>
+
+### Icons
+
+<p align='left'>
+    <a href='https://matthewramsden.com'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-code-preview.png?raw=true' height='400' alt='icons-code-preview' />
+    </a>
+</p>
+
 ## Basic Usage
+
+Implementation examples for SwiftUI and UIKit.
 
 ### Colors
 
@@ -22,6 +52,7 @@ label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
 label.text = "Wallet"
 label.textColor = .bitcoinOrange
 ```
+
 ### Icons
 
 SwiftUI
@@ -43,18 +74,31 @@ view.addSubview(imageView)
 
 ## Examples
 
-Included are Swift Previews with code for implemention examples.
+Included are Swift Previews with code implemention examples of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) "screen mock-ups for mobile and desktop with some of the best practices already baked in".
 
-### Elements
+`OnboardingView.swift` 
 
-- `Colors.swift` 
-- `Icons.swift` 
+<p align='left'>
+    <a href='https://matthewramsden.com'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/onboarding.png?raw=true' height='200' alt='onboarding' />
+    </a>
+</p>
 
-### Screens
+`SendView.swift` 
 
-- `OnboardingView.swift`
-- `SendView.swift`
-- `TransactionView.swift`
+<p align='left'>
+    <a href='https://matthewramsden.com'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='200' alt='send' />
+    </a>
+</p>
+
+`TransactionView.swift` 
+
+<p align='left'>
+    <a href='https://matthewramsden.com'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='200' alt='transaction' />
+    </a>
+</p>
 
 ## Requirements
 
