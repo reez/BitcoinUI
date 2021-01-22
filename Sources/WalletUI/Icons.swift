@@ -10,43 +10,47 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-    public func BitcoinImage(named: String) -> Image {
-        return Image(named, bundle: Bundle.module)
-    }
+public func BitcoinImage(named: String) -> Image {
+    return Image(named, bundle: Bundle.module)
+}
 
-    public func BitcoinUIImage(named: String) -> UIImage {
-        return UIImage(named: named, in: .module, compatibleWith: nil)!
-    }
+public func BitcoinUIImage(named: String) -> UIImage {
+    return UIImage(named: named, in: .module, compatibleWith: nil)!
+}
 
-    struct IconView: View {
-        let named: String
-
-        var body: some View {
-
-            VStack {
-                BitcoinImage(named: named)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Text(named)
-                    .font(.caption)
-                    .foregroundColor(Color(UIColor.bitcoinNeutral5))
-                    .multilineTextAlignment(.center)
-            }
-            .frame(maxWidth: .infinity)
-
+struct IconView: View {
+    let named: String
+    
+    var body: some View {
+        
+        VStack {
+            BitcoinImage(named: named)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Text(named)
+                .font(.caption)
+                .foregroundColor(Color(UIColor.bitcoinNeutral5))
+                .multilineTextAlignment(.center)
         }
+        .frame(maxWidth: .infinity)
+        
     }
+}
 
-    struct IconsView: View {
-        var body: some View {
-
+struct IconsView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
             VStack {
                 Text("Icons")
                     .underline()
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding()
-
+                    .padding(.top, 40.0)
+                
                 HStack {
                     IconView(named: "Gear filled")
                     IconView(named: "Contacts filled")
@@ -54,7 +58,7 @@ import SwiftUI
                     IconView(named: "Search big")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Home")
                     IconView(named: "Receive")
@@ -62,7 +66,7 @@ import SwiftUI
                     IconView(named: "Share big")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Lock")
                     IconView(named: "Flip")
@@ -70,7 +74,7 @@ import SwiftUI
                     IconView(named: "Caret right big")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Caret down big")
                     IconView(named: "Caret up big")
@@ -78,7 +82,7 @@ import SwiftUI
                     IconView(named: "Check big")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Plus big")
                     IconView(named: "Minus big")
@@ -86,7 +90,7 @@ import SwiftUI
                     IconView(named: "Arrow right big")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Arrow down big")
                     IconView(named: "Arrow up big")
@@ -94,7 +98,7 @@ import SwiftUI
                     IconView(named: "Sofa")
                 }
                 .padding()
-
+                
                 HStack {
                     IconView(named: "Wikipedia")
                     IconView(named: "Github")
@@ -102,17 +106,25 @@ import SwiftUI
                     IconView(named: "Hand cursor")
                 }
                 .padding()
-
+                
             }
             .padding()
-
         }
+        .edgesIgnoringSafeArea(.all)
+        
     }
+}
 
-    struct IconsView_Previews: PreviewProvider {
-        static var previews: some View {
+struct IconsView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
             IconsView()
+                .environment(\.colorScheme, .light)
+            IconsView()
+                .environment(\.colorScheme, .dark)
         }
+        
     }
+}
 
 #endif
