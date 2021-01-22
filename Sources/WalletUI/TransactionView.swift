@@ -9,81 +9,84 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-    @available(OSX 10.15, *)
-    struct TransactionView: View {
-        let imageName: String
-        let title: String
-        let time: String
-        let bitcoin: String
-        let fiat: String
-
-        var body: some View {
-            VStack {
-                Rectangle()
-                    .padding(.horizontal)
-                    .frame(height: 1.0)
-                    .foregroundColor(.gray)
-                HStack {
-                    Image(systemName: imageName)
-                    VStack(alignment: .leading) {
-                        Text(title)
-                            .foregroundColor(.black)
-                        Text(time)
-                            .foregroundColor(.gray)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing) {
-                        Text(bitcoin)
-                            .foregroundColor(.black)
-                        Text(fiat)
-                            .foregroundColor(.gray)
-                    }
+@available(OSX 10.15, *)
+struct TransactionView: View {
+    let imageName: String
+    let title: String
+    let time: String
+    let bitcoin: String
+    let fiat: String
+    
+    var body: some View {
+        VStack {
+            Rectangle()
+                .padding(.horizontal)
+                .frame(height: 1.0)
+                .foregroundColor(.gray)
+            HStack {
+                Image(systemName: imageName)
+                VStack(alignment: .leading) {
+                    Text(title)
+                        .foregroundColor(Color(UIColor.label))
+                    Text(time)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
                 }
-                .padding(.all)
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text(bitcoin)
+                        .foregroundColor(Color(UIColor.label))
+                    Text(fiat)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                }
             }
+            .padding(.all)
         }
-
     }
+    
+}
 
-    struct TransactionsView: View {
-        var body: some View {
-
+struct TransactionsView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
             VStack {
-
+                
                 ZStack {
-
+                    
                     RoundedRectangle(cornerRadius: 20.0)
                         .frame(height: 200.0)
-                        .foregroundColor(.black)
-
+                        .foregroundColor(Color(UIColor.label))
+                    
                     HStack {
                         VStack(alignment: .leading, spacing: 4.0) {
                             Text("Your Balance")
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                             Text("₿ 1.6240 2785")
                                 .font(.title)
                                 .fontWeight(.semibold)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                             Text("€ 10,528.75")
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                         }
                         .padding(.leading)
                         Spacer()
                     }
-
+                    
                 }
                 .padding(.all)
-
+                
                 HStack {
                     Text("Transactions")
                         .font(.title3)
                         .fontWeight(.semibold)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color(UIColor.label))
                     Spacer()
                     BitcoinImage(named: "Search big")
                 }
                 .padding([.leading, .trailing])
-
+                
                 TransactionView(
                     imageName: "plus.circle",
                     title: "Timothy Miller",
@@ -91,7 +94,7 @@ import SwiftUI
                     bitcoin: "₿ 0.00001000",
                     fiat: "€12.75"
                 )
-
+                
                 TransactionView(
                     imageName: "minus.circle",
                     title: "Mount Socks",
@@ -99,7 +102,7 @@ import SwiftUI
                     bitcoin: "₿ 0.00001000",
                     fiat: "€12.75"
                 )
-
+                
                 TransactionView(
                     imageName: "minus.circle",
                     title: "Sending...",
@@ -107,7 +110,7 @@ import SwiftUI
                     bitcoin: "₿ 17.00000000",
                     fiat: "€1,937,921.00"
                 )
-
+                
                 TransactionView(
                     imageName: "plus.circle",
                     title: "Luigi’s pizza",
@@ -115,38 +118,47 @@ import SwiftUI
                     bitcoin: "₿ 0.00001000",
                     fiat: "€12.75"
                 )
-
+                
                 VStack {
                     Text("15 delicious Hawaii pizzas.")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
                     HStack {
                         Text("Groceries")
                             .font(.caption)
                             .padding(.all, 4.0)
                             .foregroundColor(.white)
-                            .background(Color.gray)
+                            .background(Color(UIColor.secondaryLabel))
                             .cornerRadius(2)
                         Text("Food")
                             .font(.caption)
                             .padding(.all, 4.0)
                             .foregroundColor(.white)
-                            .background(Color.gray)
+                            .background(Color(UIColor.secondaryLabel))
                             .cornerRadius(2)
                     }
                 }
                 .padding(.top, -10.0)
-
+                
                 Spacer()
-
+                
             }
-
+            .padding(.top, 40.0)
+            
         }
+        .edgesIgnoringSafeArea(.all)
+        
     }
+}
 
-    struct TransactionsView_Previews: PreviewProvider {
-        static var previews: some View {
+struct TransactionsView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
             TransactionsView()
+                .environment(\.colorScheme, .light)
+            TransactionsView()
+                .environment(\.colorScheme, .dark)
         }
     }
+}
 
 #endif
