@@ -9,34 +9,37 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-    @available(OSX 10.15, *)
-    struct NumberWordView: View {
-        let number: String
-        let word: String
-        var body: some View {
-            ZStack {
-                Capsule()
-                    .frame(width: 180, height: 60)
-                    .foregroundColor(Color(UIColor.bitcoinNeutral4))
-                Text(number)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 120))
-                    .foregroundColor(.black)
-                Rectangle()
-                    .frame(width: 2, height: 60)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 60))
-                    .foregroundColor(.white)
-                Text(word)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -60))
-                    .foregroundColor(.black)
-            }
+@available(OSX 10.15, *)
+struct NumberWordView: View {
+    let number: String
+    let word: String
+    var body: some View {
+        ZStack {
+            Capsule()
+                .frame(width: 180, height: 60)
+                .foregroundColor(Color(UIColor.bitcoinNeutral4))
+            Text(number)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 120))
+                .foregroundColor(.black)
+            Rectangle()
+                .frame(width: 2, height: 60)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 60))
+                .foregroundColor(Color(UIColor.systemBackground))
+            Text(word)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -60))
+                .foregroundColor(.black)
         }
     }
+}
 
-    struct OnboardingView: View {
-        var body: some View {
-
+struct OnboardingView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
             VStack {
-
+                
                 VStack(alignment: .leading, spacing: 8.0) {
                     Text("This is your recovery phrase")
                         .bold()
@@ -46,11 +49,11 @@ import SwiftUI
                         .foregroundColor(Color(UIColor.bitcoinNeutral7))
                         .font(.title3)
                         .fixedSize(horizontal: false, vertical: true)
-
+                    
                 }
-
+                
                 HStack {
-
+                    
                     VStack {
                         NumberWordView(number: "1", word: "gloom")
                         NumberWordView(number: "3", word: "month")
@@ -59,7 +62,7 @@ import SwiftUI
                         NumberWordView(number: "9", word: "alcohol")
                         NumberWordView(number: "11", word: "ocean")
                     }
-
+                    
                     VStack {
                         NumberWordView(number: "2", word: "police")
                         NumberWordView(number: "4", word: "stamp")
@@ -68,38 +71,38 @@ import SwiftUI
                         NumberWordView(number: "10", word: "off")
                         NumberWordView(number: "12", word: "ghost")
                     }
-
+                    
                 }
-
+                
                 VStack(spacing: -21.0) {
-
+                    
                     Button(action: {}) {
                         Text("Backup to iCloud")
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
                             .padding()
                     }
-
+                    
                     Button(action: {}) {
                         Text("Download as PDF")
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
                             .padding()
                     }
-
+                    
                     Button(action: {}) {
                         Text("Print")
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
                             .padding()
                     }
-
+                    
                     Button(action: {}) {
                         Text("Verify")
                             .padding()
@@ -108,18 +111,25 @@ import SwiftUI
                             .background(Color(UIColor.bitcoinOrange))
                             .padding()
                     }
-
+                    
                 }
-
+                
             }
-
         }
+        .edgesIgnoringSafeArea(.all)
+        
     }
+}
 
-    struct OnboardingView_Previews: PreviewProvider {
-        static var previews: some View {
+struct OnboardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
             OnboardingView()
+                .environment(\.colorScheme, .light)
+            OnboardingView()
+                .environment(\.colorScheme, .dark)
         }
     }
+}
 
 #endif
