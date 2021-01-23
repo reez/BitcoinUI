@@ -17,7 +17,7 @@ Side by side view of code interface and implementation example via Swift Preview
 ### Colors
 
 <p align='left'>
-    <a href='https://matthewramsden.com'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-code-preview.png?raw=true' height='400' alt='colors-code-preview' />
     </a>
 </p>
@@ -25,7 +25,7 @@ Side by side view of code interface and implementation example via Swift Preview
 ### Icons
 
 <p align='left'>
-    <a href='https://matthewramsden.com'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-code-preview.png?raw=true' height='400' alt='icons-code-preview' />
     </a>
 </p>
@@ -79,7 +79,7 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
 `OnboardingView.swift` 
 
 <p align='left'>
-    <a href='https://matthewramsden.com'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/onboarding.png?raw=true' height='200' alt='onboarding' />
     </a>
 </p>
@@ -87,7 +87,7 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
 `SendView.swift` 
 
 <p align='left'>
-    <a href='https://matthewramsden.com'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='200' alt='send' />
     </a>
 </p>
@@ -95,7 +95,7 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
 `TransactionView.swift` 
 
 <p align='left'>
-    <a href='https://matthewramsden.com'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='200' alt='transaction' />
     </a>
 </p>
