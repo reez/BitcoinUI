@@ -33,6 +33,7 @@ struct IconView: View {
             BitcoinImage(named: named)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .foregroundColor(Color(UIColor.label))
             Text(named)
                 .font(.caption)
                 .foregroundColor(Color(UIColor.bitcoinNeutral5))
