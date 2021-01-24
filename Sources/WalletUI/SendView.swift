@@ -32,7 +32,7 @@ struct FeeView: View {
             Spacer()
             VStack(alignment: .trailing) {
                 Text(bitcoinFee)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(UIColor.label))
                 Text(fiatFee)
                     .font(.callout)
                     .foregroundColor(.gray)
