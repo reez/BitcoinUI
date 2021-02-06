@@ -105,7 +105,7 @@ struct ValidateRecoveryPhrase1View: View {
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
-            .padding(.top, 70.0)
+            .padding(.top, .wallet_grid_10(7))
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -157,7 +157,7 @@ struct ValidateRecoveryPhrase2View: View {
             }
             .padding(.horizontal, 8.0)
             .padding(.vertical, .wallet_grid_vertical_20())
-            .padding(.top, 70.0)
+            .padding(.top, .wallet_grid_10(7))
             .multilineTextAlignment(.leading)
             
         }
@@ -183,14 +183,14 @@ struct WalletBackupSuccessView: View {
                 Text("Your Ledger is registered")
                     .bold()
                     .font(.title2)
-                    .padding(.top, 10.0)
-                
+                    .padding(.top, .wallet_grid_vertical_20())
+
                 Text(
                     "You can now use it to sign transactions and set up multisignature wallets.."
                 )
                 .foregroundColor(Color(UIColor.bitcoinNeutral7))
                 .font(.title3)
-                .padding(.bottom, 15.0)
+                .padding(.bottom, .wallet_grid_vertical_20())
 
                 Button(action: {}) {
                     Text("Continue")
@@ -204,11 +204,10 @@ struct WalletBackupSuccessView: View {
                 Spacer()
                 
             }
-//            .padding(.all, 10.0)
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
-            .padding(.top, 70.0)
-            
+            .padding(.top, .wallet_grid_10(7))
+
         }
         .edgesIgnoringSafeArea(.all)
         
