@@ -155,7 +155,7 @@ struct ValidateRecoveryPhrase2View: View {
                 Spacer()
                 
             }
-            .padding(.horizontal, 8.0)
+            .padding(.horizontal, .wallet_grid_2(4))
             .padding(.vertical, .wallet_grid_vertical_20())
             .padding(.top, .wallet_grid_10(7))
             .multilineTextAlignment(.leading)
