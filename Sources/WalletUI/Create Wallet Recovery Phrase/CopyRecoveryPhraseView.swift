@@ -1,5 +1,5 @@
 //
-//  OnboardingView.swift
+//  CopyRecoveryPhraseView.swift
 //
 //
 //  Created by Matthew Ramsden on 12/26/20.
@@ -34,7 +34,7 @@ struct NumberWordView: View {
     }
 }
 
-struct OnboardingView: View {
+struct CopyRecoveryPhraseViewView: View {
     var body: some View {
         
         ZStack {
@@ -137,9 +137,9 @@ struct OnboardingView: View {
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            OnboardingView()
+            CopyRecoveryPhraseViewView()
                 .environment(\.colorScheme, .light)
-            OnboardingView()
+            CopyRecoveryPhraseViewView()
                 .environment(\.colorScheme, .dark)
         }
     }

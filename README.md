@@ -76,11 +76,11 @@ view.addSubview(imageView)
 
 Included are Swift Previews with code implemention examples of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) "screen mock-ups for mobile and desktop with some of the best practices already baked in".
 
-`OnboardingView.swift` 
+`CopyRecoveryPhraseView.swift` 
 
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/onboarding.png?raw=true' height='200' alt='onboarding' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='200' alt='copy-recovery-phrase' />
     </a>
 </p>
 
@@ -99,6 +99,10 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='200' alt='transaction' />
     </a>
 </p>
+
+`HardwareWalletInteractionView.swift` 
+
+![](hardware-wallet-interaction.gif)
 
 ## Requirements
 
