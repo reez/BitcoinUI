@@ -121,8 +121,8 @@ struct SendView: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundColor(Color(UIColor.label))
-                        .padding(.top, 40.0)
-                    
+                        .padding(.top, .wallet_grid_vertical_20())
+                        .padding(.top, .wallet_grid_vertical_20())
                     Spacer()
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
