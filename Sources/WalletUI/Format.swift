@@ -11,6 +11,11 @@ import UIKit
 
 extension CGFloat {
     
+    // Choose spacing in increment of 2
+    static func wallet_grid_2(_ n: Int) -> CGFloat {
+        return CGFloat(n) * 2
+    }
+    
     // Choose spacing in increment of 10
     static func wallet_grid_10(_ n: Int) -> CGFloat {
         return CGFloat(n) * 10
