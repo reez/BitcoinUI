@@ -5,9 +5,10 @@
 //  Created by Matthew Ramsden on 2/6/21.
 //
 
-import UIKit
 
 #if canImport(UIKit)
+
+import UIKit
 
 extension CGFloat {
     
