@@ -102,7 +102,7 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
 
 `HardwareWalletInteractionView.swift` 
 
-![](hardware-wallet-interaction.gif)
+<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="200" alt='hardware-wallet-interaction' />
 
 ## Requirements
 
