@@ -42,11 +42,11 @@ struct OnboardingView: View {
             
             VStack {
                 
-                VStack(alignment: .leading, spacing: 8.0) {
+                VStack(alignment: .leading) {
                     Text("This is your recovery phrase")
                         .bold()
                         .font(.title2)
-                        .padding(.top, 20.0)
+                        .padding(.top, 40.0)
                     Text(
                         "Make sure to write it down as shown here. You have to verify this later."
                     )
@@ -78,42 +78,50 @@ struct OnboardingView: View {
                     
                 }
                 
-                VStack(spacing: -21.0) {
+                VStack(spacing: -33.0) {
                     
                     Button(action: {}) {
                         Text("Backup to iCloud")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Download as PDF")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Print")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Verify")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
                             .background(Color(UIColor.bitcoinOrange))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                 }
