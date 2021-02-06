@@ -21,14 +21,14 @@ struct NumberWordView: View {
                 .frame(width: 180, height: 60)
                 .foregroundColor(Color(UIColor.bitcoinNeutral4))
             Text(number)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 120))
+                .padding(.trailing, .wallet_grid_10(12))
                 .foregroundColor(.black)
             Rectangle()
                 .frame(width: 2, height: 60)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 60))
+                .padding(.trailing, .wallet_grid_10(6))
                 .foregroundColor(Color(UIColor.systemBackground))
             Text(word)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -60))
+                .padding(.trailing, .wallet_grid_10(-6))
                 .foregroundColor(.black)
         }
     }
@@ -42,11 +42,12 @@ struct OnboardingView: View {
             
             VStack {
                 
-                VStack(alignment: .leading, spacing: 8.0) {
+                VStack(alignment: .leading) {
                     Text("This is your recovery phrase")
                         .bold()
                         .font(.title2)
-                        .padding(.top, 20.0)
+                        .padding(.top, .wallet_grid_vertical_20())
+                        .padding(.top, .wallet_grid_vertical_20())
                     Text(
                         "Make sure to write it down as shown here. You have to verify this later."
                     )
@@ -78,42 +79,50 @@ struct OnboardingView: View {
                     
                 }
                 
-                VStack(spacing: -21.0) {
+                VStack(spacing: -33.0) {
                     
                     Button(action: {}) {
                         Text("Backup to iCloud")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Download as PDF")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Print")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
                             .border(Color(UIColor.bitcoinNeutral4))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                     Button(action: {}) {
                         Text("Verify")
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
                             .background(Color(UIColor.bitcoinOrange))
-                            .padding()
+                            .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, .wallet_grid_vertical_20())
                     }
                     
                 }

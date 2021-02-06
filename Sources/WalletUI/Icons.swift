@@ -55,8 +55,10 @@ struct IconsView: View {
                     .underline()
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding()
-                    .padding(.top, 40.0)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                    .padding(.vertical, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Gear filled")
@@ -64,7 +66,8 @@ struct IconsView: View {
                     IconView(named: "QR")
                     IconView(named: "Search big")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Home")
@@ -72,7 +75,8 @@ struct IconsView: View {
                     IconView(named: "Send")
                     IconView(named: "Share big")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Lock")
@@ -80,7 +84,8 @@ struct IconsView: View {
                     IconView(named: "Caret left big")
                     IconView(named: "Caret right big")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Caret down big")
@@ -88,7 +93,8 @@ struct IconsView: View {
                     IconView(named: "X big")
                     IconView(named: "Check big")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Plus big")
@@ -96,7 +102,8 @@ struct IconsView: View {
                     IconView(named: "Arrow left big")
                     IconView(named: "Arrow right big")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Arrow down big")
@@ -104,7 +111,8 @@ struct IconsView: View {
                     IconView(named: "Milk filled")
                     IconView(named: "Sofa")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     IconView(named: "Wikipedia")
@@ -112,10 +120,13 @@ struct IconsView: View {
                     IconView(named: "Storybook")
                     IconView(named: "Hand cursor")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
             }
-            .padding()
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
         }
         .edgesIgnoringSafeArea(.all)
         

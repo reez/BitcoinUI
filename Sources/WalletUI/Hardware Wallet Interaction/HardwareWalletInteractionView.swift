@@ -22,7 +22,7 @@ struct ImportOptionsViewRowView: View {
             Image(systemName: "gearshape.fill")
             Text(wallet.name)
         }
-        .padding(.vertical)
+        .padding(.vertical, .wallet_grid_vertical_20())
     }
 }
 
@@ -41,7 +41,7 @@ struct ImportOptionsView: View {
                 Text("Which hardware wallet do you want to connect to?")
                     .bold()
                     .font(.title2)
-                    .padding(.horizontal, 15.0)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
                 
                 List(wallets) { wallet in
                     NavigationLink(
@@ -72,14 +72,14 @@ struct ValidateRecoveryPhrase1View: View {
             VStack(alignment: .leading, spacing: 8.0) {
                 
                 ProgressView()
-                    .padding(.top)
+                    .padding(.top, .wallet_grid_vertical_20())
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(x: 2.0, y: 2.0, anchor: .leading)
                 
                 Text("Looking For \(wallet.name)...")
                     .bold()
                     .font(.title2)
-                    .padding(.top, 20.0)
+                    .padding(.top, .wallet_grid_vertical_20())
                 
                 Text(
                     "Make sure to write it down as shown here. You have to verify this later."
@@ -103,8 +103,9 @@ struct ValidateRecoveryPhrase1View: View {
                 Spacer()
                 
             }
-            .padding(.all, 10.0)
-            .padding(.top, 70.0)
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.top, .wallet_grid_10(7))
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -123,14 +124,14 @@ struct ValidateRecoveryPhrase2View: View {
             VStack(alignment: .leading, spacing: 8.0) {
                 
                 ProgressView()
-                    .padding(.top)
+                    .padding(.top, .wallet_grid_vertical_20())
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(x: 2.0, y: 2.0, anchor: .leading)
                 
                 Text("Verify your address on your hardware wallet")
                     .bold()
                     .font(.title2)
-                    .padding(.top, 20.0)
+                    .padding(.top, .wallet_grid_vertical_20())
                 
                 Text(
                     "Please verify the address on your hardware wallet. We currently only support the Ledger Nano S."
@@ -154,8 +155,9 @@ struct ValidateRecoveryPhrase2View: View {
                 Spacer()
                 
             }
-            .padding(.all, 8.0)
-            .padding(.top, 70.0)
+            .padding(.horizontal, .wallet_grid_2(4))
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.top, .wallet_grid_10(7))
             .multilineTextAlignment(.leading)
             
         }
@@ -176,23 +178,24 @@ struct WalletBackupSuccessView: View {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
                     Image(systemName: "checkmark")
                 }
-                .padding(.top, 30.0)
+                .padding(.top, .wallet_grid_vertical_20())
 
                 Text("Your Ledger is registered")
                     .bold()
                     .font(.title2)
-                    .padding(.top, 10.0)
-                
+                    .padding(.top, .wallet_grid_vertical_20())
+
                 Text(
                     "You can now use it to sign transactions and set up multisignature wallets.."
                 )
                 .foregroundColor(Color(UIColor.bitcoinNeutral7))
                 .font(.title3)
-                .padding(.bottom, 15.0)
+                .padding(.bottom, .wallet_grid_vertical_20())
 
                 Button(action: {}) {
                     Text("Continue")
-                        .padding()
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
@@ -201,9 +204,10 @@ struct WalletBackupSuccessView: View {
                 Spacer()
                 
             }
-            .padding(.all, 10.0)
-            .padding(.top, 70.0)
-            
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.top, .wallet_grid_10(7))
+
         }
         .edgesIgnoringSafeArea(.all)
         
@@ -218,6 +222,12 @@ struct HardwareWalletView_Previews: PreviewProvider {
                 .environment(\.colorScheme, .light)
             ImportOptionsView()
                 .environment(\.colorScheme, .dark)
+            ValidateRecoveryPhrase1View(show: false, wallet: HardwareWallet(name: "Ledger"))
+                .environment(\.colorScheme, .light)
+            ValidateRecoveryPhrase2View(show: false)
+                .environment(\.colorScheme, .light)
+            WalletBackupSuccessView()
+                .environment(\.colorScheme, .light)
         }
     }
 }

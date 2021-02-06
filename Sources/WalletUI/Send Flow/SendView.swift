@@ -38,7 +38,9 @@ struct FeeView: View {
                     .foregroundColor(.gray)
             }
         }
-        .padding(.all)
+        .padding(.horizontal, .wallet_grid_horizontal_10())
+        .padding(.vertical, .wallet_grid_vertical_20())
+        
     }
 }
 
@@ -56,7 +58,7 @@ struct FeesView: View {
             )
             
             Rectangle()
-                .padding(.horizontal)
+                .padding(.horizontal, .wallet_grid_horizontal_10())
                 .frame(height: 1.0)
                 .foregroundColor(.gray)
             
@@ -69,7 +71,7 @@ struct FeesView: View {
             )
             
             Rectangle()
-                .padding(.horizontal)
+                .padding(.horizontal, .wallet_grid_horizontal_10())
                 .frame(height: 1.0)
                 .foregroundColor(.gray)
             
@@ -82,7 +84,7 @@ struct FeesView: View {
             )
             
             Rectangle()
-                .padding(.horizontal)
+                .padding(.horizontal, .wallet_grid_horizontal_10())
                 .frame(height: 1.0)
                 .foregroundColor(.gray)
             
@@ -98,7 +100,8 @@ struct FeesView: View {
                 
                 BitcoinImage(named: "Caret right big")
             }
-            .padding(.all)
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
             
         }
         
@@ -118,11 +121,12 @@ struct SendView: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundColor(Color(UIColor.label))
-                        .padding(.top, 40.0)
-                    
+                        .padding(.top, .wallet_grid_vertical_20())
+                        .padding(.top, .wallet_grid_vertical_20())
                     Spacer()
                 }
-                .padding(.all)
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     Text("Priority & arrival time")
@@ -131,10 +135,10 @@ struct SendView: View {
                     Text("Fee")
                         .font(.callout)
                 }
-                .padding([.leading, .trailing])
-                
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+
                 Rectangle()
-                    .padding(.horizontal)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
                     .frame(height: 1.0)
                     .foregroundColor(.gray)
                 
@@ -142,11 +146,14 @@ struct SendView: View {
                 
                 Button(action: {}) {
                     Text("Continue")
-                        .padding()
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
-                        .padding()
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
+                    
                 }
                 
                 Spacer()

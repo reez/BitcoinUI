@@ -247,8 +247,10 @@ struct ColorsView: View {
                     .underline()
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding()
-                    .padding(.top, 40.0)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                    .padding(.vertical, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
                     ColorView(color: Color(UIColor.bitcoinWhite), colorLabel: "White")
@@ -257,7 +259,8 @@ struct ColorsView: View {
                     ColorView(color: Color(UIColor.bitcoinNeutral3), colorLabel: "Neutral3")
                     ColorView(color: Color(UIColor.bitcoinNeutral4), colorLabel: "Neutral4")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     ColorView(color: Color(UIColor.bitcoinNeutral5), colorLabel: "Neutral5")
@@ -266,7 +269,8 @@ struct ColorsView: View {
                     ColorView(color: Color(UIColor.bitcoinNeutral8), colorLabel: "Neutral8")
                     ColorView(color: Color(UIColor.bitcoinBlack), colorLabel: "Black")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     ColorView(color: Color(UIColor.bitcoinOrange), colorLabel: "Orange")
@@ -275,10 +279,12 @@ struct ColorsView: View {
                     ColorView(color: Color(UIColor.bitcoinBlue), colorLabel: "Blue")
                     ColorView(color: Color(UIColor.bitcoinPurple), colorLabel: "Purple")
                 }
-                .padding()
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
             }
-            .padding()
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
             
         }
         .edgesIgnoringSafeArea(.all)
