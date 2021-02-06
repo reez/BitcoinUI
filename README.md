@@ -100,6 +100,10 @@ Included are Swift Previews with code implemention examples of [Bitcoin Wallet U
     </a>
 </p>
 
+`HardwareWalletInteractionView.swift` 
+
+![](hardware-wallet-interaction.gif)
+
 ## Requirements
 
 WalletUI currently requires minimum deployment targets of iOS 14.
