@@ -21,14 +21,14 @@ struct NumberWordView: View {
                 .frame(width: 180, height: 60)
                 .foregroundColor(Color(UIColor.bitcoinNeutral4))
             Text(number)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 120))
+                .padding(.trailing, .wallet_grid_10(12))
                 .foregroundColor(.black)
             Rectangle()
                 .frame(width: 2, height: 60)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 60))
+                .padding(.trailing, .wallet_grid_10(6))
                 .foregroundColor(Color(UIColor.systemBackground))
             Text(word)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: -60))
+                .padding(.trailing, .wallet_grid_10(-6))
                 .foregroundColor(.black)
         }
     }
@@ -46,7 +46,8 @@ struct OnboardingView: View {
                     Text("This is your recovery phrase")
                         .bold()
                         .font(.title2)
-                        .padding(.top, 40.0)
+                        .padding(.top, .wallet_grid_vertical_20())
+                        .padding(.top, .wallet_grid_vertical_20())
                     Text(
                         "Make sure to write it down as shown here. You have to verify this later."
                     )
