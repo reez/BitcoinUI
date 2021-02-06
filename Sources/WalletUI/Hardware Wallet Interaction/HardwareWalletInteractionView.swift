@@ -152,10 +152,12 @@ struct ValidateRecoveryPhrase2View: View {
                 }
                 
                 Spacer()
+                
             }
             .padding(.all, 8.0)
             .padding(.top, 70.0)
             .multilineTextAlignment(.leading)
+            
         }
         .edgesIgnoringSafeArea(.all)
         
@@ -197,6 +199,7 @@ struct WalletBackupSuccessView: View {
                 }
                 
                 Spacer()
+                
             }
             .padding(.all, 10.0)
             .padding(.top, 70.0)
