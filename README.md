@@ -76,9 +76,9 @@ view.addSubview(imageView)
 
 Included are Swift Previews with code implemention examples of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) "screen mock-ups for mobile and desktop with some of the best practices already baked in".
 
-<img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='200' alt='copy-recovery-phrase' /> <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='200' alt='send'/>  <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='200' alt='transaction' />
+<img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='400' alt='copy-recovery-phrase' /> <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='400' alt='send'/>  <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='400' alt='transaction' />
 
-<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="200" alt='hardware-wallet-interaction' />
+<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="400" alt='hardware-wallet-interaction' />
 
 ## Requirements
 
