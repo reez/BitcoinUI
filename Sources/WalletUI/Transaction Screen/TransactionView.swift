@@ -142,12 +142,13 @@ struct TransactionsView: View {
                             .cornerRadius(2)
                     }
                 }
-                .padding(.top, -10.0)
+                .padding(.top, .wallet_grid_10(-1))
                 
                 Spacer()
                 
             }
-            .padding(.top, 40.0)
+            .padding(.top, .wallet_grid_vertical_20())
+            .padding(.top, .wallet_grid_vertical_20())
             
         }
         .edgesIgnoringSafeArea(.all)
