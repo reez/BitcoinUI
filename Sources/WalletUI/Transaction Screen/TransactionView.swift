@@ -22,7 +22,7 @@ struct TransactionView: View {
     var body: some View {
         VStack {
             Rectangle()
-                .padding(.horizontal)
+                .padding(.wallet_grid_horizontal_10())
                 .frame(height: 1.0)
                 .foregroundColor(.gray)
             HStack {
@@ -41,7 +41,9 @@ struct TransactionView: View {
                         .foregroundColor(Color(UIColor.secondaryLabel))
                 }
             }
-            .padding(.all)
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
         }
     }
     
@@ -72,12 +74,13 @@ struct TransactionsView: View {
                             Text("€ 10,528.75")
                                 .foregroundColor(Color(UIColor.systemBackground))
                         }
-                        .padding(.leading)
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
                         Spacer()
                     }
                     
                 }
-                .padding(.all)
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
                     Text("Transactions")
@@ -87,7 +90,7 @@ struct TransactionsView: View {
                     Spacer()
                     BitcoinImage(named: "Search big")
                 }
-                .padding([.leading, .trailing])
+                .padding(.horizontal, .wallet_grid_horizontal_10())
                 
                 TransactionView(
                     imageName: "plus.circle",
