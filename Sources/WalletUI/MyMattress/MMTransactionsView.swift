@@ -16,6 +16,9 @@ struct MMTransactionsView: View {
             VStack {
                 Text("Transactions")
             }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
         }
         .edgesIgnoringSafeArea(.all)
         

@@ -15,7 +15,19 @@ struct MMOnboardingView: View {
 
             VStack {
                 Text("Onboarding")
+                Button(action: {}) {
+                    Text("Make my Bed")
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color(UIColor.systemBackground))
+                        .background(Color(UIColor.bitcoinMyMattress))
+                }
+
             }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
         }
         .edgesIgnoringSafeArea(.all)
         

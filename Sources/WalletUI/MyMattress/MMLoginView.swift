@@ -15,7 +15,11 @@ struct MMLoginView: View {
 
             VStack {
                 Text("Login")
+                    .foregroundColor(Color(UIColor.label))
             }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
         }
         .edgesIgnoringSafeArea(.all)
         
