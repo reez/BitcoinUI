@@ -49,12 +49,124 @@ struct MMOnboardingCoverView: View {
     }
 }
 
+struct MMOnboardingChoosePIN1View: View {
+    @State private var val: String = ""
+
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+
+            VStack {
+                
+                Text("Choose a PIN")
+                    .font(.title2)
+                    .foregroundColor(Color(UIColor.label))
+                
+                Text("Make sure you can remember it.")
+                    .font(.title3)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+                
+                HStack {
+                    Circle()
+                        .frame(width: 20.0, height: 20.0)
+                        .foregroundColor(.black)
+                    
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                }
+                
+                TextField("1111", text: $val)
+                    .textContentType(.oneTimeCode)
+                    .keyboardType(.numberPad)
+
+
+            }
+            .padding(.horizontal, .wallet_grid_10(4))
+            .padding(.vertical, .wallet_grid_10(4))
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+struct MMOnboardingChoosePIN2View: View {
+    @State private var val: String = ""
+
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+
+            VStack {
+
+                Text("Confirm your PIN")
+                    .font(.title2)
+                    .foregroundColor(Color(UIColor.label))
+                
+                Text("Did you remember it?")
+                    .font(.title3)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+                
+                HStack {
+                    Circle()
+                        .frame(width: 20.0, height: 20.0)
+                        .foregroundColor(.black)
+                    
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                    Circle()
+                        .stroke(Color.black, lineWidth: 1)
+                        .frame(width: 20.0, height: 20.0)
+
+                }
+                
+                TextField("enter pin", text: $val)
+                    .textContentType(.oneTimeCode)
+                    .keyboardType(.numberPad)
+
+
+            }
+            .padding(.horizontal, .wallet_grid_10(4))
+            .padding(.vertical, .wallet_grid_10(4))
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
 struct MMOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MMOnboardingCoverView()
                 .environment(\.colorScheme, .light)
             MMOnboardingCoverView()
+                .environment(\.colorScheme, .dark)
+            MMOnboardingChoosePIN1View()
+                .environment(\.colorScheme, .light)
+            MMOnboardingChoosePIN1View()
+                .environment(\.colorScheme, .dark)
+            MMOnboardingChoosePIN2View()
+                .environment(\.colorScheme, .light)
+            MMOnboardingChoosePIN2View()
                 .environment(\.colorScheme, .dark)
         }
     }
