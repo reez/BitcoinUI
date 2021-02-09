@@ -71,28 +71,54 @@ struct MMHomeSimplifiedView: View {
 
             VStack(spacing: 20.0) {
                 
-   
+                Spacer()
+                
+                BitcoinImage(named: "Single bed big")
                 
                 VStack(spacing: 5.0) {
                     Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))
                     Text("$ 41,328.91").font(.custom("Inter Regular", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)))
                 }
-                
-                Button(action: {}) {
-                    HStack {
-                        Text("View address")
-                        Image(systemName: "arrow.forward")
+                                
+                HStack(spacing: 10.0) {
+                    
+                    ZStack {
+                        Rectangle()
+                            .stroke()
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .frame(width: 140.0, height: 90.0)
+                        VStack(spacing: 8.0) {
+                            Image(systemName: "arrow.up")
+                            Text("Send")
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                                .font(.footnote)
+                        }
                     }
-                    .padding(.horizontal, .wallet_grid_horizontal_10())
-                    .padding(.vertical, .wallet_grid_vertical_20())
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .background(Color(UIColor.bitcoinMyMattress))
-                    .cornerRadius(10.0)
+
+                    ZStack {
+                        Rectangle()
+                            .stroke()
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .frame(width: 140.0, height: 90.0)
+                        VStack(spacing: 8.0) {
+                            Image(systemName: "arrow.down")
+                            Text("Receive")
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                                .font(.footnote)
+                        }
+                    }
+
                 }
-                .padding(.top)
-                .padding(.horizontal, .wallet_grid_10(4))
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
+                Spacer()
+                
+                VStack(spacing: 8.0) {
+                    Image(systemName: "chevron.up")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .font(.footnote)
+                    Text("1 transaction today")                                .font(.footnote)
+                }
                 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
