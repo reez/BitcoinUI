@@ -135,25 +135,25 @@ struct MMHomeSimplifiedView: View {
 }
 
 struct MMHomeMultisigView: View {
-    
+
     var body: some View {
-        
+
         ZStack {
             Color(UIColor.bitcoinMyMattress)
 
             VStack(spacing: 20.0) {
-                
+
                 Spacer()
-                
-                BitcoinImage(named: "Single bed big")
-                
+
+                BitcoinImage(named: "Triple bed big filled")
+
                 VStack(spacing: 5.0) {
                     Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))
                     Text("$ 41,328.91").font(.custom("Inter Regular", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)))
                 }
-                                
+
                 HStack(spacing: 10.0) {
-                    
+
                     ZStack {
                         Rectangle()
                             .stroke()
@@ -182,16 +182,16 @@ struct MMHomeMultisigView: View {
 
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
+
                 Spacer()
-                
+
                 VStack(spacing: 8.0) {
                     Image(systemName: "chevron.up")
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .font(.footnote)
                     Text("1 transaction today")                                .font(.footnote)
                 }
-                
+
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
@@ -199,10 +199,10 @@ struct MMHomeMultisigView: View {
             .padding(.vertical, .wallet_grid_vertical_20())
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
-            
+
         }
         .edgesIgnoringSafeArea(.all)
-        
+
     }
 }
 
