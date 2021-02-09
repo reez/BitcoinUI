@@ -13,8 +13,19 @@ struct MMHomeBlankView: View {
         
         ZStack {
             Color(UIColor.systemBackground)
+            
+     
+
 
             VStack(spacing: 20.0) {
+                
+                HStack {
+                    Spacer()
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                }
+                
+                Spacer()
                 
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
@@ -47,6 +58,7 @@ struct MMHomeBlankView: View {
                 .padding(.top)
                 .padding(.horizontal, .wallet_grid_10(4))
                 
+                Spacer()
                 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
