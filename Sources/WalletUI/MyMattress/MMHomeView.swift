@@ -13,10 +13,7 @@ struct MMHomeBlankView: View {
         
         ZStack {
             Color(UIColor.systemBackground)
-            
-     
-
-
+    
             VStack(spacing: 20.0) {
                 
                 HStack {
@@ -82,6 +79,12 @@ struct MMHomeSimplifiedView: View {
             Color(UIColor.systemBackground)
 
             VStack(spacing: 20.0) {
+                
+                HStack {
+                    Spacer()
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                }
                 
                 Spacer()
                 
