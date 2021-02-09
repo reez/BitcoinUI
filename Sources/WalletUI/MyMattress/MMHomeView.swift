@@ -157,6 +157,12 @@ struct MMHomeMultisigView: View {
             Color(UIColor.bitcoinMyMattress)
 
             VStack(spacing: 20.0) {
+                
+                HStack {
+                    Spacer()
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(UIColor.white))
+                }
 
                 Spacer()
 
