@@ -236,6 +236,12 @@ struct MMHomeMessageView: View {
 
             VStack(spacing: 20.0) {
                 
+                HStack {
+                    Spacer()
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                }
+                
                 Spacer()
                 
                 BitcoinImage(named: "Single bed big")
