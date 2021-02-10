@@ -9,15 +9,16 @@ import SwiftUI
 
 struct MMSetting: Identifiable {
     var id = UUID()
+    let backup: String
     let color: Color
     let imageName: String
-    let setting: String // rename
-    let settingDetail: String // rename
+    let title: String
+    let detail: String?
 }
 
 struct MMSettingsViewRowView: View {
     let setting: MMSetting
-
+    
     var body: some View {
         HStack {
             ZStack {
@@ -28,22 +29,34 @@ struct MMSettingsViewRowView: View {
                     .foregroundColor(Color(UIColor.systemBackground))
                     .font(.footnote)
             }
-            VStack {
-                Text(setting.setting)
-                Text(setting.settingDetail)
+            VStack(alignment: .leading) {
+                Text(setting.title)
+                    .font(.body)
+                    .foregroundColor(Color(UIColor.label))
+                
+                if let d = setting.detail {
+                    Text(d)
+                        .font(.callout)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                }
+                
             }
-
+            Spacer()
+            Text(setting.backup)
+                .font(.footnote)
+                .foregroundColor(Color(UIColor.secondaryLabel))
+            
         }
         .padding(.vertical, .wallet_grid_vertical_20())
     }
 }
 
-struct MMSettingsView: View {
+struct MMSettingsDefaultView: View {
     let settings = [
-        MMSetting(color: .orange, imageName: "paperplane-vector", setting: "Set recovery email", settingDetail: ""),
-        MMSetting(color: .green, imageName: "dots-group", setting: "Change PIN", settingDetail: ""),
-        MMSetting(color: .blue, imageName: "singlebedsettings-group", setting: "Security mode", settingDetail: "Single bed"),
-        MMSetting(color: .purple, imageName: "x-group", setting: "Log out", settingDetail: ""),
+        MMSetting(backup: "", color: .orange, imageName: "paperplane-vector", title: "Set recovery email", detail: nil),
+        MMSetting(backup: "", color: .green, imageName: "dots-group", title: "Change PIN", detail: nil),
+        MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", title: "Security mode", detail: "Single bed"),
+        MMSetting(backup: "", color: .purple, imageName: "x-group", title: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -54,7 +67,7 @@ struct MMSettingsView: View {
             NavigationView {
                 
                 VStack {
-               
+                    
                     List(settings) { setting in
                         NavigationLink(
                             destination: EmptyView()
@@ -64,7 +77,7 @@ struct MMSettingsView: View {
                     }
                     .listStyle(PlainListStyle())
                     .navigationBarTitle("Settings")
-
+                    
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
@@ -82,9 +95,9 @@ struct MMSettingsView: View {
 struct MMSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MMSettingsView()
+            MMSettingsDefaultView()
                 .environment(\.colorScheme, .light)
-            MMSettingsView()
+            MMSettingsDefaultView()
                 .environment(\.colorScheme, .dark)
         }
     }
