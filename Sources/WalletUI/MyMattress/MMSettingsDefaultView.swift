@@ -98,11 +98,9 @@ struct MMSettingsSummaryView: View {
         
         ZStack {
             Color(UIColor.systemBackground)
-    
+            
             VStack(spacing: 20.0) {
-                
-//                Spacer()
-                
+                                
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
                     BitcoinImage(named: "singlebedsettings-group")
@@ -116,7 +114,7 @@ struct MMSettingsSummaryView: View {
                         .font(.title)
                         .foregroundColor(Color(UIColor.label))
                         .multilineTextAlignment(.center)
-
+                    
                     Text("Your funds are secured by a single key, which is backed up to your cloud storage provider.")
                         .font(.title3)
                         .foregroundColor(Color(UIColor.secondaryLabel))
@@ -124,27 +122,25 @@ struct MMSettingsSummaryView: View {
                 }
                 
                 Button(action: {}) {
-                        Text("Export backup")
-                    .padding(.horizontal, .wallet_grid_horizontal_10())
-                            .padding(.vertical, 12.0)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(Color(UIColor.label))
-//                    .background(Color(UIColor.bitcoinMyMattress))
-//                    .cornerRadius(10.0)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 6)
-                                    .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
-                            )
+                    Text("Export backup")
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, 12.0)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color(UIColor.label))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                        )
                 }
                 .padding(.vertical)
-                //                .padding(.horizontal, .wallet_grid_10(2))
                 
                 Button(action: {}) {
+                    
                     HStack {
                         
                         ZStack {
                             Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
-                            BitcoinImage(named: "singlebedsettings-group")
+                            BitcoinImage(named: "switchtriple-group")
                                 .foregroundColor(Color(UIColor.systemBackground))
                                 .font(.footnote)
                         }
@@ -153,25 +149,23 @@ struct MMSettingsSummaryView: View {
                             Text("Switch to a triple bed")
                                 .font(.body)
                                 .foregroundColor(Color(UIColor.label))
-                            
                             Text("Export backup")
-                                    .font(.callout)
-                                    .foregroundColor(Color(UIColor.secondaryLabel))
-                            
-                            
+                                .font(.callout)
+                                .foregroundColor(Color(UIColor.secondaryLabel))
                         }
+                        
+                        Spacer()
                         
                         Image(systemName: "chevron.right")
                             .foregroundColor(Color(UIColor.secondaryLabel))
-
+                        
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.all)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
-                )
-                
+                    )
                     
                 }
                 .frame(maxWidth: .infinity)
