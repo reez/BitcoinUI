@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 struct MMSetting: Identifiable {
     var id = UUID()
     let backup: String
@@ -436,3 +438,5 @@ struct MMSettingsView_Previews: PreviewProvider {
         }
     }
 }
+
+#endif

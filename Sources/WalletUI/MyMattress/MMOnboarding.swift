@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 struct MMOnboardingCoverView: View {
     var body: some View {
         
@@ -321,3 +323,5 @@ struct MMOnboardingView_Previews: PreviewProvider {
         }
     }
 }
+
+#endif
