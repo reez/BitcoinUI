@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MMSetting: Identifiable {
     var id = UUID()
+    let color: Color
+    let imageName: String
     let setting: String // rename
     let settingDetail: String // rename
 }
@@ -18,9 +20,18 @@ struct MMSettingsViewRowView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "gearshape.fill")
-            Text(setting.setting)
-            Text(setting.settingDetail)
+            ZStack {
+                Circle()
+                    .frame(width: 50.0, height: 50.0)
+                    .foregroundColor(setting.color)
+                BitcoinImage(named: setting.imageName)
+                    .foregroundColor(Color(UIColor.systemBackground))
+                    .font(.footnote)
+            }
+            VStack {
+                Text(setting.setting)
+                Text(setting.settingDetail)
+            }
 
         }
         .padding(.vertical, .wallet_grid_vertical_20())
@@ -29,14 +40,13 @@ struct MMSettingsViewRowView: View {
 
 struct MMSettingsView: View {
     let settings = [
-        MMSetting(setting: "Set recovery email", settingDetail: ""),
-        MMSetting(setting: "Change PIN", settingDetail: ""),
-        MMSetting(setting: "Single bed", settingDetail: "Single bed"),
-        MMSetting(setting: "Log out", settingDetail: ""),
+        MMSetting(color: .orange, imageName: "paperplane-vector", setting: "Set recovery email", settingDetail: ""),
+        MMSetting(color: .green, imageName: "dots-group", setting: "Change PIN", settingDetail: ""),
+        MMSetting(color: .blue, imageName: "singlebedsettings-group", setting: "Security mode", settingDetail: "Single bed"),
+        MMSetting(color: .purple, imageName: "x-group", setting: "Log out", settingDetail: ""),
     ]
     
     var body: some View {
-        
         
         ZStack {
             Color(UIColor.systemBackground)
@@ -45,7 +55,6 @@ struct MMSettingsView: View {
                 
                 VStack {
                
-                    
                     List(settings) { setting in
                         NavigationLink(
                             destination: EmptyView()
