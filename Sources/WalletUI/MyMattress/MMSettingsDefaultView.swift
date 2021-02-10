@@ -92,12 +92,117 @@ struct MMSettingsDefaultView: View {
     }
 }
 
+struct MMSettingsSummaryView: View {
+    
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+    
+            VStack(spacing: 20.0) {
+                
+//                Spacer()
+                
+                ZStack {
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                    BitcoinImage(named: "singlebedsettings-group")
+                        .foregroundColor(Color(UIColor.systemBackground))
+                        .font(.footnote)
+                }
+                
+                VStack(spacing: 5.0) {
+                    Text("Your security mode is Single Bed")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(Color(UIColor.label))
+                        .multilineTextAlignment(.center)
+
+                    Text("Your funds are secured by a single key, which is backed up to your cloud storage provider.")
+                        .font(.title3)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .multilineTextAlignment(.center)
+                }
+                
+                Button(action: {}) {
+                        Text("Export backup")
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                            .padding(.vertical, 12.0)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(Color(UIColor.label))
+//                    .background(Color(UIColor.bitcoinMyMattress))
+//                    .cornerRadius(10.0)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                            )
+                }
+                .padding(.vertical)
+                //                .padding(.horizontal, .wallet_grid_10(2))
+                
+                Button(action: {}) {
+                    HStack {
+                        
+                        ZStack {
+                            Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                            BitcoinImage(named: "singlebedsettings-group")
+                                .foregroundColor(Color(UIColor.systemBackground))
+                                .font(.footnote)
+                        }
+                        
+                        VStack(alignment: .leading) {
+                            Text("Switch to a triple bed")
+                                .font(.body)
+                                .foregroundColor(Color(UIColor.label))
+                            
+                            Text("Export backup")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            
+                            
+                        }
+                        
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.all)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                )
+                
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical)                
+                
+                Spacer()
+                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
 struct MMSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MMSettingsDefaultView()
                 .environment(\.colorScheme, .light)
             MMSettingsDefaultView()
+                .environment(\.colorScheme, .dark)
+            MMSettingsSummaryView()
+                .environment(\.colorScheme, .light)
+            MMSettingsSummaryView()
                 .environment(\.colorScheme, .dark)
         }
     }
