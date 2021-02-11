@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+
 struct MMDoubleBedIntroView: View {
     var body: some View {
         
@@ -143,7 +145,7 @@ struct MMDoubleBedWarningView: View {
     }
 }
 
-struct MMDoubleBedDeviceView: View {
+struct MMDoubleBedDevice1View: View {
     
     var body: some View {
         
@@ -307,6 +309,112 @@ struct MMDoubleBedDeviceView: View {
     }
 }
 
+struct MMDoubleBedDevice2View: View {
+    
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
+            VStack(spacing: 20.0) {
+                
+                VStack(spacing: 5.0) {
+                    Text("Choose the hardware device to use for key #1")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(Color(UIColor.label))
+                        .multilineTextAlignment(.center)
+                    
+                }
+                
+                VStack(spacing: 2.0) {
+                    
+                    Button(action: {}) {
+                        
+                        HStack {
+                            
+                            BitcoinImage(named: "cobo-group")
+                                .foregroundColor(Color(UIColor.label))
+                            
+                            VStack(alignment: .leading) {
+                                Text("Coldcard")
+                                    .font(.body)
+                                    .foregroundColor(Color(UIColor.label))
+                                Text("Via SD card adapter")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            }
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.all)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                        )
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                    
+                    Button(action: {}) {
+                        
+                        HStack {
+                            
+                            BitcoinImage(named: "cobo-group")
+                                .foregroundColor(Color(UIColor.label))
+                            
+                            VStack(alignment: .leading) {
+                                Text("Cobo Vault")
+                                    .font(.body)
+                                    .foregroundColor(Color(UIColor.label))
+                                Text("Via QR code scan")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            }
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(UIColor.secondaryLabel))
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.all)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                        )
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical)
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical)
+                
+                Spacer()
+                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+
 struct MMDoubleBedSetupView_Previews: PreviewProvider {
     static var previews: some View {
         MMDoubleBedIntroView()
@@ -317,9 +425,15 @@ struct MMDoubleBedSetupView_Previews: PreviewProvider {
             .environment(\.colorScheme, .light)
         MMDoubleBedWarningView()
             .environment(\.colorScheme, .dark)
-        MMDoubleBedDeviceView()
+        MMDoubleBedDevice1View()
             .environment(\.colorScheme, .light)
-        MMDoubleBedDeviceView()
+        MMDoubleBedDevice1View()
+            .environment(\.colorScheme, .dark)
+        MMDoubleBedDevice2View()
+            .environment(\.colorScheme, .light)
+        MMDoubleBedDevice2View()
             .environment(\.colorScheme, .dark)
     }
 }
+
+#endif
