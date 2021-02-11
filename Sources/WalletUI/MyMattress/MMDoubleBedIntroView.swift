@@ -143,6 +143,170 @@ struct MMDoubleBedWarningView: View {
     }
 }
 
+struct MMDoubleBedDeviceView: View {
+    
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
+            VStack(spacing: 20.0) {
+                
+                VStack(spacing: 5.0) {
+                    Text("Your new wallet will have 3 keys")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(Color(UIColor.label))
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Key 1 will be on this device, as before. You will set up the other 2 keys in the next steps.")
+                        .font(.title3)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .multilineTextAlignment(.center)
+                }
+                
+                VStack(spacing: 2.0) {
+                    
+                    Button(action: {}) {
+                        
+                        HStack {
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(Color(UIColor.label), lineWidth: 1)
+                                    .frame(width: 50.0, height: 50.0)
+                                
+                                Image(systemName: "cloud.fill")
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                                    .font(.title2)
+                            }
+                            
+                            VStack(alignment: .leading) {
+                                Text("Key 1")
+                                    .font(.body)
+                                    .foregroundColor(Color(UIColor.label))
+                                Text("Cloud backup")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            }
+                            
+                            Spacer()
+                            
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.green)
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.all)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                        )
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                    
+                    Button(action: {}) {
+                        
+                        HStack {
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(Color(UIColor.label), lineWidth: 1)
+                                    .frame(width: 50.0, height: 50.0)
+                                
+                                Image(systemName: "key.fill")
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                                    .font(.title2)
+                            }
+                            
+                            VStack(alignment: .leading) {
+                                Text("Key 2")
+                                    .font(.body)
+                                    .foregroundColor(Color(UIColor.label))
+                                Text("Not set up yet")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            }
+                            
+                            Spacer()
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.all)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                        )
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical)
+                    
+                    Button(action: {}) {
+                        
+                        HStack {
+                            
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 6)
+                                    .stroke(Color(UIColor.label), lineWidth: 1)
+                                    .frame(width: 50.0, height: 50.0)
+                                
+                                Image(systemName: "key.fill")
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                                    .font(.title2)
+                            }
+                            
+                            VStack(alignment: .leading) {
+                                Text("Key 3")
+                                    .font(.body)
+                                    .foregroundColor(Color(UIColor.label))
+                                Text("Not set up yet")
+                                    .font(.callout)
+                                    .foregroundColor(Color(UIColor.secondaryLabel))
+                            }
+                            
+                        }
+                        
+                        Spacer()
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.all)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
+                    )
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical)
+                
+                Spacer()
+                
+                Button(action: {}) {
+                    Text("Continue")
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor.bitcoinOrange))
+                }
+                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
 struct MMDoubleBedSetupView_Previews: PreviewProvider {
     static var previews: some View {
         MMDoubleBedIntroView()
@@ -152,6 +316,10 @@ struct MMDoubleBedSetupView_Previews: PreviewProvider {
         MMDoubleBedWarningView()
             .environment(\.colorScheme, .light)
         MMDoubleBedWarningView()
+            .environment(\.colorScheme, .dark)
+        MMDoubleBedDeviceView()
+            .environment(\.colorScheme, .light)
+        MMDoubleBedDeviceView()
             .environment(\.colorScheme, .dark)
     }
 }
