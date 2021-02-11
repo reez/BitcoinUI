@@ -17,7 +17,7 @@ struct MMDoubleBedIntroView: View {
                 
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
-                    BitcoinImage(named: "singlebedsettings-group")
+                    BitcoinImage(named: "Double bed filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
                 }
@@ -26,16 +26,19 @@ struct MMDoubleBedIntroView: View {
                     Text("Switch security mode to Triple Bed")
                         .bold()
                         .font(.title)
+                        // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
                     
                     Text("Improve your wallet security by setting up 2 hardware devices.")
                         .font(.title3)
+                        // This should be secondaryLabel but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.lightGray))
                         .multilineTextAlignment(.center)
                     
                     Text("Be aware that you will need to approve each new transaction on a hardware device before you can send it.")
                         .font(.title3)
+                        // This should be secondaryLabel but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.lightGray))
                         .multilineTextAlignment(.center)
                         .padding(.top)
@@ -43,23 +46,23 @@ struct MMDoubleBedIntroView: View {
                     Text("You will need 2 hardware devices")
                         .bold()
                         .font(.title3)
+                        // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
                         .padding(.top)
                     
                     Text("We support Coldcard and Cobo Vault.")
                         .font(.title3)
+                        // This should be secondaryLabel but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.lightGray))
                         .multilineTextAlignment(.center)
                 }
                 
-                HStack {
-                    BitcoinImage(named: "singlebedsettings-group")
+                HStack(spacing: 20.0) {
+                    BitcoinImage(named: "ColdCard 150h")
                         .foregroundColor(Color(UIColor.systemBackground))
-//                        .font(.footnote)
-                    BitcoinImage(named: "singlebedsettings-group")
+                    BitcoinImage(named: "Cobo Vault 150h")
                         .foregroundColor(Color(UIColor.systemBackground))
-//                        .font(.footnote)
                 }
                 
                 Spacer()
