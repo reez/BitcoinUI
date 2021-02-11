@@ -73,7 +73,7 @@ struct MMSingleBedWarningView: View {
                 
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(.purple)
-                    BitcoinImage(named: "singlebedsettings-group")
+                    BitcoinImage(named: "Wallet filled big")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
                 }
