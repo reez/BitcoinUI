@@ -9,7 +9,6 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-
 struct MMSingleBedIntroView: View {
     var body: some View {
         
@@ -176,7 +175,7 @@ struct MMSingleBedReadyView: View {
     }
 }
 
-struct MMTransactionsView_Previews: PreviewProvider {
+struct MMSingleBedSetupView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MMSingleBedIntroView()
