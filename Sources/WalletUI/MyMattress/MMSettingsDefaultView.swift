@@ -14,7 +14,7 @@ struct MMSetting: Identifiable {
     let backup: String
     let color: Color
     let imageName: String
-    let title: String
+    let status: String
     let detail: String?
 }
 
@@ -32,7 +32,7 @@ struct MMSettingsViewRowView: View {
                     .font(.footnote)
             }
             VStack(alignment: .leading) {
-                Text(setting.title)
+                Text(setting.status)
                     .font(.body)
                     .foregroundColor(Color(UIColor.label))
                 
@@ -56,10 +56,10 @@ struct MMSettingsViewRowView: View {
 
 struct MMSettingsDefaultView: View {
     let settings = [
-        MMSetting(backup: "", color: .orange, imageName: "paperplane-vector", title: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: .green, imageName: "dots-group", title: "Change PIN", detail: nil),
-        MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", title: "Security mode", detail: "Single bed"),
-        MMSetting(backup: "", color: .purple, imageName: "x-group", title: "Log out", detail: nil),
+        MMSetting(backup: "", color: .orange, imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
+        MMSetting(backup: "", color: .green, imageName: "dots-group", status: "Change PIN", detail: nil),
+        MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Single bed"),
+        MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -191,10 +191,10 @@ struct MMSettingsSummaryView: View {
 
 struct MMSettingsDefaultDoubleView: View {
     let settings = [
-        MMSetting(backup: "", color: .orange, imageName: "paperplane-vector", title: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: .green, imageName: "dots-group", title: "Change PIN", detail: nil),
-        MMSetting(backup: "Multiple keys", color: .blue, imageName: "singlebedsettings-group", title: "Security mode", detail: "Triple bed"),
-        MMSetting(backup: "", color: .purple, imageName: "x-group", title: "Log out", detail: nil),
+        MMSetting(backup: "", color: .orange, imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
+        MMSetting(backup: "", color: .green, imageName: "dots-group", status: "Change PIN", detail: nil),
+        MMSetting(backup: "Multiple keys", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
+        MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -251,7 +251,7 @@ struct MMSettingsDoubleViewRowView: View {
             }
             
             VStack(alignment: .leading) {
-                Text(setting.title)
+                Text(setting.status)
                     .font(.body)
                     // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                     .foregroundColor(Color(UIColor.white))
