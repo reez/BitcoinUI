@@ -122,7 +122,12 @@ struct MMTransactionView: View {
 
 struct MMTransactionView_Previews: PreviewProvider {
     static var previews: some View {
-        MMTransactionView()
+        Group {
+            MMTransactionView()
+                .environment(\.colorScheme, .light)
+            MMTransactionView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
 
