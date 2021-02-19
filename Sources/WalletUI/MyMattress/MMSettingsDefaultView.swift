@@ -57,7 +57,7 @@ struct MMSettingsViewRowView: View {
 struct MMSettingsDefaultView: View {
     let settings = [
         MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: .green, imageName: "dots-group", status: "Change PIN", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
         MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Single bed"),
         MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
     ]
@@ -192,7 +192,7 @@ struct MMSettingsSummaryView: View {
 struct MMSettingsDefaultDoubleView: View {
     let settings = [
         MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: .green, imageName: "dots-group", status: "Change PIN", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
         MMSetting(backup: "Multiple keys", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
         MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
     ]

@@ -175,7 +175,7 @@ struct WalletBackupSuccessView: View {
             VStack(alignment: .leading, spacing: 8.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
                     Image(systemName: "checkmark")
                 }
                 .padding(.top, .wallet_grid_vertical_20())

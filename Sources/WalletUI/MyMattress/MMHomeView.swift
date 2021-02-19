@@ -27,7 +27,7 @@ struct MMHomeBlankView: View {
                 Spacer()
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
                     Image(systemName: "checkmark")
                 }
                 

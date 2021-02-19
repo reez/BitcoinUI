@@ -54,7 +54,7 @@ struct MMMultisigRecoverySettings1View: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(.green)
+                                .foregroundColor(Color(UIColor.bitcoinGreen))
                             
                         }
                         .frame(maxWidth: .infinity)

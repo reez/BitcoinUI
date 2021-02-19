@@ -124,7 +124,7 @@ struct MMSingleBedReadyView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
