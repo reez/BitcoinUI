@@ -38,7 +38,6 @@ struct MMReceiveView: View {
                 .padding(.top)
                 
                 Rectangle()
-//                    .padding(.wallet_grid_horizontal_10())
                     .frame(height: 1.0)
                     .foregroundColor(Color(UIColor.secondaryLabel))
                 
@@ -52,7 +51,6 @@ struct MMReceiveView: View {
                 }
                 
                 Rectangle()
-//                    .padding(.wallet_grid_horizontal_10())
                     .frame(height: 1.0)
                     .foregroundColor(Color(UIColor.secondaryLabel))
                 
