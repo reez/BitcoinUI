@@ -104,7 +104,7 @@ struct MMSettingsSummaryView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                     BitcoinImage(named: "singlebedsettings-group")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -141,7 +141,7 @@ struct MMSettingsSummaryView: View {
                     HStack {
                         
                         ZStack {
-                            Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                            Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                             BitcoinImage(named: "switchtriple-group")
                                 .foregroundColor(Color(UIColor.systemBackground))
                                 .font(.footnote)
@@ -193,7 +193,7 @@ struct MMSettingsDefaultDoubleView: View {
     let settings = [
         MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
         MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
-        MMSetting(backup: "Multiple keys", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
+        MMSetting(backup: "Multiple keys", color: Color(UIColor.bitcoinBlue), imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
         MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
     ]
     
@@ -293,7 +293,7 @@ struct MMSettingsSummaryDoubleView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                     // This icon should be triple bed on Figma I think
                     BitcoinImage(named: "singlebedsettings-group")
                         .foregroundColor(Color(UIColor.systemBackground))
@@ -365,7 +365,7 @@ struct MMSettingsSummaryDoubleView: View {
                     HStack {
                         
                         ZStack {
-                            Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                            Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                             BitcoinImage(named: "switchtriple-group")
                                 // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                                 .foregroundColor(Color(UIColor.white))                                .font(.footnote)
