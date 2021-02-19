@@ -18,7 +18,7 @@ struct MMDoubleBedIntroView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                     BitcoinImage(named: "Double bed filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -100,7 +100,7 @@ struct MMDoubleBedWarningView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.purple)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
                     BitcoinImage(named: "Wallet filled big")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -195,7 +195,7 @@ struct MMDoubleBedDevice1View: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(.green)
+                                .foregroundColor(Color(UIColor.bitcoinGreen))
                             
                         }
                         .frame(maxWidth: .infinity)

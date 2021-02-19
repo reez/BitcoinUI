@@ -18,7 +18,7 @@ struct MMSingleBedIntroView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.blue)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
                     BitcoinImage(named: "singlebedsettings-group")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -71,7 +71,7 @@ struct MMSingleBedWarningView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.purple)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
                     BitcoinImage(named: "Wallet filled big")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -124,7 +124,7 @@ struct MMSingleBedReadyView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.green)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
