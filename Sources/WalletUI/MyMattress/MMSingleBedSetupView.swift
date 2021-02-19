@@ -71,7 +71,7 @@ struct MMSingleBedWarningView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.purple)
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
                     BitcoinImage(named: "Wallet filled big")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)

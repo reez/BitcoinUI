@@ -59,7 +59,7 @@ struct MMSettingsDefaultView: View {
         MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
         MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
         MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Single bed"),
-        MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "x-group", status: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -194,7 +194,7 @@ struct MMSettingsDefaultDoubleView: View {
         MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
         MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
         MMSetting(backup: "Multiple keys", color: Color(UIColor.bitcoinBlue), imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
-        MMSetting(backup: "", color: .purple, imageName: "x-group", status: "Log out", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "x-group", status: "Log out", detail: nil),
     ]
     
     var body: some View {
