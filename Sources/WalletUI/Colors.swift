@@ -218,6 +218,24 @@ extension UIColor {
     
 }
 
+/// Extend UIColor to add MyMattress specific colors
+
+extension UIColor {
+    
+    public static var bitcoinMyMattress: UIColor {
+        return UIColor { (traitCollection: UITraitCollection) -> UIColor in
+            if traitCollection.userInterfaceStyle == .dark {
+                return UIColor(
+                    red: 28/255, green: 55/255, blue: 107/255, alpha: 1)
+            } else {
+                return UIColor(
+                    red: 28/255, green: 55/255, blue: 107/255, alpha: 1)
+            }
+        }
+    }
+}
+
+
 struct ColorView: View {
     let color: Color
     let colorLabel: String
