@@ -61,64 +61,37 @@ struct IconsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Gear filled")
-                    IconView(named: "Contacts filled")
-                    IconView(named: "QR")
-                    IconView(named: "Search big")
+                    IconView(named: "Cobo Vault 150h")
+                    IconView(named: "cobo-group")
+                    IconView(named: "ColdCard 75h")
+                    IconView(named: "ColdCard 150h")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Home")
-                    IconView(named: "Receive")
-                    IconView(named: "Send")
-                    IconView(named: "Share big")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Lock")
-                    IconView(named: "Flip")
-                    IconView(named: "Caret left big")
-                    IconView(named: "Caret right big")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Caret down big")
-                    IconView(named: "Caret up big")
-                    IconView(named: "X big")
-                    IconView(named: "Check big")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Plus big")
-                    IconView(named: "Minus big")
-                    IconView(named: "Arrow left big")
-                    IconView(named: "Arrow right big")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Arrow down big")
-                    IconView(named: "Arrow up big")
-                    IconView(named: "Milk filled")
-                    IconView(named: "Sofa")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Wikipedia")
+                    IconView(named: "dots-group")
+                    IconView(named: "Double bed filled")
                     IconView(named: "Github")
-                    IconView(named: "Storybook")
-                    IconView(named: "Hand cursor")
+                    IconView(named: "mattress")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "Single bed big")
+                    IconView(named: "singlebedsettings-group")
+                    IconView(named: "switchtriple-group")
+                    IconView(named: "Triple bed big filled")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "Wallet filled big")
+                    IconView(named: "")
+                    IconView(named: "")
+                    IconView(named: "")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
