@@ -75,6 +75,8 @@ struct MMDoubleBedIntroView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.black)
                         .background(Color(UIColor.white))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -129,6 +131,8 @@ struct MMDoubleBedWarningView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.black)
                         .background(Color(UIColor.white))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -293,6 +297,8 @@ struct MMDoubleBedDevice1View: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }

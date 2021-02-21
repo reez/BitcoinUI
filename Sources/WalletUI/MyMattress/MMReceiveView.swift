@@ -71,6 +71,8 @@ struct MMReceiveView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinMyMattress))
+                        .cornerRadius(5.0)
+
                 }
                 
             }

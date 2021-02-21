@@ -123,6 +123,7 @@ struct CopyRecoveryPhraseViewView: View {
                             .background(Color(UIColor.bitcoinOrange))
                             .padding(.horizontal, .wallet_grid_horizontal_10())
                             .padding(.vertical, .wallet_grid_vertical_20())
+
                     }
                     
                 }
