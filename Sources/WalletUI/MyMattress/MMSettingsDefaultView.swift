@@ -322,10 +322,8 @@ struct MMSettingsSummaryDoubleView: View {
                         // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.black))
                         .background(Color.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
-                        )
+                        .cornerRadius(5.0)
+
                 }
                 .padding(.top)
                 
@@ -337,13 +335,8 @@ struct MMSettingsSummaryDoubleView: View {
                         // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.black))
                         .background(Color.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 4)
-                                .stroke(
-                                    Color(UIColor.secondaryLabel),
-                                    lineWidth: 1
-                                )
-                        )
+                        .cornerRadius(5.0)
+
                 }
                 
                 Button(action: {}) {
@@ -354,10 +347,8 @@ struct MMSettingsSummaryDoubleView: View {
                         // This should be label but because we are using set color for light/dark double bed it needs to be gray atm
                         .foregroundColor(Color(UIColor.black))
                         .background(Color.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color(UIColor.secondaryLabel), lineWidth: 1)
-                        )
+                        .cornerRadius(5.0)
+
                 }
                 
                 Button(action: {}) {

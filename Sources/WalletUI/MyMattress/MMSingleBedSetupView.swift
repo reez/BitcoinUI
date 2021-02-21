@@ -46,6 +46,8 @@ struct MMSingleBedIntroView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -99,6 +101,8 @@ struct MMSingleBedWarningView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -156,6 +160,8 @@ struct MMSingleBedReadyView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
                 Spacer()

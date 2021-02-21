@@ -150,6 +150,8 @@ struct MMMultisigRecoverySettings1View: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -196,6 +198,8 @@ struct MMMultisigRecoverySettings2View: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }

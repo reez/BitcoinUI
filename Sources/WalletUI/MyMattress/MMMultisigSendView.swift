@@ -133,6 +133,8 @@ struct MMMultisigSendAmountView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
+
                 }
                 
             }
@@ -267,6 +269,7 @@ struct MMMultisigSendFeeView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
+                        .cornerRadius(5.0)
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
                     
