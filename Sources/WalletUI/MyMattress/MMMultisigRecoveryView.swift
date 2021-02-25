@@ -72,7 +72,7 @@ struct MMMultisigRecoverySettings1View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo-group")
+                            BitcoinImage(named: "coldcard75")
                                 .padding(.horizontal, 5.0)
                                 .foregroundColor(Color(UIColor.label))
                             
@@ -107,7 +107,7 @@ struct MMMultisigRecoverySettings1View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo-group")
+                            BitcoinImage(named: "cobo75")
                                 .padding(.horizontal, 5.0)
                                 .foregroundColor(Color(UIColor.label))
                             
@@ -115,7 +115,7 @@ struct MMMultisigRecoverySettings1View: View {
                                 Text("Key 3")
                                     .font(.body)
                                     .foregroundColor(Color(UIColor.label))
-                                Text("Coldcard")
+                                Text("Cobo Vault")
                                     .font(.callout)
                                     .foregroundColor(Color(UIColor.secondaryLabel))
                             }
