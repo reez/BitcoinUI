@@ -308,7 +308,7 @@ struct MMMultisigSendSettingsView: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo-group")
+                            BitcoinImage(named: "coldcard75")
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {
@@ -340,7 +340,7 @@ struct MMMultisigSendSettingsView: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo-group")
+                            BitcoinImage(named: "cobo75")
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {

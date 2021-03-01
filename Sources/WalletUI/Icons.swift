@@ -61,10 +61,10 @@ struct IconsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Cobo Vault 150h")
-                    IconView(named: "cobo-group")
-                    IconView(named: "ColdCard 75h")
-                    IconView(named: "ColdCard 150h")
+                    IconView(named: "cobo75")
+                    IconView(named: "cobo150")
+                    IconView(named: "coldcard75")
+                    IconView(named: "coldcard150")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())

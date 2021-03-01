@@ -1,0 +1,23 @@
+<svg width="89" height="150" viewBox="0 0 89 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect x="1.04395" y="1" width="86" height="148" rx="9" stroke="black" stroke-width="2"/>
+<rect x="14.0439" y="22" width="38" height="18" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="23.0439" cy="68" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="23.0439" cy="89" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="23.0439" cy="110" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="23.0439" cy="131" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="44.0439" cy="68" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="44.0439" cy="89" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="44.0439" cy="110" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="44.0439" cy="131" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="65.0439" cy="68" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="65.0439" cy="89" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="65.0439" cy="110" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="65.0439" cy="131" r="8" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="88" height="150" fill="white" transform="translate(0.0439453)"/>
+</clipPath>
+</defs>
+</svg>
