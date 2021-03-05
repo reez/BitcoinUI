@@ -132,24 +132,32 @@ struct IconsView: View {
 //                .padding(.horizontal, .wallet_grid_horizontal_10())
 //                .padding(.vertical, .wallet_grid_vertical_20())
                 
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "foundation75")
+//                    IconView(named: "foundation150")
+//                    IconView(named: "foundation300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+//                
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "cardwallet75")
+//                    IconView(named: "cardwallet150")
+//                    IconView(named: "cardwallet300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+                                
                 HStack {
                     IconView(named: "Wallet filled big")
-                    IconView(named: "foundation75")
-                    IconView(named: "foundation150")
-                    IconView(named: "foundation300")
+                    IconView(named: "seedplate75")
+                    IconView(named: "seedplate150")
+                    IconView(named: "seedplate300")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Wallet filled big")
-                    IconView(named: "cardwallet75")
-                    IconView(named: "cardwallet150")
-                    IconView(named: "cardwallet300")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
                 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())

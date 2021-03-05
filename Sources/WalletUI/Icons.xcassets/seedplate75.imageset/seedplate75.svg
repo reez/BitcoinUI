@@ -1,0 +1,22 @@
+<svg width="120" height="75" viewBox="0 0 120 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="118" height="73" rx="1.5" stroke="black" stroke-width="2"/>
+<g opacity="0.25">
+<line y1="11" x2="120" y2="11" stroke="black" stroke-width="2"/>
+<line y1="20" x2="120" y2="20" stroke="black" stroke-width="2"/>
+<line y1="29" x2="120" y2="29" stroke="black" stroke-width="2"/>
+<line y1="38" x2="120" y2="38" stroke="black" stroke-width="2"/>
+<line y1="47" x2="120" y2="47" stroke="black" stroke-width="2"/>
+<line y1="56" x2="120" y2="56" stroke="black" stroke-width="2"/>
+<line y1="65" x2="120" y2="65" stroke="black" stroke-width="2"/>
+<line x1="18" y1="4.37114e-08" x2="18" y2="75" stroke="black" stroke-width="2"/>
+<line x1="28" y1="10" x2="28" y2="75" stroke="black" stroke-width="2"/>
+<line x1="38" y1="10" x2="38" y2="75" stroke="black" stroke-width="2"/>
+<line x1="48" y1="4.37114e-08" x2="48" y2="75" stroke="black" stroke-width="2"/>
+<line x1="58" y1="10" x2="58" y2="75" stroke="black" stroke-width="2"/>
+<line x1="68" y1="10" x2="68" y2="75" stroke="black" stroke-width="2"/>
+<line x1="78" y1="4.37114e-08" x2="78" y2="75" stroke="black" stroke-width="2"/>
+<line x1="88" y1="10" x2="88" y2="75" stroke="black" stroke-width="2"/>
+<line x1="98" y1="10" x2="98" y2="75" stroke="black" stroke-width="2"/>
+<line x1="108" y1="4.37114e-08" x2="108" y2="75" stroke="black" stroke-width="2"/>
+</g>
+</svg>
