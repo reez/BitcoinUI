@@ -169,11 +169,20 @@ struct IconsView: View {
 //                .padding(.horizontal, .wallet_grid_horizontal_10())
 //                .padding(.vertical, .wallet_grid_vertical_20())
                 
+//                HStack {
+//                    IconView(named: "ledgernano75")
+//                    IconView(named: "ledgernano112")
+//                    IconView(named: "ledgernano150")
+//                    IconView(named: "ledgernano300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+                
                 HStack {
-                    IconView(named: "ledgernano75")
-                    IconView(named: "ledgernano112")
-                    IconView(named: "ledgernano150")
-                    IconView(named: "ledgernano300")
+                    IconView(named: "Wallet filled big")
+                    IconView(named: "hardwarewallet75")
+                    IconView(named: "hardwarewallet112")
+                    IconView(named: "hardwarewallet150")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())

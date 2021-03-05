@@ -1,0 +1,6 @@
+<svg width="75" height="113" viewBox="0 0 75 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="42.25" y="69" width="24.25" height="9.25" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<rect x="8.5" y="69" width="24.25" height="9.25" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<rect x="8.5" y="16.5" width="58" height="43" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
+<path d="M11.25 2.5H63.75V-1.5H11.25V2.5ZM73 11.75V101.75H77V11.75H73ZM63.75 111H11.25V115H63.75V111ZM2 101.75V11.75H-2V101.75H2ZM11.25 111C6.14136 111 2 106.859 2 101.75H-2C-2 109.068 3.93223 115 11.25 115V111ZM73 101.75C73 106.859 68.8586 111 63.75 111V115C71.0678 115 77 109.068 77 101.75H73ZM63.75 2.5C68.8586 2.5 73 6.64137 73 11.75H77C77 4.43223 71.0678 -1.5 63.75 -1.5V2.5ZM11.25 -1.5C3.93223 -1.5 -2 4.43223 -2 11.75H2C2 6.64137 6.14137 2.5 11.25 2.5V-1.5Z" fill="black"/>
+</svg>
