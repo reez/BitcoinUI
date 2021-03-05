@@ -96,41 +96,52 @@ struct IconsView: View {
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "jade75")
+//                    IconView(named: "jade150")
+//                    IconView(named: "jade300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+//
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "bitbox75")
+//                    IconView(named: "bitbox150")
+//                    IconView(named: "bitbox300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+//
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "keepkey75")
+//                    IconView(named: "keepkey150")
+//                    IconView(named: "keepkey300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+//
+//                HStack {
+//                    IconView(named: "Wallet filled big")
+//                    IconView(named: "paperwallet75")
+//                    IconView(named: "paperwallet150")
+//                    IconView(named: "paperwallet300")
+//                }
+//                .padding(.horizontal, .wallet_grid_horizontal_10())
+//                .padding(.vertical, .wallet_grid_vertical_20())
+                
                 HStack {
                     IconView(named: "Wallet filled big")
-                    IconView(named: "jade75")
-                    IconView(named: "jade150")
-                    IconView(named: "jade300")
+                    IconView(named: "foundation75")
+                    IconView(named: "foundation150")
+                    IconView(named: "foundation300")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
-                HStack {
-                    IconView(named: "Wallet filled big")
-                    IconView(named: "bitbox75")
-                    IconView(named: "bitbox150")
-                    IconView(named: "bitbox300")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
                 
-                HStack {
-                    IconView(named: "Wallet filled big")
-                    IconView(named: "keepkey75")
-                    IconView(named: "keepkey150")
-                    IconView(named: "keepkey300")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "Wallet filled big")
-                    IconView(named: "paperwallet75")
-                    IconView(named: "paperwallet150")
-                    IconView(named: "paperwallet300")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
                 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
