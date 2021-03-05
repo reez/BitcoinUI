@@ -105,6 +105,15 @@ struct IconsView: View {
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
+                HStack {
+                    IconView(named: "Wallet filled big")
+                    IconView(named: "bitbox75")
+                    IconView(named: "bitbox150")
+                    IconView(named: "bitbox300")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
