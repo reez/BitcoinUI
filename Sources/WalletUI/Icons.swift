@@ -140,7 +140,7 @@ struct IconsView: View {
 //                }
 //                .padding(.horizontal, .wallet_grid_horizontal_10())
 //                .padding(.vertical, .wallet_grid_vertical_20())
-//                
+//
 //                HStack {
 //                    IconView(named: "Wallet filled big")
 //                    IconView(named: "cardwallet75")
@@ -158,6 +158,18 @@ struct IconsView: View {
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
+                
+                
+                HStack {
+                    IconView(named: "trezorone75")
+                    IconView(named: "trezorone112")
+                    IconView(named: "trezorone150")
+                    IconView(named: "trezorone300")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                
                 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
