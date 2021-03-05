@@ -114,6 +114,15 @@ struct IconsView: View {
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
+                HStack {
+                    IconView(named: "Wallet filled big")
+                    IconView(named: "keepkey75")
+                    IconView(named: "keepkey150")
+                    IconView(named: "keepkey300")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
