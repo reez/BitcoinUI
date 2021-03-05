@@ -61,15 +61,6 @@ struct IconsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "cobo75")
-                    IconView(named: "cobo150")
-                    IconView(named: "coldcard75")
-                    IconView(named: "coldcard150")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
                     IconView(named: "dots-group")
                     IconView(named: "Double bed filled")
                     IconView(named: "Github")
@@ -88,107 +79,32 @@ struct IconsView: View {
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Wallet filled big")
                     IconView(named: "trezort75")
-                    IconView(named: "trezort150")
-                    IconView(named: "trezort300")
+                    IconView(named: "jade75")
+                    IconView(named: "bitbox75")
+                    IconView(named: "paperwallet75")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
-                
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "jade75")
-//                    IconView(named: "jade150")
-//                    IconView(named: "jade300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-//
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "bitbox75")
-//                    IconView(named: "bitbox150")
-//                    IconView(named: "bitbox300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-//
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "keepkey75")
-//                    IconView(named: "keepkey150")
-//                    IconView(named: "keepkey300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-//
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "paperwallet75")
-//                    IconView(named: "paperwallet150")
-//                    IconView(named: "paperwallet300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-                
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "foundation75")
-//                    IconView(named: "foundation150")
-//                    IconView(named: "foundation300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-//
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "cardwallet75")
-//                    IconView(named: "cardwallet150")
-//                    IconView(named: "cardwallet300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-                                
-//                HStack {
-//                    IconView(named: "Wallet filled big")
-//                    IconView(named: "seedplate75")
-//                    IconView(named: "seedplate150")
-//                    IconView(named: "seedplate300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                
-//                HStack {
-//                    IconView(named: "trezorone75")
-//                    IconView(named: "trezorone112")
-//                    IconView(named: "trezorone150")
-//                    IconView(named: "trezorone300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
-                
-//                HStack {
-//                    IconView(named: "ledgernano75")
-//                    IconView(named: "ledgernano112")
-//                    IconView(named: "ledgernano150")
-//                    IconView(named: "ledgernano300")
-//                }
-//                .padding(.horizontal, .wallet_grid_horizontal_10())
-//                .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Wallet filled big")
-                    IconView(named: "hardwarewallet75")
-                    IconView(named: "hardwarewallet112")
-                    IconView(named: "hardwarewallet150")
+                    IconView(named: "foundation75")
+                    IconView(named: "cardwallet75")
+                    IconView(named: "seedplate75")
+                    IconView(named: "trezorone75")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
-                
-                
+                HStack {
+                    IconView(named: "ledgernano75")
+                    IconView(named: "keepkey75")
+                    IconView(named: "coldcard75")
+                    IconView(named: "cobo75")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                                
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
             .padding(.vertical, .wallet_grid_vertical_20())
