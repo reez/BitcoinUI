@@ -187,9 +187,9 @@ struct MMCoboImport3: View {
                 VStack(spacing: 5.0) {
                     Text("xpub6DE1bvvTaMkDaAghedChtufg3rDPeYdWt9sM5iTwBVYe9X6bmLenQrSexSa1qDscYtidSMUEo9u7TuXg48Y3hBXzUaEToH1rVgvif")
                         .font(.title3)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .foregroundColor(Color(UIColor.gray))
                         .padding()
-                        .background(Color(UIColor.bitcoinNeutral2))
+                        .background(Color(UIColor.systemGray6))
                         .cornerRadius(5)
                         .multilineTextAlignment(.center)
                 }
