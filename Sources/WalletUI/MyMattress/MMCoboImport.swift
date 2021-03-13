@@ -1,5 +1,5 @@
 //
-//  MMColdcardImport.swift
+//  MMCoboImport.swift
 //  
 //
 //  Created by Matthew Ramsden on 3/13/21.
@@ -9,7 +9,7 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-struct MMColdcardImport0: View {
+struct MMCoboImport0: View {
     var body: some View {
         
         ZStack {
@@ -24,16 +24,14 @@ struct MMColdcardImport0: View {
                         .foregroundColor(Color(UIColor.label))
                         .multilineTextAlignment(.center)
                     
-                    Text("Make sure you have a Coldcard device and a Lightning SD Card adapter for your iPhone at hand.")
+                    Text("Make sure you have a Cobo Vault device at hand.")
                         .font(.title3)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
                 }
                 
                 HStack(spacing: 20.0) {
-                    BitcoinImage(named: "coldcard150")
-                        .foregroundColor(Color(UIColor.label))
-                    BitcoinImage(named: "lightning-sd-card-adapter150")
+                    BitcoinImage(named: "cobo150")
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -64,7 +62,7 @@ struct MMColdcardImport0: View {
     }
 }
 
-struct MMColdcardImport1: View {
+struct MMCoboImport1: View {
     var body: some View {
         
         ZStack {
@@ -78,34 +76,37 @@ struct MMColdcardImport1: View {
                 }
                 
                 VStack(spacing: 5.0) {
-                    Text("On your Coldcard...")
+                    Text("On your Cobo Vault...")
                         .bold()
                         .font(.title)
                         .foregroundColor(Color(UIColor.label))
                         .multilineTextAlignment(.center)
                     
-                    Text("Export your master public key")
+                    Text("Display your master public key:")
                         .font(.title3)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
                 }
                 
                 VStack(spacing: 5.0) {
-                    Text("- Settings")
+                    Text("- Choose multisig in the main menu")
                         .font(.caption)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
-                    Text("- Multisig wallet")
+                    Text("- Tap the three dots in the top-right")
                         .font(.caption)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
-                    Text("- Export XPUB")
+                    Text("- Tap “Show/Export XPUB")
                         .font(.caption)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
                 }
                 
-
+                Text("In the next step, you will scan the QR code to copy the key.")
+                    .font(.caption)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .multilineTextAlignment(.center)
                 
                 Spacer()
                 
@@ -134,67 +135,18 @@ struct MMColdcardImport1: View {
     }
 }
 
-struct MMColdcardImport2: View {
+struct MMCoboImport2: View {
     var body: some View {
         
         ZStack {
-            Color(UIColor.systemBackground)
+            Color(UIColor.black)
             
             VStack(spacing: 20.0) {
-                
-                HStack {
-                    BitcoinImage(named: "sd-card75")
-                        .foregroundColor(Color(UIColor.label))
-                }
-                
-                VStack(spacing: 5.0) {
-                    Text("Connect your SD card")
-                        .bold()
-                        .font(.title)
-                        .foregroundColor(Color(UIColor.label))
-                        .multilineTextAlignment(.center)
-                    
-                    Text("Remove the SD card from your Coldcard and connect it to your phone via the adapter.")
-                        .font(.title3)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.bottom)
-
-                ProgressView()
-                    .padding(.top, .wallet_grid_vertical_20())
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(x: 2.0, y: 2.0, anchor: .leading)
-                
-                VStack(spacing: 5.0) {
-
-                    Text("Looking for SD card...")
-                        .font(.title3)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.top)
-                
-                Spacer()
-                
-                Button(action: {}) {
-                    Text("Continue")
-                        .padding(.horizontal, .wallet_grid_horizontal_10())
-                        .padding(.vertical, .wallet_grid_vertical_20())
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinNeutral4))
-                        .cornerRadius(5.0)
-
-                }
-                
+                Image(systemName: "viewfinder")
+                    .padding(.top)
+                    .font(.system(size: 200))
+                    .foregroundColor(.white)
             }
-            .padding(.horizontal, .wallet_grid_horizontal_10())
-            .padding(.vertical, .wallet_grid_vertical_20())
-            .padding(.horizontal, .wallet_grid_horizontal_10())
-            .padding(.vertical, .wallet_grid_vertical_20())
-            .padding(.horizontal, .wallet_grid_horizontal_10())
-            .padding(.vertical, .wallet_grid_vertical_20())
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -202,7 +154,9 @@ struct MMColdcardImport2: View {
     }
 }
 
-struct MMColdcardImport3: View {
+
+
+struct MMCoboImport3: View {
     var body: some View {
         
         ZStack {
@@ -210,25 +164,6 @@ struct MMColdcardImport3: View {
             
             VStack(spacing: 20.0) {
                 
-                HStack {
-                    BitcoinImage(named: "sd-card75")
-                        .foregroundColor(Color(UIColor.label))
-                }
-                
-                VStack(spacing: 5.0) {
-                    Text("Connect your SD card")
-                        .bold()
-                        .font(.title)
-                        .foregroundColor(Color(UIColor.label))
-                        .multilineTextAlignment(.center)
-                    
-                    Text("Remove the SD card from your Coldcard and connect it to your phone via the adapter.")
-                        .font(.title3)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.bottom)
-
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
                     Image(systemName: "checkmark")
@@ -237,17 +172,35 @@ struct MMColdcardImport3: View {
                 
                 VStack(spacing: 5.0) {
 
-                    Text("Success")
+                    Text("Key Copied")
+                        .font(.title3).bold()
+                        .foregroundColor(Color(UIColor.label))
+                        .multilineTextAlignment(.center)
+                    
+                    Text("The following key was read from the QR code.")
                         .font(.title3)
                         .foregroundColor(Color(UIColor.secondaryLabel))
                         .multilineTextAlignment(.center)
                 }
                 .padding(.top)
                 
+                VStack(spacing: 5.0) {
+                    Text("xpub6DE1bvvTaMkDaAghedChtufg3rDPeYdWt9sM5iTwBVYe9X6bmLenQrSexSa1qDscYtidSMUEo9u7TuXg48Y3hBXzUaEToH1rVgvif")
+                        .font(.title3)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                        .padding()
+                        .background(Color(UIColor.bitcoinNeutral2))
+                        .cornerRadius(5)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(.top)
+
+
+                
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("Continue")
+                    Text("Looks good")
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
@@ -272,23 +225,23 @@ struct MMColdcardImport3: View {
 }
 
 
-struct MMColdcardImport_Previews: PreviewProvider {
+struct MMCoboImport_Previews: PreviewProvider {
     static var previews: some View {
-        MMColdcardImport0()
+        MMCoboImport0()
             .environment(\.colorScheme, .light)
-        MMColdcardImport0()
+        MMCoboImport0()
             .environment(\.colorScheme, .dark)
-        MMColdcardImport1()
+        MMCoboImport1()
             .environment(\.colorScheme, .light)
-        MMColdcardImport1()
+        MMCoboImport1()
             .environment(\.colorScheme, .dark)
-        MMColdcardImport2()
+        MMCoboImport2()
             .environment(\.colorScheme, .light)
-        MMColdcardImport2()
+        MMCoboImport2()
             .environment(\.colorScheme, .dark)
-        MMColdcardImport3()
+        MMCoboImport3()
             .environment(\.colorScheme, .light)
-        MMColdcardImport3()
+        MMCoboImport3()
             .environment(\.colorScheme, .dark)
     }
 }
