@@ -1,5 +1,5 @@
 //
-//  MMDoubleBedSetupView.swift
+//  MMDoubleBedIntroView.swift
 //  
 //
 //  Created by Matthew Ramsden on 2/11/21.
@@ -420,8 +420,7 @@ struct MMDoubleBedDevice2View: View {
     }
 }
 
-
-struct MMDoubleBedSetupView_Previews: PreviewProvider {
+struct MMDoubleBedIntroView_Previews: PreviewProvider {
     static var previews: some View {
         MMDoubleBedIntroView()
             .environment(\.colorScheme, .light)
