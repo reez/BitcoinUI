@@ -51,7 +51,7 @@ struct MMMultisigSendAmountView: View {
                     .padding(.bottom)
                 
                 HStack {
-
+                    
                     Text("Balance:")
                         .font(.callout)
                         .foregroundColor(Color(UIColor.secondaryLabel))
@@ -63,7 +63,7 @@ struct MMMultisigSendAmountView: View {
                 }
                 
                 Spacer()
-                                
+                
                 VStack(alignment: .center) {
                     HStack {
                         NumberButtonView(number: "1", letters: "aaa", numberIsHidden: false, letterIsHidden: true)
@@ -134,7 +134,7 @@ struct MMMultisigSendAmountView: View {
                         .foregroundColor(.white)
                         .background(Color(UIColor.bitcoinOrange))
                         .cornerRadius(5.0)
-
+                    
                 }
                 
             }
@@ -168,7 +168,7 @@ struct MMMultisigSendFeeView: View {
                 .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-
+                    
                     VStack(alignment: .leading) {
                         Text("Fast")
                             .font(.body)
@@ -199,7 +199,7 @@ struct MMMultisigSendFeeView: View {
                 .padding(.all)
                 
                 HStack {
-
+                    
                     VStack(alignment: .leading) {
                         Text("Medium")
                             .font(.body)
@@ -230,7 +230,7 @@ struct MMMultisigSendFeeView: View {
                 .padding(.all)
                 
                 HStack {
-
+                    
                     VStack(alignment: .leading) {
                         Text("Slow")
                             .font(.body)
@@ -389,7 +389,130 @@ struct MMMultisigSendSettingsView: View {
     }
 }
 
-
+struct MMMultisigSendCreationView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
+            VStack(spacing: 20.0) {
+                
+                ZStack {
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Image(systemName: "checkmark")
+                        .foregroundColor(Color(UIColor.systemBackground))
+                }
+                
+                VStack(spacing: 5.0) {
+                    Text("Send this transaction?")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(Color(UIColor.label))
+                        .multilineTextAlignment(.center)
+                }
+                
+                VStack {
+                    Rectangle()
+                        .frame(height: 1.0)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                    
+                    HStack(spacing: 5.0) {
+                        Text("To")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.center)
+                        
+                        Spacer()
+                        
+                        Text("3LaQ yFGJ 82tf XNdm jL23 7J6X dvhx RrNf kY")
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.trailing)
+                    }
+                    .padding(.top)
+                    
+                    Rectangle()
+                        .frame(height: 1.0)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                    HStack(spacing: 5.0) {
+                        Text("Amount")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.center)
+                        
+                        Spacer()
+                        
+                        Text("₿0.35651816")
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.trailing)
+                    }
+                    .padding(.vertical)
+                    
+                    Rectangle()
+                        .frame(height: 1.0)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                    
+                    HStack(spacing: 5.0) {
+                        Text("Fee")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.center)
+                        
+                        Spacer()
+                        
+                        Text("₿0.00000987")
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.label))
+                            .multilineTextAlignment(.trailing)
+                    }
+                    .padding(.top)
+                    
+                    Rectangle()
+                        .frame(height: 1.0)
+                        .foregroundColor(Color(UIColor.secondaryLabel))
+                    
+                    HStack(spacing: 5.0) {
+                        Text("Add description...")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                    .padding(.top)
+                    
+                }
+                
+                Spacer()
+                
+                Button(action: {}) {
+                    Text("Send it")
+                        .padding(.horizontal, .wallet_grid_horizontal_10())
+                        .padding(.vertical, .wallet_grid_vertical_20())
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor.orange))
+                        .cornerRadius(5.0)
+                    
+                }
+                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
 
 struct MMMultisigSendView_Previews: PreviewProvider {
     static var previews: some View {
@@ -409,6 +532,10 @@ struct MMMultisigSendView_Previews: PreviewProvider {
             MMMultisigSendSettingsView()
                 .environment(\.colorScheme, .light)
             MMMultisigSendSettingsView()
+                .environment(\.colorScheme, .dark)
+            MMMultisigSendCreationView()
+                .environment(\.colorScheme, .light)
+            MMMultisigSendCreationView()
                 .environment(\.colorScheme, .dark)
         }
     }
