@@ -9,12 +9,6 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-struct MMMultisigCoboImport: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
 struct MMMultisigCoboImport0: View {
     var body: some View {
         
