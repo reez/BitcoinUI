@@ -314,12 +314,12 @@ struct MMMultisigCoboImport3: View {
                 Spacer()
                 
                 Button(action: {}) {
-                    Text("Share")
+                    Text("Continue")
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinMyMattress))
+                        .background(Color(UIColor.bitcoinOrange))
                         .cornerRadius(5.0)
 
                 }

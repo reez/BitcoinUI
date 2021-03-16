@@ -342,6 +342,7 @@ struct MMMultisigColdcardImport4: View {
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.purple))
                     Image(systemName: "checkmark")
+                        .foregroundColor(Color(UIColor.systemBackground))
                 }
                 .padding(.top, .wallet_grid_vertical_20())
                 
