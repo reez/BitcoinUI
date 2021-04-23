@@ -11,6 +11,9 @@ Bitcoin Wallet UI Kit:
 Bitcoin Wallet UI Kit Hardware+Accessories:
 - [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
 
+Bitcoin Hardware Illustrations:
+- [GitHub](https://github.com/GBKS/bitcoin-hardware-illustrations)
+
 [Elements](#elements)<br>
 [Basic Usage](#basic-usage)<br>
 [Examples](#examples)<br>
