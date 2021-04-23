@@ -106,7 +106,7 @@ struct MMDoubleBedWarningView: View {
                 
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
-                    BitcoinImage(named: "Wallet filled big")
+                    BitcoinImage(named: "wallet-filled-big")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
                 }

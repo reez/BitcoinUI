@@ -168,7 +168,7 @@ struct MMHomeMultisigView: View {
 
                 Spacer()
 
-                BitcoinImage(named: "Triple bed big filled")
+                BitcoinImage(named: "triple-bed-big-filled")
 
                 VStack(spacing: 5.0) {
                     Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))

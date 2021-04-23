@@ -73,7 +73,7 @@ struct IconsView: View {
                     IconView(named: "single-bed-big")
                     IconView(named: "singlebedsettings-group")
                     IconView(named: "switchtriple-group")
-                    IconView(named: "Triple bed big filled")
+                    IconView(named: "triple-bed-big-filled")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
