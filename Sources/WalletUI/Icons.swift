@@ -89,7 +89,7 @@ struct IconsView: View {
                 
                 HStack {
                     IconView(named: "foundation75")
-                    IconView(named: "cardwallet75")
+                    IconView(named: "cardwallet")
                     IconView(named: "seedplate75")
                     IconView(named: "trezorone75")
                 }
