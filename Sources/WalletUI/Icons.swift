@@ -91,7 +91,7 @@ struct IconsView: View {
                     IconView(named: "foundation")
                     IconView(named: "cardwallet")
                     IconView(named: "seedplate")
-                    IconView(named: "trezorone75")
+                    IconView(named: "trezor-one")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
