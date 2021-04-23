@@ -97,7 +97,7 @@ struct IconsView: View {
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "ledgernano75")
+                    IconView(named: "ledger-nano")
                     IconView(named: "keepkey")
                     IconView(named: "coldcard75")
                     IconView(named: "cobo-vault")

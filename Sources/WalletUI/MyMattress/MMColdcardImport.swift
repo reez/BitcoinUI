@@ -33,7 +33,10 @@ struct MMColdcardImport0: View {
                 HStack(spacing: 20.0) {
                     BitcoinImage(named: "coldcard150")
                         .foregroundColor(Color(UIColor.label))
-                    BitcoinImage(named: "lightning-sd-card-adapter150")
+                    BitcoinImage(named: "lightning-sd-card-adapter")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
