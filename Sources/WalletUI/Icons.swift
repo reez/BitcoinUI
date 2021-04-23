@@ -79,7 +79,7 @@ struct IconsView: View {
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "trezort75")
+                    IconView(named: "trezor-model-t")
                     IconView(named: "blockstream-jade")
                     IconView(named: "bitbox")
                     IconView(named: "generic-paper-wallet")
