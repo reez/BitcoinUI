@@ -106,11 +106,14 @@ struct MMMultisigRecoverySettings1View: View {
                     Button(action: {}) {
                         
                         HStack {
-                            
-                            BitcoinImage(named: "cobo75")
-                                .padding(.horizontal, 5.0)
+                                                    
+                            BitcoinImage(named: "cobo-vault")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .foregroundColor(Color(UIColor.label))
-                            
+                                .padding(.horizontal, 5.0)
+
                             VStack(alignment: .leading) {
                                 Text("Key 3")
                                     .font(.body)

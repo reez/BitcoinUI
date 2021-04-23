@@ -31,7 +31,10 @@ struct MMCoboImport0: View {
                 }
                 
                 HStack(spacing: 20.0) {
-                    BitcoinImage(named: "cobo150")
+                    BitcoinImage(named: "cobo-vault")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 

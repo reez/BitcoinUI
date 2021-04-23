@@ -65,9 +65,10 @@ label.textColor = .bitcoinOrange
 SwiftUI
 
 ```swift
-BitcoinImage(named: "Github")
+BitcoinImage(named: "cobo-vault")
     .resizable()
     .aspectRatio(contentMode: .fit)
+    .frame(height: 75.0)
 ```
 
 UIKit

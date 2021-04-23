@@ -65,7 +65,10 @@ struct MMDoubleBedDevice3View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo75")
+                            BitcoinImage(named: "cobo-vault")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {
@@ -223,8 +226,12 @@ struct MMDoubleBedDeviceReviewView: View {
                     Button(action: {}) {
                         
                         HStack {
-                                
-                            BitcoinImage(named: "cobo75")
+                            
+                            BitcoinImage(named: "cobo-vault")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
+                                .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {
                                 Text("Key 3")

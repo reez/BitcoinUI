@@ -340,7 +340,10 @@ struct MMMultisigSendSettingsView: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "cobo75")
+                            BitcoinImage(named: "cobo-vault")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {

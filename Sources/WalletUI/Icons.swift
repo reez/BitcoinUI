@@ -100,7 +100,7 @@ struct IconsView: View {
                     IconView(named: "ledgernano75")
                     IconView(named: "keepkey75")
                     IconView(named: "coldcard75")
-                    IconView(named: "cobo75")
+                    IconView(named: "cobo-vault")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
