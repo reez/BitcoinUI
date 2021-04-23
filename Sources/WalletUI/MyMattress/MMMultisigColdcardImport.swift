@@ -18,7 +18,10 @@ struct MMMultisigColdcardImport0: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -129,7 +132,10 @@ struct MMMultisigColdcardImport1: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -260,7 +266,10 @@ struct MMMultisigColdcardImport3: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -322,7 +331,10 @@ struct MMMultisigColdcardImport4: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
