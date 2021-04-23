@@ -80,7 +80,7 @@ struct IconsView: View {
                 
                 HStack {
                     IconView(named: "trezort75")
-                    IconView(named: "jade75")
+                    IconView(named: "blockstream-jade")
                     IconView(named: "bitbox")
                     IconView(named: "paperwallet75")
                 }
@@ -98,7 +98,7 @@ struct IconsView: View {
                 
                 HStack {
                     IconView(named: "ledgernano75")
-                    IconView(named: "keepkey75")
+                    IconView(named: "keepkey")
                     IconView(named: "coldcard75")
                     IconView(named: "cobo-vault")
                 }
