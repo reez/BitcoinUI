@@ -82,7 +82,7 @@ struct IconsView: View {
                     IconView(named: "trezort75")
                     IconView(named: "blockstream-jade")
                     IconView(named: "bitbox")
-                    IconView(named: "paperwallet75")
+                    IconView(named: "generic-paper-wallet")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
