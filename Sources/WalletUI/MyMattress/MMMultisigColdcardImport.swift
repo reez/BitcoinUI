@@ -197,7 +197,10 @@ struct MMMultisigColdcardImport2: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "coldcard75")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 

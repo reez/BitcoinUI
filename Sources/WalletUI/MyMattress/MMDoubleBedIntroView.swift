@@ -60,7 +60,10 @@ struct MMDoubleBedIntroView: View {
                 }
                 
                 HStack(spacing: 20.0) {
-                    BitcoinImage(named: "coldcard150")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.systemBackground))
                     BitcoinImage(named: "cobo-vault")
                         .resizable()
@@ -342,7 +345,10 @@ struct MMDoubleBedDevice2View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "coldcard75")
+                            BitcoinImage(named: "coldcard")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {

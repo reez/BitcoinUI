@@ -31,7 +31,10 @@ struct MMColdcardImport0: View {
                 }
                 
                 HStack(spacing: 20.0) {
-                    BitcoinImage(named: "coldcard150")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.label))
                     BitcoinImage(named: "lightning-sd-card-adapter")
                         .resizable()
@@ -76,7 +79,10 @@ struct MMColdcardImport1: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "coldcard75")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 

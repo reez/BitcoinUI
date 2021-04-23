@@ -72,7 +72,10 @@ struct MMMultisigRecoverySettings1View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "coldcard75")
+                            BitcoinImage(named: "coldcard")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .padding(.horizontal, 5.0)
                                 .foregroundColor(Color(UIColor.label))
                             

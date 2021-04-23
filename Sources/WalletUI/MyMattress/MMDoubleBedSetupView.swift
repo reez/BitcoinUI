@@ -33,7 +33,10 @@ struct MMDoubleBedDevice3View: View {
                         
                         HStack {
                             
-                            BitcoinImage(named: "coldcard75")
+                            BitcoinImage(named: "coldcard")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 75.0)
                                 .foregroundColor(Color(UIColor.label))
                             
                             VStack(alignment: .leading) {
@@ -195,7 +198,7 @@ struct MMDoubleBedDeviceReviewView: View {
                         
                         HStack {
                                                             
-                            BitcoinImage(named: "coldcard75")
+                            BitcoinImage(named: "coldcard")
                             
                             VStack(alignment: .leading) {
                                 Text("Key 2")
