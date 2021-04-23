@@ -61,46 +61,37 @@ struct IconsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "dots-group")
-                    IconView(named: "double-bed-filled")
-                    IconView(named: "") // was github
-                    IconView(named: "mattress")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "single-bed-big")
-                    IconView(named: "singlebedsettings-group")
-                    IconView(named: "switchtriple-group")
-                    IconView(named: "triple-bed-big-filled")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "trezor-model-t")
-                    IconView(named: "blockstream-jade")
                     IconView(named: "bitbox")
-                    IconView(named: "generic-paper-wallet")
-                }
-                .padding(.horizontal, .wallet_grid_horizontal_10())
-                .padding(.vertical, .wallet_grid_vertical_20())
-                
-                HStack {
-                    IconView(named: "foundation")
+                    IconView(named: "blockstream-jade")
                     IconView(named: "cardwallet")
-                    IconView(named: "seedplate")
-                    IconView(named: "trezor-one")
+                    IconView(named: "cobo-vault")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "ledger-nano")
-                    IconView(named: "keepkey")
                     IconView(named: "coldcard")
-                    IconView(named: "cobo-vault")
+                    IconView(named: "cypherwheel")
+                    IconView(named: "foundation-passport")
+                    IconView(named: "generic-hardware-wallet")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "generic-paper-wallet")
+                    IconView(named: "keepkey")
+                    IconView(named: "ledger-nano")
+                    IconView(named: "opendime")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "satochip")
+                    IconView(named: "seedplate")
+                    IconView(named: "trezor-model-t")
+                    IconView(named: "trezor-one")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
