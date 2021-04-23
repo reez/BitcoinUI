@@ -19,7 +19,7 @@ struct MMDoubleBedIntroView: View {
                 
                 ZStack {
                     Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
-                    BitcoinImage(named: "Double bed filled")
+                    BitcoinImage(named: "double-bed-filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
                 }

@@ -62,7 +62,7 @@ struct IconsView: View {
                 
                 HStack {
                     IconView(named: "dots-group")
-                    IconView(named: "Double bed filled")
+                    IconView(named: "double-bed-filled")
                     IconView(named: "Github")
                     IconView(named: "mattress")
                 }
