@@ -81,7 +81,7 @@ struct IconsView: View {
                 HStack {
                     IconView(named: "trezort75")
                     IconView(named: "jade75")
-                    IconView(named: "bitbox75")
+                    IconView(named: "bitbox")
                     IconView(named: "paperwallet75")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
