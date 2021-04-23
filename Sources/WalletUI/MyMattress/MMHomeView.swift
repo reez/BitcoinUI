@@ -90,7 +90,7 @@ struct MMHomeSimplifiedView: View {
                 
                 Spacer()
                 
-                BitcoinImage(named: "Single bed big")
+                BitcoinImage(named: "single-bed-big")
                 
                 VStack(spacing: 5.0) {
                     Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))
@@ -246,7 +246,7 @@ struct MMHomeMessageView: View {
                 
                 Spacer()
                 
-                BitcoinImage(named: "Single bed big")
+                BitcoinImage(named: "single-bed-big")
                 
                 VStack(spacing: 5.0) {
                     Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))

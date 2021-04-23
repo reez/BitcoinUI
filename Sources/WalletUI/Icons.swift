@@ -70,7 +70,7 @@ struct IconsView: View {
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Single bed big")
+                    IconView(named: "single-bed-big")
                     IconView(named: "singlebedsettings-group")
                     IconView(named: "switchtriple-group")
                     IconView(named: "Triple bed big filled")
