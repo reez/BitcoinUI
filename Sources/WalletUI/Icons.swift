@@ -63,7 +63,7 @@ struct IconsView: View {
                 HStack {
                     IconView(named: "dots-group")
                     IconView(named: "double-bed-filled")
-                    IconView(named: "Github")
+                    IconView(named: "") // was github
                     IconView(named: "mattress")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())

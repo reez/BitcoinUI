@@ -74,7 +74,7 @@ BitcoinImage(named: "cobo-vault")
 UIKit
 
 ```swift
-let image = BitcoinUIImage(named: "Github")
+let image = BitcoinUIImage(named: "cobo-vault")
 let imageView = UIImageView(image: image)
 imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
 view.addSubview(imageView)
