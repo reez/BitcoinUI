@@ -67,9 +67,9 @@ Implementation examples for SwiftUI and UIKit.
 
 SwiftUI
 ```swift
-Text("Neutral 5")
+Text("Bitcoin Orange")
     .font(.caption)
-    .foregroundColor(Color(UIColor.bitcoinNeutral5))
+    .foregroundColor(Color(UIColor.bitcoinOrange))
     .multilineTextAlignment(.center)
 ```
 
@@ -77,8 +77,8 @@ UIKit
 
 ```swift
 let label = UILabel()
-label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
-label.text = "Wallet"
+label.frame = CGRect(x: 200, y: 200, width: 200, height: 20)
+label.text = "Bitcoin Orange"
 label.textColor = .bitcoinOrange
 ```
 
@@ -98,7 +98,7 @@ UIKit
 ```swift
 let image = BitcoinUIImage(named: "coldcard")
 let imageView = UIImageView(image: image)
-imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
 view.addSubview(imageView)
 ```
 
