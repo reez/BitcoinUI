@@ -1,6 +1,6 @@
 # WalletUI
 
-An iOS implementation of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)), with example code implementations via Swift Previews.
+An iOS implementation of Bitcoin Wallet UI Kit, with example code implementations via Swift Previews.
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
@@ -8,11 +8,14 @@ Bitcoin Wallet UI Kit:
 - [Figma](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
 - [GitHub](https://github.com/GBKS/bitcoin-design/blob/main/bitcoin-wallet-ui-kit.md)
 
-Bitcoin Wallet UI Kit Hardware+Accessories:
-- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
-
 Bitcoin Hardware Illustrations:
+- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
 - [GitHub](https://github.com/GBKS/bitcoin-hardware-illustrations)
+
+Bitcoin Icons:
+- [Figma](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set)
+- [GitHub](https://github.com/BitcoinDesign/Bitcoin-Icons)
+- [Website](https://bitcoinicons.com)
 
 [Elements](#elements)<br>
 [Basic Usage](#basic-usage)<br>
