@@ -10,16 +10,10 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-/// This function returns an Image for a given image name (SwiftUI)
-/// - Parameter named: name of image file
-/// - Returns: Image from resources
 public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
 
-/// This function returns a UIImage for a given image name (UIKit)
-/// - Parameter named: name of image file
-/// - Returns: UIImage from resources
 public func BitcoinUIImage(named: String) -> UIImage {
     return UIImage(named: named, in: .module, compatibleWith: nil)!
 }
@@ -44,14 +38,14 @@ struct IconView: View {
     }
 }
 
-struct IconsView: View {
+struct HardwareIllustrationsView: View {
     var body: some View {
         
         ZStack {
             Color(UIColor.systemBackground)
             
             VStack {
-                Text("Icons")
+                Text("Hardware Illustrations")
                     .underline()
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -61,46 +55,161 @@ struct IconsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "dots-group")
-                    IconView(named: "Double bed filled")
-                    IconView(named: "Github")
-                    IconView(named: "mattress")
+                    IconView(named: "bitbox")
+                    IconView(named: "blockstream-jade")
+                    IconView(named: "cardwallet")
+                    IconView(named: "cobo-vault")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "Single bed big")
-                    IconView(named: "singlebedsettings-group")
-                    IconView(named: "switchtriple-group")
-                    IconView(named: "Triple bed big filled")
+                    IconView(named: "coldcard")
+                    IconView(named: "cypherwheel")
+                    IconView(named: "foundation-passport")
+                    IconView(named: "generic-hardware-wallet")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "trezort75")
-                    IconView(named: "jade75")
-                    IconView(named: "bitbox75")
-                    IconView(named: "paperwallet75")
+                    IconView(named: "generic-paper-wallet")
+                    IconView(named: "keepkey")
+                    IconView(named: "ledger-nano")
+                    IconView(named: "opendime")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "foundation75")
-                    IconView(named: "cardwallet75")
-                    IconView(named: "seedplate75")
-                    IconView(named: "trezorone75")
+                    IconView(named: "satochip")
+                    IconView(named: "seedplate")
+                    IconView(named: "trezor-model-t")
+                    IconView(named: "trezor-one")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+struct BitcoinIconsFilledView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
+            VStack {
+                Text("Icons Filled")
+                    .underline()
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                    .padding(.vertical, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "bitcoin-circle-filled")
+                    IconView(named: "bitcoin-filled")
+                    IconView(named: "block-filled")
+                    IconView(named: "devices-filled")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    IconView(named: "ledgernano75")
-                    IconView(named: "keepkey75")
-                    IconView(named: "coldcard75")
-                    IconView(named: "cobo75")
+                    IconView(named: "key-filled")
+                    IconView(named: "lightning-filled")
+                    IconView(named: "mining-filled")
+                    IconView(named: "mnemonic-filled")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "node-1-connection-filled")
+                    IconView(named: "node-2-connections-filled")
+                    IconView(named: "node-3-connections-filled")
+                    IconView(named: "node-filled")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "node-hardware-filled")
+                    IconView(named: "two-keys-filled")
+                    IconView(named: "wallet-filled")
+                    IconView(named: "")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                                
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+struct BitcoinIconsOutlineView: View {
+    var body: some View {
+        
+        ZStack {
+            Color(UIColor.systemBackground)
+            
+            VStack {
+                Text("Icons Outline")
+                    .underline()
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                    .padding(.vertical, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "bitcoin-circle-outline")
+                    IconView(named: "bitcoin-outline")
+                    IconView(named: "block-outline")
+                    IconView(named: "devices-outline")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "key-outline")
+                    IconView(named: "lightning-outline")
+                    IconView(named: "mining-outline")
+                    IconView(named: "mnemonic-outline")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "node-1-connection-outline")
+                    IconView(named: "node-2-connections-outline")
+                    IconView(named: "node-3-connections-outline")
+                    IconView(named: "node-outline")
+                }
+                .padding(.horizontal, .wallet_grid_horizontal_10())
+                .padding(.vertical, .wallet_grid_vertical_20())
+                
+                HStack {
+                    IconView(named: "node-hardware-outline")
+                    IconView(named: "two-keys-outline")
+                    IconView(named: "wallet-outline")
+                    IconView(named: "")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
@@ -118,9 +227,17 @@ struct IconsView: View {
 struct IconsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IconsView()
+            HardwareIllustrationsView()
                 .environment(\.colorScheme, .light)
-            IconsView()
+            HardwareIllustrationsView()
+                .environment(\.colorScheme, .dark)
+            BitcoinIconsFilledView()
+                .environment(\.colorScheme, .light)
+            BitcoinIconsFilledView()
+                .environment(\.colorScheme, .dark)
+            BitcoinIconsOutlineView()
+                .environment(\.colorScheme, .light)
+            BitcoinIconsOutlineView()
                 .environment(\.colorScheme, .dark)
         }
         

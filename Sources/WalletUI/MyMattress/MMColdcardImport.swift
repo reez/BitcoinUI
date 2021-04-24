@@ -31,9 +31,15 @@ struct MMColdcardImport0: View {
                 }
                 
                 HStack(spacing: 20.0) {
-                    BitcoinImage(named: "coldcard150")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.label))
-                    BitcoinImage(named: "lightning-sd-card-adapter150")
+                    BitcoinImage(named: "lightning-sd-card-adapter")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 150.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -73,7 +79,10 @@ struct MMColdcardImport1: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "coldcard75")
+                    BitcoinImage(named: "coldcard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -143,7 +152,10 @@ struct MMColdcardImport2: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 
@@ -211,7 +223,10 @@ struct MMColdcardImport3: View {
             VStack(spacing: 20.0) {
                 
                 HStack {
-                    BitcoinImage(named: "sd-card75")
+                    BitcoinImage(named: "sd-card")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 75.0)
                         .foregroundColor(Color(UIColor.label))
                 }
                 

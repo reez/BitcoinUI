@@ -1,21 +1,58 @@
 # WalletUI
 
-An iOS implementation of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)), with example code implementations via Swift Previews.
+An iOS implementation of Bitcoin Wallet UI Kit, with example code implementations via Swift Previews.
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
-Bitcoin Wallet UI Kit:
-- [Figma](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
-- [GitHub](https://github.com/GBKS/bitcoin-design/blob/main/bitcoin-wallet-ui-kit.md)
-
-Bitcoin Wallet UI Kit Hardware+Accessories:
-- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
-
-[Elements](#elements)<br>
 [Basic Usage](#basic-usage)<br>
+[Elements](#elements)<br>
 [Examples](#examples)<br>
+[References](#references)<br>
 [Requirements](#requirements)<br>
 [Installation](#installation)<br>
+
+## Basic Usage
+
+Implementation examples for SwiftUI and UIKit.
+
+### Colors
+
+SwiftUI
+```swift
+Text("Bitcoin Orange")
+    .font(.caption)
+    .foregroundColor(Color(UIColor.bitcoinOrange))
+    .multilineTextAlignment(.center)
+```
+
+UIKit
+
+```swift
+let label = UILabel()
+label.frame = CGRect(x: 200, y: 200, width: 200, height: 20)
+label.text = "Bitcoin Orange"
+label.textColor = .bitcoinOrange
+```
+
+### Icons
+
+SwiftUI
+
+```swift
+BitcoinImage(named: "coldcard")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+    .frame(height: 75.0)
+```
+
+UIKit
+
+```swift
+let image = BitcoinUIImage(named: "coldcard")
+let imageView = UIImageView(image: image)
+imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
+view.addSubview(imageView)
+```
 
 ## Elements
 
@@ -29,63 +66,50 @@ Side by side view of code interface and implementation example via Swift Preview
     </a>
 </p>
 
-### Icons
+### Hardware Illustrations
 
 <p align='left'>
-    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-code-preview.png?raw=true' height='400' alt='icons-code-preview' />
+    <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-illustrations-code-preview.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
 
-## Basic Usage
+### Icons Filled
 
-Implementation examples for SwiftUI and UIKit.
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-filled-code-preview.png?raw=true' height='400' alt='icons-filled-code-preview' />
+    </a>
+</p>
 
-### Colors
+### Icons Outline
 
-SwiftUI
-```swift
-Text("Neutral 5")
-    .font(.caption)
-    .foregroundColor(Color(UIColor.bitcoinNeutral5))
-    .multilineTextAlignment(.center)
-```
-
-UIKit
-
-```swift
-let label = UILabel()
-label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
-label.text = "Wallet"
-label.textColor = .bitcoinOrange
-```
-
-### Icons
-
-SwiftUI
-
-```swift
-BitcoinImage(named: "Github")
-    .resizable()
-    .aspectRatio(contentMode: .fit)
-```
-
-UIKit
-
-```swift
-let image = BitcoinUIImage(named: "Github")
-let imageView = UIImageView(image: image)
-imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-view.addSubview(imageView)
-```
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-outline-code-preview.png?raw=true' height='400' alt='icons-outline-code-preview' />
+    </a>
+</p>
 
 ## Examples
 
-Included are Swift Previews with code implemention examples of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) "screen mock-ups for mobile and desktop with some of the best practices already baked in".
-
-<img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='400' alt='copy-recovery-phrase' /> <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='400' alt='send'/>  <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='400' alt='transaction' />
+Included are Swift Previews with code implemention examples of Bitcoin Wallet UI Kit (example: Hardware Wallet Interaction)
 
 <img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="400" alt='hardware-wallet-interaction' />
+
+## References
+
+Bitcoin Wallet UI Kit:
+- [Figma](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
+- [GitHub](https://github.com/GBKS/bitcoin-design/blob/main/bitcoin-wallet-ui-kit.md)
+
+Bitcoin Hardware Illustrations:
+- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
+- [GitHub](https://github.com/GBKS/bitcoin-hardware-illustrations)
+
+Bitcoin Icons:
+- [Figma](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set)
+- [GitHub](https://github.com/BitcoinDesign/Bitcoin-Icons)
+- [Website](https://bitcoinicons.com)
 
 ## Requirements
 

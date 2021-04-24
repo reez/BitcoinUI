@@ -1,6 +1,0 @@
-<svg width="100" height="150" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="56" y="91" width="33" height="13" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
-<rect x="11" y="91" width="33" height="13" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
-<rect x="11" y="21" width="78" height="58" stroke="black" stroke-opacity="0.25" stroke-width="2"/>
-<path d="M15 2H85V-2H15V2ZM98 15V135H102V15H98ZM85 148H15V152H85V148ZM2 135V15H-2V135H2ZM15 148C7.8203 148 2 142.18 2 135H-2C-2 144.389 5.61116 152 15 152V148ZM98 135C98 142.18 92.1797 148 85 148V152C94.3888 152 102 144.389 102 135H98ZM85 2C92.1797 2 98 7.8203 98 15H102C102 5.61116 94.3888 -2 85 -2V2ZM15 -2C5.61116 -2 -2 5.61116 -2 15H2C2 7.8203 7.8203 2 15 2V-2Z" fill="black"/>
-</svg>
