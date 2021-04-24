@@ -10,16 +10,10 @@ import SwiftUI
 
 #if canImport(UIKit)
 
-/// This function returns an Image for a given image name (SwiftUI)
-/// - Parameter named: name of image file
-/// - Returns: Image from resources
 public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
 
-/// This function returns a UIImage for a given image name (UIKit)
-/// - Parameter named: name of image file
-/// - Returns: UIImage from resources
 public func BitcoinUIImage(named: String) -> UIImage {
     return UIImage(named: named, in: .module, compatibleWith: nil)!
 }

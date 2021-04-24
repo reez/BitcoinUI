@@ -35,11 +35,27 @@ Side by side view of code interface and implementation example via Swift Preview
     </a>
 </p>
 
-### Icons
+### Hardware Illustrations
 
 <p align='left'>
-    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-code-preview.png?raw=true' height='400' alt='icons-code-preview' />
+    <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-illustrations-code-preview.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
+    </a>
+</p>
+
+### Icons Filled
+
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-filled-code-preview.png?raw=true' height='400' alt='icons-filled-code-preview' />
+    </a>
+</p>
+
+### Icons Outline
+
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-outline-code-preview.png?raw=true' height='400' alt='icons-outline-code-preview' />
     </a>
 </p>
 
@@ -71,7 +87,7 @@ label.textColor = .bitcoinOrange
 SwiftUI
 
 ```swift
-BitcoinImage(named: "cobo-vault")
+BitcoinImage(named: "coldcard")
     .resizable()
     .aspectRatio(contentMode: .fit)
     .frame(height: 75.0)
@@ -80,7 +96,7 @@ BitcoinImage(named: "cobo-vault")
 UIKit
 
 ```swift
-let image = BitcoinUIImage(named: "cobo-vault")
+let image = BitcoinUIImage(named: "coldcard")
 let imageView = UIImageView(image: image)
 imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
 view.addSubview(imageView)
@@ -88,7 +104,7 @@ view.addSubview(imageView)
 
 ## Examples
 
-Included are Swift Previews with code implemention examples of [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)) "screen mock-ups for mobile and desktop with some of the best practices already baked in".
+Included are Swift Previews with code implemention examples of Bitcoin Wallet UI Kit.
 
 <img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='400' alt='copy-recovery-phrase' /> <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='400' alt='send'/>  <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='400' alt='transaction' />
 
