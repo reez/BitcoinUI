@@ -4,22 +4,10 @@ An iOS implementation of Bitcoin Wallet UI Kit, with example code implementation
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
-Bitcoin Wallet UI Kit:
-- [Figma](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
-- [GitHub](https://github.com/GBKS/bitcoin-design/blob/main/bitcoin-wallet-ui-kit.md)
-
-Bitcoin Hardware Illustrations:
-- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
-- [GitHub](https://github.com/GBKS/bitcoin-hardware-illustrations)
-
-Bitcoin Icons:
-- [Figma](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set)
-- [GitHub](https://github.com/BitcoinDesign/Bitcoin-Icons)
-- [Website](https://bitcoinicons.com)
-
 [Elements](#elements)<br>
 [Basic Usage](#basic-usage)<br>
 [Examples](#examples)<br>
+[References](#references)<br>
 [Requirements](#requirements)<br>
 [Installation](#installation)<br>
 
@@ -107,6 +95,21 @@ view.addSubview(imageView)
 Included are Swift Previews with code implemention examples of Bitcoin Wallet UI Kit (example: Hardware Wallet Interaction)
 
 <img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="400" alt='hardware-wallet-interaction' />
+
+## References
+
+Bitcoin Wallet UI Kit:
+- [Figma](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
+- [GitHub](https://github.com/GBKS/bitcoin-design/blob/main/bitcoin-wallet-ui-kit.md)
+
+Bitcoin Hardware Illustrations:
+- [Figma](https://www.figma.com/community/file/946807598525782935/Bitcoin-hardware-%26-accessories)
+- [GitHub](https://github.com/GBKS/bitcoin-hardware-illustrations)
+
+Bitcoin Icons:
+- [Figma](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set)
+- [GitHub](https://github.com/BitcoinDesign/Bitcoin-Icons)
+- [Website](https://bitcoinicons.com)
 
 ## Requirements
 
