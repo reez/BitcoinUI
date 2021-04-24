@@ -14,22 +14,25 @@ struct MMSetting: Identifiable {
     let backup: String
     let color: Color
     let imageName: String
+    let imageBitcoin: Bool
     let status: String
     let detail: String?
 }
 
 struct MMSettingsViewRowView: View {
     let setting: MMSetting
-    
+    let imageIsBitcoin: Bool = false
+
     var body: some View {
         HStack {
             ZStack {
                 Circle()
                     .frame(width: 50.0, height: 50.0)
                     .foregroundColor(setting.color)
-                BitcoinImage(named: setting.imageName)
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .font(.footnote)
+                setting.imageBitcoin ?
+                    BitcoinImage(named: setting.imageName)
+                    :
+                    Image(systemName: setting.imageName)
             }
             VStack(alignment: .leading) {
                 Text(setting.status)
@@ -56,10 +59,10 @@ struct MMSettingsViewRowView: View {
 
 struct MMSettingsDefaultView: View {
     let settings = [
-        MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
-        MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", status: "Security mode", detail: "Single bed"),
-        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "x-group", status: "Log out", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane.fill", imageBitcoin: false, status: "Set recovery email", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "ellipsis", imageBitcoin: false, status: "Change PIN", detail: nil),
+        MMSetting(backup: "Cloud backup", color: .blue, imageName: "singlebedsettings-group", imageBitcoin: true, status: "Security mode", detail: "Single bed"),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "clear.fill", imageBitcoin: false, status: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -76,6 +79,7 @@ struct MMSettingsDefaultView: View {
                             destination: MMSettingsSummaryView()
                         ) {
                             MMSettingsViewRowView(setting: setting)
+                                .foregroundColor(Color(UIColor.systemBackground))
                         }
                     }
                     .listStyle(PlainListStyle())
@@ -191,10 +195,10 @@ struct MMSettingsSummaryView: View {
 
 struct MMSettingsDefaultDoubleView: View {
     let settings = [
-        MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane-vector", status: "Set recovery email", detail: nil),
-        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "dots-group", status: "Change PIN", detail: nil),
-        MMSetting(backup: "Multiple keys", color: Color(UIColor.bitcoinBlue), imageName: "singlebedsettings-group", status: "Security mode", detail: "Triple bed"),
-        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "x-group", status: "Log out", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinOrange), imageName: "paperplane.fill", imageBitcoin: false, status: "Set recovery email", detail: nil),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinGreen), imageName: "ellipsis", imageBitcoin: false, status: "Change PIN", detail: nil),
+        MMSetting(backup: "Cloud backup", color: .blue, imageName: "double-bed-filled", imageBitcoin: true, status: "Security mode", detail: "Single bed"),
+        MMSetting(backup: "", color: Color(UIColor.bitcoinPurple), imageName: "clear.fill", imageBitcoin: false, status: "Log out", detail: nil),
     ]
     
     var body: some View {
@@ -215,6 +219,7 @@ struct MMSettingsDefaultDoubleView: View {
                                 Rectangle()
                                     .frame(height: 1.0)
                                 MMSettingsDoubleViewRowView(setting: setting)
+                                    .foregroundColor(Color(UIColor.systemBackground))
                             }
                         }
                         .navigationBarTitle("Settings")
@@ -245,9 +250,10 @@ struct MMSettingsDoubleViewRowView: View {
                 Circle()
                     .frame(width: 50.0, height: 50.0)
                     .foregroundColor(setting.color)
-                BitcoinImage(named: setting.imageName)
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .font(.footnote)
+                setting.imageBitcoin ?
+                    BitcoinImage(named: setting.imageName)
+                    :
+                    Image(systemName: setting.imageName)
             }
             
             VStack(alignment: .leading) {
