@@ -104,9 +104,7 @@ view.addSubview(imageView)
 
 ## Examples
 
-Included are Swift Previews with code implemention examples of Bitcoin Wallet UI Kit.
-
-<img src='https://github.com/reez/WalletUI/blob/main/Docs/copy-recovery-phrase.png?raw=true' height='400' alt='copy-recovery-phrase' /> <img src='https://github.com/reez/WalletUI/blob/main/Docs/send.png?raw=true' height='400' alt='send'/>  <img src='https://github.com/reez/WalletUI/blob/main/Docs/transaction.png?raw=true' height='400' alt='transaction' />
+Included are Swift Previews with code implemention examples of Bitcoin Wallet UI Kit (example: Hardware Wallet Interaction)
 
 <img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="400" alt='hardware-wallet-interaction' />
 
