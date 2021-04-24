@@ -4,48 +4,12 @@ An iOS implementation of Bitcoin Wallet UI Kit, with example code implementation
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
-[Elements](#elements)<br>
 [Basic Usage](#basic-usage)<br>
+[Elements](#elements)<br>
 [Examples](#examples)<br>
 [References](#references)<br>
 [Requirements](#requirements)<br>
 [Installation](#installation)<br>
-
-## Elements
-
-Side by side view of code interface and implementation example via Swift Previews.
-
-### Colors
-
-<p align='left'>
-    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-code-preview.png?raw=true' height='400' alt='colors-code-preview' />
-    </a>
-</p>
-
-### Hardware Illustrations
-
-<p align='left'>
-    <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-illustrations-code-preview.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
-    </a>
-</p>
-
-### Icons Filled
-
-<p align='left'>
-    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-filled-code-preview.png?raw=true' height='400' alt='icons-filled-code-preview' />
-    </a>
-</p>
-
-### Icons Outline
-
-<p align='left'>
-    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-outline-code-preview.png?raw=true' height='400' alt='icons-outline-code-preview' />
-    </a>
-</p>
 
 ## Basic Usage
 
@@ -89,6 +53,42 @@ let imageView = UIImageView(image: image)
 imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
 view.addSubview(imageView)
 ```
+
+## Elements
+
+Side by side view of code interface and implementation example via Swift Previews.
+
+### Colors
+
+<p align='left'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-code-preview.png?raw=true' height='400' alt='colors-code-preview' />
+    </a>
+</p>
+
+### Hardware Illustrations
+
+<p align='left'>
+    <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-illustrations-code-preview.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
+    </a>
+</p>
+
+### Icons Filled
+
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-filled-code-preview.png?raw=true' height='400' alt='icons-filled-code-preview' />
+    </a>
+</p>
+
+### Icons Outline
+
+<p align='left'>
+    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-outline-code-preview.png?raw=true' height='400' alt='icons-outline-code-preview' />
+    </a>
+</p>
 
 ## Examples
 
