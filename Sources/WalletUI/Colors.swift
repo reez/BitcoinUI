@@ -218,6 +218,54 @@ extension UIColor {
     
 }
 
+extension Color {
+    public static var bitcoinWhite: Color {
+        return Color(.bitcoinWhite)
+    }
+    public static var bitcoinNeutral1: Color {
+        return Color(.bitcoinNeutral1)
+    }
+    public static var bitcoinNeutral2: Color {
+        return Color(.bitcoinNeutral2)
+    }
+    public static var bitcoinNeutral3: Color {
+        return Color(.bitcoinNeutral3)
+    }
+    public static var bitcoinNeutral4: Color {
+        return Color(.bitcoinNeutral4)
+    }
+    public static var bitcoinNeutral5: Color {
+        return Color(.bitcoinNeutral5)
+    }
+    public static var bitcoinNeutral6: Color {
+        return Color(.bitcoinNeutral6)
+    }
+    public static var bitcoinNeutral7: Color {
+        return Color(.bitcoinNeutral7)
+    }
+    public static var bitcoinNeutral8: Color {
+        return Color(.bitcoinNeutral8)
+    }
+    public static var bitcoinBlack: Color {
+        return Color(.bitcoinBlack)
+    }
+    public static var bitcoinOrange: Color {
+        return Color(.bitcoinOrange)
+    }
+    public static var bitcoinRed: Color {
+        return Color(.bitcoinRed)
+    }
+    public static var bitcoinGreen: Color {
+        return Color(.bitcoinGreen)
+    }
+    public static var bitcoinBlue: Color {
+        return Color(.bitcoinBlue)
+    }
+    public static var bitcoinPurple: Color {
+        return Color(.bitcoinPurple)
+    }
+}
+
 /// Extend UIColor to add MyMattress specific colors
 
 extension UIColor {
@@ -235,6 +283,11 @@ extension UIColor {
     }
 }
 
+extension Color {
+    public static var bitcoinMyMattress: Color {
+        return Color(.bitcoinMyMattress)
+    }
+}
 
 struct ColorView: View {
     let color: Color
