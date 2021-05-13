@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMTripleBedExportSuccess1View: View {
     var body: some View {
         
@@ -188,5 +186,3 @@ struct MMDoubleBedSuccessView_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

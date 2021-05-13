@@ -8,8 +8,6 @@
 import Foundation
 import SwiftUI
 
-#if canImport(UIKit)
-
 public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
@@ -243,5 +241,3 @@ struct IconsView_Previews: PreviewProvider {
         
     }
 }
-
-#endif

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMReceiveView: View {
     var body: some View {
         
@@ -99,5 +97,3 @@ struct MMReceiveView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

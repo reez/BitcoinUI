@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMDoubleBedDevice3View: View {
     
     var body: some View {
@@ -576,5 +574,3 @@ struct MMDoubleBedSetupView_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

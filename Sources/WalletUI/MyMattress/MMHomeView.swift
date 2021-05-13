@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMHomeBlankView: View {
     
     var body: some View {
@@ -337,5 +335,3 @@ struct MMHomeView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMTransactionRowView: View {
     let status: String
     let time: String
@@ -130,5 +128,3 @@ struct MMTransactionView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

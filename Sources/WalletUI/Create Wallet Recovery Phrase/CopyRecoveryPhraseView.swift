@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
-/// [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
-
-@available(OSX 10.15, *)
 struct NumberWordView: View {
     let number: String
     let word: String
@@ -145,5 +140,3 @@ struct OnboardingView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

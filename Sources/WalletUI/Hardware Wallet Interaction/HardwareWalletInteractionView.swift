@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct HardwareWallet: Identifiable {
     var id = UUID()
     let name: String
@@ -231,5 +229,3 @@ struct HardwareWalletView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMMultisigRecoverySettings1View: View {
     
     var body: some View {
@@ -314,5 +312,3 @@ struct MMMultisigRecoveryView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

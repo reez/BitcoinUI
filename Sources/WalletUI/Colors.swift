@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-#if canImport(UIKit)
-
-/// Extend UIColor to add WalletUI specific colors
-
 extension UIColor {
     
     public static var bitcoinOrange: UIColor {
@@ -374,5 +370,3 @@ struct ColorsView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

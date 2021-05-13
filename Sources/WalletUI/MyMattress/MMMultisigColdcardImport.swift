@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMMultisigColdcardImport0: View {
     var body: some View {
         
@@ -415,5 +413,3 @@ struct MMMultisigColdcardImport_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

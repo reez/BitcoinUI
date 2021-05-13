@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMMultisigCoboImport0: View {
     var body: some View {
         
@@ -513,4 +511,3 @@ struct MMMultisigCoboImport_Previews: PreviewProvider {
     }
 }
 
-#endif
