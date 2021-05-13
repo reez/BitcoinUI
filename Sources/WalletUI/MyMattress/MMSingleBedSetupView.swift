@@ -18,7 +18,7 @@ struct MMSingleBedIntroView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinBlue)
                     BitcoinImage(named: "singlebedsettings-group")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -45,7 +45,7 @@ struct MMSingleBedIntroView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -73,7 +73,7 @@ struct MMSingleBedWarningView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinPurple)
                     BitcoinImage(named: "wallet-filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -100,7 +100,7 @@ struct MMSingleBedWarningView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -128,7 +128,7 @@ struct MMSingleBedReadyView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinGreen)
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -159,7 +159,7 @@ struct MMSingleBedReadyView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }

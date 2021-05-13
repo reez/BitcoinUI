@@ -104,7 +104,7 @@ struct MMMultisigColdcardImport0: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -169,7 +169,7 @@ struct MMMultisigColdcardImport1: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -241,7 +241,7 @@ struct MMMultisigColdcardImport2: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -372,7 +372,7 @@ struct MMMultisigColdcardImport4: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }

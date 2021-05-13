@@ -84,7 +84,7 @@ struct ValidateRecoveryPhrase1View: View {
                 Text(
                     "Make sure to write it down as shown here. You have to verify this later."
                 )
-                .foregroundColor(Color(UIColor.bitcoinNeutral7))
+                .foregroundColor(.bitcoinNeutral7)
                 .font(.title3)
                 
                 NavigationLink(
@@ -136,7 +136,7 @@ struct ValidateRecoveryPhrase2View: View {
                 Text(
                     "Please verify the address on your hardware wallet. We currently only support the Ledger Nano S."
                 )
-                .foregroundColor(Color(UIColor.bitcoinNeutral7))
+                .foregroundColor(.bitcoinNeutral7)
                 .font(.title3)
 
                 NavigationLink(
@@ -175,7 +175,7 @@ struct WalletBackupSuccessView: View {
             VStack(alignment: .leading, spacing: 8.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color.bitcoinGreen)
                     Image(systemName: "checkmark")
                 }
                 .padding(.top, .wallet_grid_vertical_20())
@@ -188,7 +188,7 @@ struct WalletBackupSuccessView: View {
                 Text(
                     "You can now use it to sign transactions and set up multisignature wallets.."
                 )
-                .foregroundColor(Color(UIColor.bitcoinNeutral7))
+                .foregroundColor(.bitcoinNeutral7)
                 .font(.title3)
                 .padding(.bottom, .wallet_grid_vertical_20())
 
@@ -198,7 +198,7 @@ struct WalletBackupSuccessView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                 }
                 
                 Spacer()

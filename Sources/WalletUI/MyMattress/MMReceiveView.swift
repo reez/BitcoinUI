@@ -70,7 +70,7 @@ struct MMReceiveView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinMyMattress))
+                        .background(Color.bitcoinMyMattress)
                         .cornerRadius(5.0)
 
                 }

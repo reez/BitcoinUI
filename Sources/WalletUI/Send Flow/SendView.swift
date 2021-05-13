@@ -150,7 +150,7 @@ struct SendView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
                     

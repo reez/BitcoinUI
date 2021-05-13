@@ -92,7 +92,7 @@ struct MMTransactionView: View {
                     time: "Yesterday",
                     bitcoin: "₿ 0.00001000",
                     fiat: "€12.75",
-                    color: UIColor.bitcoinGreen
+                    color: .bitcoinGreen
                 )
                 
                 Rectangle()

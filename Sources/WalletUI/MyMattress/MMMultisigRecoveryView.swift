@@ -54,7 +54,7 @@ struct MMMultisigRecoverySettings1View: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(Color(UIColor.bitcoinGreen))
+                                .foregroundColor(.bitcoinGreen)
                             
                         }
                         .frame(maxWidth: .infinity)
@@ -155,7 +155,7 @@ struct MMMultisigRecoverySettings1View: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -203,7 +203,7 @@ struct MMMultisigRecoverySettings2View: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }

@@ -30,7 +30,7 @@ struct IconView: View {
                 .foregroundColor(Color(UIColor.label))
             Text(named)
                 .font(.caption)
-                .foregroundColor(Color(UIColor.bitcoinNeutral5))
+                .foregroundColor(.bitcoinNeutral5)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)

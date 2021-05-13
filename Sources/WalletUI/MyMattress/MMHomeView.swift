@@ -27,7 +27,7 @@ struct MMHomeBlankView: View {
                 Spacer()
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinGreen)
                     Image(systemName: "checkmark")
                 }
                 
@@ -51,7 +51,7 @@ struct MMHomeBlankView: View {
                     .padding(.vertical, .wallet_grid_vertical_20())
                     .frame(maxWidth: .infinity)
                     .foregroundColor(Color(UIColor.systemBackground))
-                    .background(Color(UIColor.bitcoinMyMattress))
+                    .background(Color.bitcoinMyMattress)
                     .cornerRadius(10.0)
                 }
                 .padding(.top)
@@ -156,7 +156,7 @@ struct MMHomeMultisigView: View {
     var body: some View {
 
         ZStack {
-            Color(UIColor.bitcoinMyMattress)
+            Color(.bitcoinMyMattress)
 
             VStack(spacing: 20.0) {
                 

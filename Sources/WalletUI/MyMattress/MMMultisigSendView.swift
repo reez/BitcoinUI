@@ -132,7 +132,7 @@ struct MMMultisigSendAmountView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
                     
                 }
@@ -224,8 +224,8 @@ struct MMMultisigSendFeeView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.all)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color(UIColor.bitcoinOrange), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: 6.0)
+                        .stroke(Color.bitcoinOrange, lineWidth: 1.0)
                 )
                 .padding(.all)
                 
@@ -268,7 +268,7 @@ struct MMMultisigSendFeeView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
@@ -404,7 +404,7 @@ struct MMMultisigSendCreationView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color.bitcoinGreen)
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                 }
