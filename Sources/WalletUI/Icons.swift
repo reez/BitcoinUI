@@ -10,10 +10,29 @@ import SwiftUI
 
 #if canImport(UIKit)
 
+
+/// A function that returns a Bitcoin Icon `Image`
+///
+/// This is similar to `Image` but returns a Bitcoin specific `BitcoinImage`
+///
+/// ```swift
+/// BitcoinImage(named: "coldcard")
+/// ```
+/// - Parameter named: The name of the Bitcoin Icon you would like to return.
+/// - Returns: The  specific Bitcoin `Image`
 public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
 
+/// A function that returns a Bitcoin Icon `UIImage`
+///
+/// This is similar to `UIImage` but returns a Bitcoin specific `BitcoinUIImage`
+///
+/// ```swift
+/// BitcoinUIImage(named: "coldcard")
+/// ```
+/// - Parameter named: The name of the Bitcoin Icon you would like to return.
+/// - Returns: The  specific Bitcoin `UIImage`
 public func BitcoinUIImage(named: String) -> UIImage {
     return UIImage(named: named, in: .module, compatibleWith: nil)!
 }
