@@ -1,0 +1,24 @@
+@Tutorials(name: "Tutorials") {
+    @Intro(title: "Intro") {
+        Intro
+        
+        @Image(source: coldcard-import-halfsize.png, alt: "Intro")
+
+    }
+    
+    @Chapter(name: "Chapter 1: Colors") {
+        Chapter 1
+        
+        @Image(source: coldcard-import-halfsize.png, alt: "Colors")
+        
+        @TutorialReference(tutorial: "doc:Colors")
+    }
+    
+    @Chapter(name: "Chapter 2: Images") {
+        Chapter 2
+        
+        @Image(source: coldcard-import-halfsize.png, alt: "Images")
+        
+        @TutorialReference(tutorial: "doc:Images")
+    }
+}
