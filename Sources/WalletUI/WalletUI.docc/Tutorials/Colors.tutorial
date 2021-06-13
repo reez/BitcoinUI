@@ -15,12 +15,16 @@
         @Steps {
             @Step {
                 Here is what using `Color` would look like.
-                @Code(name: "Colors.swift", file: 01-01-colors.swift)
+                @Code(name: "Colors.swift", file: 01-01-colors.swift) {
+                    @Image(source: 01-01-colors-preview-500.png, alt: "01-01-colors-preview")
+                }
             }
             
             @Step {
-                Here is what using a Bitcoin `Color` would look like.
-                @Code(name: "Colors.swift", file: 01-02-colors.swift)
+                Here is what using a Bitcoin `Color` would look like. Just `import WalletUI`.
+                @Code(name: "Colors.swift", file: 01-02-colors.swift) {
+                    @Image(source: 01-02-colors-preview-500.png, alt: "01-02-colors-preview")
+                }
             }
         }
     }

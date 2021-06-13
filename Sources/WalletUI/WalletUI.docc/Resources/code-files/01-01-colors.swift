@@ -3,7 +3,7 @@ import SwiftUI
 struct ColorsTutorial: View {
     var body: some View {
         
-        Text("Bitcoin Orange")
+        Text("Orange")
             .font(.caption)
             .foregroundColor(.orange)
             .multilineTextAlignment(.center)

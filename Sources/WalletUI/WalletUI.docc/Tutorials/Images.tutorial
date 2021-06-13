@@ -15,12 +15,16 @@
         @Steps {
             @Step {
                 Here is what using `Image` would look like.
-                @Code(name: "Images.swift", file: 01-01-images.swift)
+                @Code(name: "Images.swift", file: 01-01-images.swift) {
+                    @Image(source: 01-01-images-preview-500.png, alt: "01-01-images-preview")
+                }
             }
             
             @Step {
                 Here is what using a Bitcoin `Image` would look like.
-                @Code(name: "Images.swift", file: 01-02-images.swift)
+                @Code(name: "Images.swift", file: 01-02-images.swift) {
+                    @Image(source: 01-02-images-preview-500.png, alt: "01-02-images-preview")
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 import SwiftUI
+import WalletUI
 
 struct ColorsTutorial: View {
     var body: some View {

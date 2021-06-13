@@ -1,4 +1,5 @@
 import SwiftUI
+import WalletUI
 
 struct ImagesTutorial: View {
     var body: some View {
