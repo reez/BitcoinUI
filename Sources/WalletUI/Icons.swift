@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-#if canImport(UIKit)
+//// #if canImport(UIKit)
 
 
 /// A function that returns a Bitcoin Icon `Image`
@@ -263,4 +263,4 @@ struct IconsView_Previews: PreviewProvider {
     }
 }
 
-#endif
+//// #endif

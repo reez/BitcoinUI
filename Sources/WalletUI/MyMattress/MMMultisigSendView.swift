@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMMultisigSendScanView: View {
     var body: some View {
@@ -547,4 +547,4 @@ struct MMMultisigSendView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 /// [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
 
@@ -167,4 +167,4 @@ struct TransactionsView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

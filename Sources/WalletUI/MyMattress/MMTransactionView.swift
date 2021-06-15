@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMTransactionRowView: View {
     let status: String
@@ -131,4 +131,4 @@ struct MMTransactionView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

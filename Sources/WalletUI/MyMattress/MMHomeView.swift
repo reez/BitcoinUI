@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMHomeBlankView: View {
     
@@ -338,4 +338,4 @@ struct MMHomeView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMSetting: Identifiable {
     var id = UUID()
@@ -436,4 +436,4 @@ struct MMSettingsView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

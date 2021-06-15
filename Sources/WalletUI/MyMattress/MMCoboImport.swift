@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMCoboImport0: View {
     var body: some View {
@@ -252,4 +252,4 @@ struct MMCoboImport_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

@@ -6,4 +6,4 @@ import XCTest
       testCase(WalletUITests.allTests)
     ]
   }
-#endif
+// #endif

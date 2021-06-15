@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+// #if canImport(UIKit)
 
 struct MMDoubleBedDevice3View: View {
     
@@ -577,4 +577,4 @@ struct MMDoubleBedSetupView_Previews: PreviewProvider {
     }
 }
 
-#endif
+// #endif

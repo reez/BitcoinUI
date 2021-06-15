@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-#if canImport(UIKit)
+//// #if canImport(UIKit)
 
 /// Extend UIColor to add WalletUI specific colors
 
@@ -322,4 +322,4 @@ struct ColorsView_Previews: PreviewProvider {
     }
 }
 
-#endif
+//// #endif
