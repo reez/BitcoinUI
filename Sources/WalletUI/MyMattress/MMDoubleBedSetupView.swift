@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMDoubleBedDevice3View: View {
     
     var body: some View {
@@ -112,7 +110,7 @@ struct MMDoubleBedDevice3View: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -181,7 +179,7 @@ struct MMDoubleBedDeviceReviewView: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(Color(UIColor.bitcoinGreen))
+                                .foregroundColor(.bitcoinGreen)
                             
                         }
                         .frame(maxWidth: .infinity)
@@ -212,7 +210,7 @@ struct MMDoubleBedDeviceReviewView: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(Color(UIColor.bitcoinGreen))
+                                .foregroundColor(.bitcoinGreen)
                             
                         }
                         .frame(maxWidth: .infinity)
@@ -250,7 +248,7 @@ struct MMDoubleBedDeviceReviewView: View {
                         Spacer()
                         
                         Image(systemName: "checkmark")
-                            .foregroundColor(Color(UIColor.bitcoinGreen))
+                            .foregroundColor(.bitcoinGreen)
                         
                     }
                     .frame(maxWidth: .infinity)
@@ -272,7 +270,7 @@ struct MMDoubleBedDeviceReviewView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -300,7 +298,7 @@ struct MMTripleBedReadyView: View {
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinGreen))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinGreen)
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -339,7 +337,7 @@ struct MMTripleBedReadyView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -386,7 +384,7 @@ struct MMTripleBedBackupWalletView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -576,5 +574,3 @@ struct MMDoubleBedSetupView_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

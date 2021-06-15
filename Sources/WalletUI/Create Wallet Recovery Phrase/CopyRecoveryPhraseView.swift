@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
-/// [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
-
-@available(OSX 10.15, *)
 struct NumberWordView: View {
     let number: String
     let word: String
@@ -19,7 +14,7 @@ struct NumberWordView: View {
         ZStack {
             Capsule()
                 .frame(width: 180, height: 60)
-                .foregroundColor(Color(UIColor.bitcoinNeutral4))
+                .foregroundColor(.bitcoinNeutral4)
             Text(number)
                 .padding(.trailing, .wallet_grid_10(12))
                 .foregroundColor(.black)
@@ -51,7 +46,7 @@ struct CopyRecoveryPhraseViewView: View {
                     Text(
                         "Make sure to write it down as shown here. You have to verify this later."
                     )
-                    .foregroundColor(Color(UIColor.bitcoinNeutral7))
+                    .foregroundColor(.bitcoinNeutral7)
                     .font(.title3)
                     .fixedSize(horizontal: false, vertical: true)
                     
@@ -87,7 +82,7 @@ struct CopyRecoveryPhraseViewView: View {
                             .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
-                            .border(Color(UIColor.bitcoinNeutral4))
+                            .border(Color.bitcoinNeutral4)
                             .padding(.horizontal, .wallet_grid_horizontal_10())
                             .padding(.vertical, .wallet_grid_vertical_20())
                     }
@@ -98,7 +93,7 @@ struct CopyRecoveryPhraseViewView: View {
                             .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
-                            .border(Color(UIColor.bitcoinNeutral4))
+                            .border(Color.bitcoinNeutral4)
                             .padding(.horizontal, .wallet_grid_horizontal_10())
                             .padding(.vertical, .wallet_grid_vertical_20())
                     }
@@ -109,7 +104,7 @@ struct CopyRecoveryPhraseViewView: View {
                             .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color(UIColor.label))
-                            .border(Color(UIColor.bitcoinNeutral4))
+                            .border(Color.bitcoinNeutral4)
                             .padding(.horizontal, .wallet_grid_horizontal_10())
                             .padding(.vertical, .wallet_grid_vertical_20())
                     }
@@ -120,7 +115,7 @@ struct CopyRecoveryPhraseViewView: View {
                             .padding(.vertical, .wallet_grid_vertical_20())
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
-                            .background(Color(UIColor.bitcoinOrange))
+                            .background(Color.bitcoinOrange)
                             .padding(.horizontal, .wallet_grid_horizontal_10())
                             .padding(.vertical, .wallet_grid_vertical_20())
 
@@ -145,5 +140,3 @@ struct OnboardingView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

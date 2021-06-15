@@ -6,8 +6,6 @@
 //
 
 
-#if canImport(UIKit)
-
 import UIKit
 
 extension CGFloat {
@@ -33,5 +31,3 @@ extension CGFloat {
     }
     
 }
-
-#endif

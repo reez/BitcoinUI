@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMReceiveView: View {
     var body: some View {
         
@@ -70,7 +68,7 @@ struct MMReceiveView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinMyMattress))
+                        .background(Color.bitcoinMyMattress)
                         .cornerRadius(5.0)
 
                 }
@@ -99,5 +97,3 @@ struct MMReceiveView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

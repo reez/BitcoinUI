@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMDoubleBedIntroView: View {
     var body: some View {
         
         ZStack {
-            Color(UIColor.bitcoinMyMattress)
+            Color(.bitcoinMyMattress)
             
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinBlue))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinBlue)
                     BitcoinImage(named: "double-bed-filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -103,12 +101,12 @@ struct MMDoubleBedWarningView: View {
     var body: some View {
         
         ZStack {
-            Color(UIColor.bitcoinMyMattress)
+            Color(.bitcoinMyMattress)
             
             VStack(spacing: 20.0) {
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(.bitcoinPurple)
                     BitcoinImage(named: "wallet-filled")
                         .foregroundColor(Color(UIColor.systemBackground))
                         .font(.footnote)
@@ -205,7 +203,7 @@ struct MMDoubleBedDevice1View: View {
                             Spacer()
                             
                             Image(systemName: "checkmark")
-                                .foregroundColor(Color(UIColor.bitcoinGreen))
+                                .foregroundColor(.bitcoinGreen)
                             
                         }
                         .frame(maxWidth: .infinity)
@@ -302,7 +300,7 @@ struct MMDoubleBedDevice1View: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -452,5 +450,3 @@ struct MMDoubleBedIntroView_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

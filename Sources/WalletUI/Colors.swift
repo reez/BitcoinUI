@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-#if canImport(UIKit)
-
-/// Extend UIColor to add WalletUI specific colors
-
 extension UIColor {
     
     public static var bitcoinOrange: UIColor {
@@ -218,6 +214,54 @@ extension UIColor {
     
 }
 
+extension Color {
+    public static var bitcoinWhite: Color {
+        return Color(.bitcoinWhite)
+    }
+    public static var bitcoinNeutral1: Color {
+        return Color(.bitcoinNeutral1)
+    }
+    public static var bitcoinNeutral2: Color {
+        return Color(.bitcoinNeutral2)
+    }
+    public static var bitcoinNeutral3: Color {
+        return Color(.bitcoinNeutral3)
+    }
+    public static var bitcoinNeutral4: Color {
+        return Color(.bitcoinNeutral4)
+    }
+    public static var bitcoinNeutral5: Color {
+        return Color(.bitcoinNeutral5)
+    }
+    public static var bitcoinNeutral6: Color {
+        return Color(.bitcoinNeutral6)
+    }
+    public static var bitcoinNeutral7: Color {
+        return Color(.bitcoinNeutral7)
+    }
+    public static var bitcoinNeutral8: Color {
+        return Color(.bitcoinNeutral8)
+    }
+    public static var bitcoinBlack: Color {
+        return Color(.bitcoinBlack)
+    }
+    public static var bitcoinOrange: Color {
+        return Color(.bitcoinOrange)
+    }
+    public static var bitcoinRed: Color {
+        return Color(.bitcoinRed)
+    }
+    public static var bitcoinGreen: Color {
+        return Color(.bitcoinGreen)
+    }
+    public static var bitcoinBlue: Color {
+        return Color(.bitcoinBlue)
+    }
+    public static var bitcoinPurple: Color {
+        return Color(.bitcoinPurple)
+    }
+}
+
 /// Extend UIColor to add MyMattress specific colors
 
 extension UIColor {
@@ -235,6 +279,11 @@ extension UIColor {
     }
 }
 
+extension Color {
+    public static var bitcoinMyMattress: Color {
+        return Color(.bitcoinMyMattress)
+    }
+}
 
 struct ColorView: View {
     let color: Color
@@ -246,7 +295,7 @@ struct ColorView: View {
                 .foregroundColor(color)
             Text(colorLabel)
                 .font(.caption)
-                .foregroundColor(Color(UIColor.bitcoinNeutral5))
+                .foregroundColor(.bitcoinNeutral5)
                 .multilineTextAlignment(.center)
         }
     }
@@ -271,31 +320,31 @@ struct ColorsView: View {
                     .padding(.top, .wallet_grid_vertical_20())
                 
                 HStack {
-                    ColorView(color: Color(UIColor.bitcoinWhite), colorLabel: "White")
-                    ColorView(color: Color(UIColor.bitcoinNeutral1), colorLabel: "Neutral1")
-                    ColorView(color: Color(UIColor.bitcoinNeutral2), colorLabel: "Neutral2")
-                    ColorView(color: Color(UIColor.bitcoinNeutral3), colorLabel: "Neutral3")
-                    ColorView(color: Color(UIColor.bitcoinNeutral4), colorLabel: "Neutral4")
+                    ColorView(color: .bitcoinWhite, colorLabel: "White")
+                    ColorView(color: .bitcoinNeutral1, colorLabel: "Neutral1")
+                    ColorView(color: .bitcoinNeutral2, colorLabel: "Neutral2")
+                    ColorView(color: .bitcoinNeutral3, colorLabel: "Neutral3")
+                    ColorView(color: .bitcoinNeutral4, colorLabel: "Neutral4")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    ColorView(color: Color(UIColor.bitcoinNeutral5), colorLabel: "Neutral5")
-                    ColorView(color: Color(UIColor.bitcoinNeutral6), colorLabel: "Neutral6")
-                    ColorView(color: Color(UIColor.bitcoinNeutral7), colorLabel: "Neutral7")
-                    ColorView(color: Color(UIColor.bitcoinNeutral8), colorLabel: "Neutral8")
-                    ColorView(color: Color(UIColor.bitcoinBlack), colorLabel: "Black")
+                    ColorView(color: .bitcoinNeutral5, colorLabel: "Neutral5")
+                    ColorView(color: .bitcoinNeutral6, colorLabel: "Neutral6")
+                    ColorView(color: .bitcoinNeutral7, colorLabel: "Neutral7")
+                    ColorView(color: .bitcoinNeutral8, colorLabel: "Neutral8")
+                    ColorView(color: .bitcoinBlack, colorLabel: "Black")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
                 
                 HStack {
-                    ColorView(color: Color(UIColor.bitcoinOrange), colorLabel: "Orange")
-                    ColorView(color: Color(UIColor.bitcoinRed), colorLabel: "Red")
-                    ColorView(color: Color(UIColor.bitcoinGreen), colorLabel: "Green")
-                    ColorView(color: Color(UIColor.bitcoinBlue), colorLabel: "Blue")
-                    ColorView(color: Color(UIColor.bitcoinPurple), colorLabel: "Purple")
+                    ColorView(color: .bitcoinOrange, colorLabel: "Orange")
+                    ColorView(color: .bitcoinRed, colorLabel: "Red")
+                    ColorView(color: .bitcoinGreen, colorLabel: "Green")
+                    ColorView(color: .bitcoinBlue, colorLabel: "Blue")
+                    ColorView(color: .bitcoinPurple, colorLabel: "Purple")
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
@@ -321,5 +370,3 @@ struct ColorsView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

@@ -21,7 +21,7 @@ SwiftUI
 ```swift
 Text("Bitcoin Orange")
     .font(.caption)
-    .foregroundColor(Color(UIColor.bitcoinOrange))
+    .foregroundColor(.bitcoinOrange)
     .multilineTextAlignment(.center)
 ```
 

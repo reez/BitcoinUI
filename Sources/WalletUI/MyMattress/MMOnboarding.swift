@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMOnboardingCoverView: View {
     var body: some View {
         
@@ -37,7 +35,7 @@ struct MMOnboardingCoverView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(Color(UIColor.systemBackground))
-                        .background(Color(UIColor.bitcoinMyMattress))
+                        .background(Color.bitcoinMyMattress)
                         .cornerRadius(10.0)
                 }
                 
@@ -323,5 +321,3 @@ struct MMOnboardingView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

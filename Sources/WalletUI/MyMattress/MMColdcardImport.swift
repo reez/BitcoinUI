@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMColdcardImport0: View {
     var body: some View {
         
@@ -51,7 +49,7 @@ struct MMColdcardImport0: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -124,7 +122,7 @@ struct MMColdcardImport1: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -195,7 +193,7 @@ struct MMColdcardImport2: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinNeutral4))
+                        .background(Color.bitcoinNeutral4)
                         .cornerRadius(5.0)
 
                 }
@@ -245,7 +243,7 @@ struct MMColdcardImport3: View {
                 .padding(.bottom)
 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.bitcoinPurple))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color.bitcoinPurple)
                     Image(systemName: "checkmark")
                 }
                 .padding(.top, .wallet_grid_vertical_20())
@@ -267,7 +265,7 @@ struct MMColdcardImport3: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
 
                 }
@@ -307,5 +305,3 @@ struct MMColdcardImport_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
-#endif

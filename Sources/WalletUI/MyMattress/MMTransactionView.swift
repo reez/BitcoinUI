@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMTransactionRowView: View {
     let status: String
     let time: String
@@ -92,7 +90,7 @@ struct MMTransactionView: View {
                     time: "Yesterday",
                     bitcoin: "₿ 0.00001000",
                     fiat: "€12.75",
-                    color: UIColor.bitcoinGreen
+                    color: .bitcoinGreen
                 )
                 
                 Rectangle()
@@ -130,5 +128,3 @@ struct MMTransactionView_Previews: PreviewProvider {
         }
     }
 }
-
-#endif

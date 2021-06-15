@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
-/// [Bitcoin Wallet UI Kit](https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress))
-
-@available(OSX 10.15, *)
 struct FeeView: View {
     let image: String
     let priority: String
@@ -150,7 +145,7 @@ struct SendView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.bitcoinOrange))
+                        .background(Color.bitcoinOrange)
                         .padding(.horizontal, .wallet_grid_horizontal_10())
                         .padding(.vertical, .wallet_grid_vertical_20())
                     
@@ -176,5 +171,3 @@ struct SendView_Previews: PreviewProvider {
         
     }
 }
-
-#endif

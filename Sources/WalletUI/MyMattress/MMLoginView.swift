@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
-
 struct MMLoginPINEntryView: View {
     @State private var val: String = ""
     
@@ -175,5 +173,3 @@ struct MMLoginView_Previews: PreviewProvider {
 
     }
 }
-
-#endif
