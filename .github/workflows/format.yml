@@ -9,8 +9,8 @@ jobs:
   swift_format:
     name: swift-format
     runs-on: macos-11
-#    steps:
-#      - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 #      - name: Install
 #        run: brew install swift-format
 #      - name: Format
