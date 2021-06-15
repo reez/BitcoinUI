@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-#    - name: Force Xcode 13
-#      run: sudo xcode-select -switch /Applications/Xcode_13.0.app
+    - name: Force Xcode 13
+      run: sudo xcode-select -switch /Applications/Xcode_13.0.app
 #    - name: Build
 #      run: xcodebuild -scheme WalletUI -sdk iphoneos
 #    - name: Run tests
