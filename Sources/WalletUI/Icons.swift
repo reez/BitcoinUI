@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-<<<<<<< HEAD
-=======
+
 #if canImport(UIKit)
 
 
@@ -22,7 +21,6 @@ import SwiftUI
 /// ```
 /// - Parameter named: The name of the Bitcoin Icon you would like to return.
 /// - Returns: The  specific Bitcoin `Image`
->>>>>>> f6bc9f92311f3f22afebcc635d23d0a68a7d8997
 public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
@@ -265,3 +263,5 @@ struct IconsView_Previews: PreviewProvider {
         
     }
 }
+
+#endif
