@@ -1,0 +1,31 @@
+@Tutorial(time: 1) {
+    @Intro(title: "Using Bitcoin Colors") {
+        This tutorial is about using Bitcoin Colors.
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Section(title: "Use of Bitcoin Colors") {
+        @ContentAndMedia(layout: horizontal) {
+            Let's see how to use Bitcoin Colors.
+            
+<!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        }
+        
+        @Steps {
+            @Step {
+                Here is what using `Color` would look like.
+                @Code(name: "Colors.swift", file: 01-01-colors.swift) {
+                    @Image(source: 01-01-colors-preview-500.png, alt: "01-01-colors-preview")
+                }
+            }
+            
+            @Step {
+                Here is what using a Bitcoin `Color` would look like. Just `import WalletUI`.
+                @Code(name: "Colors.swift", file: 01-02-colors.swift) {
+                    @Image(source: 01-02-colors-preview-500.png, alt: "01-02-colors-preview")
+                }
+            }
+        }
+    }
+}

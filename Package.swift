@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // swift-tools-version:5.4
+=======
+// swift-tools-version:5.5
+>>>>>>> f6bc9f92311f3f22afebcc635d23d0a68a7d8997
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
