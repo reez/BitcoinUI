@@ -3,7 +3,7 @@
 
 # WalletUI
 
-An iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
+WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
@@ -57,7 +57,7 @@ Example code implementations via Swift Previews:
     </a>
 </p>
 
-Additionally, there are components specific to Bitcoin wallets, such as:
+Additionally, there are example code implementations via Swift Previews specific to Bitcoin wallets, such as:
 
 - Balance display
 - Transaction display
@@ -67,7 +67,7 @@ Additionally, there are components specific to Bitcoin wallets, such as:
 <img src="https://github.com/reez/WalletUI/blob/main/Docs/coldcard-import.png?raw=true" height="400" alt='coldcard-import' />
 
 
-It also includes some detailed user flows, such as:
+It also includes some example code implementations via Swift Previews of detailed user flows, such as:
 
 - Onboarding
 - Creation and import of single and multi signature wallets
@@ -81,8 +81,6 @@ It also includes some detailed user flows, such as:
 
 
 ## Basic Usage
-
-Implementation examples for SwiftUI and UIKit.
 
 ### Colors
 
