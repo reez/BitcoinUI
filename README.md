@@ -1,5 +1,4 @@
-![Bitcoin wallet UI kit cover image](/Docs/bitcoin-wallet-ui-kit-themes.png)
-*Bitcoin Wallet UI Kit themes*
+![cover image](/Docs/bitcoin-wallet-ui-kit-themes@2x.png)
 
 # WalletUI
 
