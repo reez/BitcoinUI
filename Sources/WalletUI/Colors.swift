@@ -74,16 +74,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.1764705926179886,
-                    green: 0.6117647290229797,
-                    blue: 0.8588235378265381,
+                    red: 60/255,
+                    green: 163/255,
+                    blue: 222/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.1764705926179886,
-                    green: 0.6117647290229797,
-                    blue: 0.8588235378265381,
+                    red: 45/255,
+                    green: 156/255,
+                    blue: 219/255,
                     alpha: 1
                 )
             }
