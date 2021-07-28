@@ -5,7 +5,7 @@ struct ColorsTutorial: View {
         
         Text("Orange")
             .font(.caption)
-            .foregroundColor(.orange)
+            .foregroundColor(.bitcoinOrange)
             .multilineTextAlignment(.center)
         
     }

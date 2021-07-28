@@ -14,16 +14,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.9686274528503418,
-                    green: 0.5764706134796143,
-                    blue: 0.10196078568696976,
+                    red: 248/255,
+                    green: 155/255,
+                    blue: 42/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.9686274528503418,
-                    green: 0.5764706134796143,
-                    blue: 0.10196078568696976,
+                    red: 247/255,
+                    green: 147/255,
+                    blue: 26/255,
                     alpha: 1
                 )
             }
@@ -34,16 +34,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.9215686321258545,
-                    green: 0.34117648005485535,
-                    blue: 0.34117648005485535,
+                    red: 236/255,
+                    green: 99/255,
+                    blue: 99/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.9215686321258545,
-                    green: 0.34117648005485535,
-                    blue: 0.34117648005485535,
+                    red: 235/255,
+                    green: 87/255,
+                    blue: 87/255,
                     alpha: 1
                 )
             }
@@ -54,16 +54,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.15294118225574493,
-                    green: 0.6823529601097107,
-                    blue: 0.3764705955982208,
+                    red: 54/255,
+                    green: 180/255,
+                    blue: 107/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.15294118225574493,
-                    green: 0.6823529601097107,
-                    blue: 0.3764705955982208,
+                    red: 39/255,
+                    green: 174/255,
+                    blue: 96/255,
                     alpha: 1
                 )
             }
@@ -74,16 +74,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.1764705926179886,
-                    green: 0.6117647290229797,
-                    blue: 0.8588235378265381,
+                    red: 60/255,
+                    green: 163/255,
+                    blue: 222/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.1764705926179886,
-                    green: 0.6117647290229797,
-                    blue: 0.8588235378265381,
+                    red: 45/255,
+                    green: 156/255,
+                    blue: 219/255,
                     alpha: 1
                 )
             }
@@ -94,16 +94,16 @@ extension UIColor {
         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                 return UIColor(
-                    red: 0.7333333492279053,
-                    green: 0.41960784792900085,
-                    blue: 0.8509804010391235,
+                    red: 192/255,
+                    green: 117/255,
+                    blue: 220/255,
                     alpha: 1
                 )
             } else {
                 return UIColor(
-                    red: 0.7333333492279053,
-                    green: 0.41960784792900085,
-                    blue: 0.8509804010391235,
+                    red: 187/255,
+                    green: 107/255,
+                    blue: 217/255,
                     alpha: 1
                 )
             }

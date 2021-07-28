@@ -499,7 +499,7 @@ struct MMMultisigSendCreationView: View {
                         .padding(.vertical, .wallet_grid_vertical_20())
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.orange))
+                        .background(Color.bitcoinOrange)
                         .cornerRadius(5.0)
                     
                 }
