@@ -353,7 +353,7 @@ struct MMMultisigColdcardImport4: View {
                 }
                 
                 ZStack {
-                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color(UIColor.purple))
+                    Circle().frame(width: 50.0, height: 50.0).foregroundColor(Color.bitcoinPurple)
                     Image(systemName: "checkmark")
                         .foregroundColor(Color(UIColor.systemBackground))
                 }
