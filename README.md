@@ -16,7 +16,7 @@ WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/
 
 The design system in the kit includes the basics:
 
-- Colors
+- Colors (Light+Dark Mode)
 - Icons
 
 Example code implementations via Swift Previews:
@@ -81,7 +81,7 @@ It also includes some example code implementations via Swift Previews of detaile
 
 ## Basic Usage
 
-### Colors
+### Colors (Light+Dark Mode)
 
 SwiftUI
 ```swift
