@@ -24,7 +24,7 @@ Example code implementations via Swift Previews:
 - Common navigation components (tab bar, side bar...)
 - Screen templates
 
-### Colors
+### Colors (Light+Dark Mode)
 
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
