@@ -128,7 +128,7 @@ WalletUI currently requires minimum deployment targets of iOS 14.
 
 You can add WalletUI to an Xcode project by adding it as a package dependency.
 
-  1. From the **File** menu, select **Swift Packages › Add Package Dependency…**
+  1. From the **File** menu, select **Add Packages…**
   2. Enter "https://github.com/reez/WalletUI" into the package repository URL text field
   3. Depending on how your project is structured:
       - If you have a single application target that needs access to the library, then add **WalletUI** directly to your application.
