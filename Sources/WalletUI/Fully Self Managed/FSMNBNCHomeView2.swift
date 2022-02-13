@@ -94,7 +94,7 @@ struct FSMNBNCHomeView2_Previews: PreviewProvider {
     static var previews: some View {
         FSMNBNCHomeView2()
             .environment(\.colorScheme, .light)
-//        FSMNBNCHomeView2()
-//            .environment(\.colorScheme, .dark)
+        FSMNBNCHomeView2()
+            .environment(\.colorScheme, .dark)
     }
 }
