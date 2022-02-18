@@ -17,7 +17,7 @@ struct Frame9798AmountView3: View {
                 
                 Spacer()
                 
-                Text("Amount to send")
+                Text("Amount to receive")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(Color(UIColor.label))
