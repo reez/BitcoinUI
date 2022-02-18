@@ -1,6 +1,6 @@
 //
 //  FSMNBNCHomeView2.swift
-//  
+//
 //
 //  Created by Matthew Ramsden on 2/12/22.
 //
@@ -8,93 +8,93 @@
 import SwiftUI
 
 struct FSMNBNCHomeView2: View {
-    var body: some View {
+  var body: some View {
 
-      ZStack {
-        Color(UIColor.systemBackground)
+    ZStack {
+      Color(UIColor.systemBackground)
 
-        VStack(spacing: 20.0) {
+      VStack(spacing: 20.0) {
 
+        HStack {
+          Spacer()
+          Image(systemName: "gearshape")
+            .foregroundColor(Color(UIColor.secondaryLabel))
+        }
+
+        Spacer()
+
+        VStack(spacing: 5.0) {
           HStack {
-            Spacer()
-            Image(systemName: "gearshape")
-              .foregroundColor(Color(UIColor.secondaryLabel))
+            Text("Savings").font(.custom("Inter Regular", size: 18))
+            Image(systemName: "chevron.down")
           }
+          .foregroundColor(Color(UIColor.secondaryLabel))
 
-          Spacer()
-
-          VStack(spacing: 5.0) {
-              HStack {
-                  Text("Savings").font(.custom("Inter Regular", size: 18))
-                  Image(systemName: "chevron.down")
-              }
-              .foregroundColor(Color(UIColor.secondaryLabel))
-
-            Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))
-            Text("$ 41,328.91").font(.custom("Inter Regular", size: 18))
-                  .foregroundColor(
+          Text("₿ 1.6240 2785").font(.custom("Inter Regular", size: 24))
+          Text("$ 41,328.91").font(.custom("Inter Regular", size: 18))
+            .foregroundColor(
               Color(#colorLiteral(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)))
-          }
+        }
 
-          HStack(spacing: 10.0) {
+        HStack(spacing: 10.0) {
 
-            ZStack {
-              Rectangle()
-                .stroke()
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .frame(width: 140.0, height: 90.0)
-              VStack(spacing: 8.0) {
-                Image(systemName: "arrow.up")
-                Text("Send")
-                  .foregroundColor(Color(UIColor.secondaryLabel))
-                  .font(.footnote)
-              }
-            }
-
-            ZStack {
-              Rectangle()
-                .stroke()
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .frame(width: 140.0, height: 90.0)
-              VStack(spacing: 8.0) {
-                Image(systemName: "arrow.down")
-                Text("Receive")
-                  .foregroundColor(Color(UIColor.secondaryLabel))
-                  .font(.footnote)
-              }
-            }
-
-          }
-          .padding( /*@START_MENU_TOKEN@*/.all /*@END_MENU_TOKEN@*/)
-
-          Spacer()
-
-          VStack(spacing: 8.0) {
-            Image(systemName: "chevron.up")
+          ZStack {
+            Rectangle()
+              .stroke()
               .foregroundColor(Color(UIColor.secondaryLabel))
-              .font(.footnote)
-            Text("Receiving ₿0.00500000").font(.footnote)
+              .frame(width: 140.0, height: 90.0)
+            VStack(spacing: 8.0) {
+              Image(systemName: "arrow.up")
+              Text("Send")
+                .foregroundColor(Color(UIColor.secondaryLabel))
+                .font(.footnote)
+            }
+          }
+
+          ZStack {
+            Rectangle()
+              .stroke()
+              .foregroundColor(Color(UIColor.secondaryLabel))
+              .frame(width: 140.0, height: 90.0)
+            VStack(spacing: 8.0) {
+              Image(systemName: "arrow.down")
+              Text("Receive")
+                .foregroundColor(Color(UIColor.secondaryLabel))
+                .font(.footnote)
+            }
           }
 
         }
-        .padding(.horizontal, .wallet_grid_horizontal_10())
-        .padding(.vertical, .wallet_grid_vertical_20())
-        .padding(.horizontal, .wallet_grid_horizontal_10())
-        .padding(.vertical, .wallet_grid_vertical_20())
-        .padding(.horizontal, .wallet_grid_horizontal_10())
-        .padding(.vertical, .wallet_grid_vertical_20())
+        .padding( /*@START_MENU_TOKEN@*/.all /*@END_MENU_TOKEN@*/)
+
+        Spacer()
+
+        VStack(spacing: 8.0) {
+          Image(systemName: "chevron.up")
+            .foregroundColor(Color(UIColor.secondaryLabel))
+            .font(.footnote)
+          Text("Receiving ₿0.00500000").font(.footnote)
+        }
 
       }
-      .edgesIgnoringSafeArea(.all)
+      .padding(.horizontal, .wallet_grid_horizontal_10())
+      .padding(.vertical, .wallet_grid_vertical_20())
+      .padding(.horizontal, .wallet_grid_horizontal_10())
+      .padding(.vertical, .wallet_grid_vertical_20())
+      .padding(.horizontal, .wallet_grid_horizontal_10())
+      .padding(.vertical, .wallet_grid_vertical_20())
 
     }
+    .edgesIgnoringSafeArea(.all)
+
+  }
 }
 
 struct FSMNBNCHomeView2_Previews: PreviewProvider {
-    static var previews: some View {
-        FSMNBNCHomeView2()
-            .environment(\.colorScheme, .light)
-        FSMNBNCHomeView2()
-            .environment(\.colorScheme, .dark)
-    }
+  static var previews: some View {
+    FSMNBNCHomeView2()
+      .environment(\.colorScheme, .light)
+    FSMNBNCHomeView2()
+      .environment(\.colorScheme, .dark)
+  }
 }
