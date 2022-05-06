@@ -1,5 +1,5 @@
 //
-//  SCPNBNCHomeView2.swift
+//  SelfCustodialProviderHomeView1.swift
 //
 //
 //  Created by Matthew Ramsden on 2/13/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SCPNBNCHomeView2: View {
+struct SelfCustodialProviderHomeView1: View {
   var body: some View {
 
     ZStack {
@@ -29,10 +29,8 @@ struct SCPNBNCHomeView2: View {
             Image(systemName: "chevron.down")
           }
           .foregroundColor(Color(UIColor.secondaryLabel))
-          Text("₿ 52 276 sats").font(.custom("Inter Regular", size: 24))
-          Text("$ 18.33").font(.custom("Inter Regular", size: 18))
-            .foregroundColor(
-              Color(#colorLiteral(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)))
+
+          Text("Your wallet is empty").font(.custom("Inter Regular", size: 24))
         }
 
         HStack(spacing: 10.0) {
@@ -43,8 +41,8 @@ struct SCPNBNCHomeView2: View {
               .foregroundColor(Color(UIColor.secondaryLabel))
               .frame(width: 140.0, height: 90.0)
             VStack(spacing: 8.0) {
-              Image(systemName: "arrow.up")
-              Text("Send")
+              Image(systemName: "cart.fill")
+              Text("Buy")
                 .foregroundColor(Color(UIColor.secondaryLabel))
                 .font(.footnote)
             }
@@ -68,13 +66,6 @@ struct SCPNBNCHomeView2: View {
 
         Spacer()
 
-        VStack(spacing: 8.0) {
-          Image(systemName: "chevron.up")
-            .foregroundColor(Color(UIColor.secondaryLabel))
-            .font(.footnote)
-          Text("Receiving ₿0.00500000").font(.footnote)
-        }
-
       }
       .padding(.horizontal, .wallet_grid_horizontal_10())
       .padding(.vertical, .wallet_grid_vertical_20())
@@ -89,11 +80,11 @@ struct SCPNBNCHomeView2: View {
   }
 }
 
-struct SCPNBNCHomeView2_Previews: PreviewProvider {
+struct SCPNBNCHomeView1_Previews: PreviewProvider {
   static var previews: some View {
-    SCPNBNCHomeView2()
+    SelfCustodialProviderHomeView1()
       .environment(\.colorScheme, .light)
-    SCPNBNCHomeView2()
+    SelfCustodialProviderHomeView1()
       .environment(\.colorScheme, .dark)
   }
 }
