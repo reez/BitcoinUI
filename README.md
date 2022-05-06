@@ -122,7 +122,7 @@ view.addSubview(imageView)
 
 ## Requirements
 
-WalletUI currently requires minimum deployment targets of iOS 14.
+WalletUI currently requires minimum deployment targets of iOS 15.
 
 ## Installation
 
