@@ -1,5 +1,5 @@
 //
-//  Format.swift
+//  CGFloat+Extension.swift
 //
 //
 //  Created by Matthew Ramsden on 2/6/21.
