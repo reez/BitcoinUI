@@ -31,7 +31,11 @@ public func BitcoinImage(named: String) -> Image {
 /// - Parameter named: The name of the Bitcoin Icon you would like to return.
 /// - Returns: The  specific Bitcoin `UIImage`
 public func BitcoinUIImage(named: String) -> UIImage {
-  return UIImage(named: named, in: .module, compatibleWith: nil)!
+    guard let image = UIImage(named: named, in: .module, compatibleWith: nil) else {
+        assertionFailure("*No WalletUI Image Found*")
+        return UIImage()
+    }
+    return image
 }
 
 struct IconView: View {
