@@ -27,7 +27,8 @@ struct BitcoinFilled: ButtonStyle {
     var cornerRadius = 5.0
     var tintColor = Color.bitcoinOrange
     var textColor = Color.bitcoinWhite
-    var disabledColor = Color.bitcoinNeutral4
+    var disabledColor = Color.bitcoinNeutral2
+    var disabledTextColor = Color.bitcoinNeutral5
     
     func makeBody(configuration: Configuration) -> some View {
         let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
@@ -35,12 +36,15 @@ struct BitcoinFilled: ButtonStyle {
             .padding()
             .frame(width: width, height: 46)
             .background(stateBackgroundColor.opacity(0.8).cornerRadius(cornerRadius))
-            .foregroundColor(textColor)
+            .foregroundColor(stateTextColor())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
     }
     func stateBackgroundColor(configuration: Configuration) -> Color {
         return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+    }
+    func stateTextColor() -> Color {
+        return isEnabled ? textColor : disabledTextColor
     }
 }
 
@@ -58,6 +62,7 @@ struct BitcoinFilled: ButtonStyle {
 /// - Parameter disabledColor: The disabled background color of the button (optional, default is .bitcoinNeutral4)
 struct BitcoinOutlined: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
+    @Environment(\.colorScheme) var colorScheme
     var width = 315.0
     var cornerRadius = 5.0
     var tintColor = Color.bitcoinOrange
@@ -67,18 +72,22 @@ struct BitcoinOutlined: ButtonStyle {
         configuration.label
             .padding()
             .frame(width: width, height: 46)
-            .foregroundColor(stateForegroundColor())
+            .background(stateBackgroundColor().cornerRadius(cornerRadius))
+            .foregroundColor(stateTextColor())
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(stateBackgroundColor(configuration: configuration), lineWidth: 1.5)
+                    .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
                 )
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
     }
-    func stateBackgroundColor(configuration: Configuration) -> Color {
+    func stateBackgroundColor() -> Color {
+        return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
+    }
+    func stateBorderColor(configuration: Configuration) -> Color {
         return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
     }
-    func stateForegroundColor() -> Color {
+    func stateTextColor() -> Color {
         return isEnabled ? tintColor : disabledColor
     }
 }
