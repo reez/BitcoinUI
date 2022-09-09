@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-private let defaultButtonWidth = 315.0
-private let defaultButtonHeight = 48.0
+public let defaultButtonWidth = 315.0
+public let defaultButtonHeight = 48.0
 
 public struct BitcoinFilled: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
