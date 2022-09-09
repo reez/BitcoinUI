@@ -21,7 +21,7 @@ import SwiftUI
 /// - Parameter tintColor: The background color of the button (optional, default is .bitcoinOrange)
 /// - Parameter textColor: The text color of the button (optional, default is .bitcoinWhite)
 /// - Parameter disabledColor: The disabled background color of the button (optional, default is .bitcoinNeutral4)
-struct BitcoinFilled: ButtonStyle {
+public struct BitcoinFilled: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
     var width = 315.0
     var cornerRadius = 5.0
@@ -60,7 +60,7 @@ struct BitcoinFilled: ButtonStyle {
 /// - Parameter cornerRadius: The corner radius of the button (optional, default is 5.0)
 /// - Parameter tintColor: The border color of the button (optional, default is .bitcoinOrange)
 /// - Parameter disabledColor: The disabled background color of the button (optional, default is .bitcoinNeutral4)
-struct BitcoinOutlined: ButtonStyle {
+public struct BitcoinOutlined: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
     @Environment(\.colorScheme) var colorScheme
     var width = 315.0
