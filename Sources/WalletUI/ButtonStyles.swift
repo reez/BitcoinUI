@@ -129,7 +129,7 @@ public struct BitcoinOutlined: ButtonStyle {
         return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
     }
     private func stateTextColor() -> Color {
-        return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+        return isEnabled ? tintColor : disabledColor
     }
 }
 
