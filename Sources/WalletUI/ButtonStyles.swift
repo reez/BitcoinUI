@@ -12,7 +12,7 @@ public struct BitcoinFilled: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
     
-    let width = 315.0
+    let width: CGFloat
     let cornerRadius = 5.0
     let tintColor = Color.bitcoinOrange
     let textColor = Color.bitcoinWhite
