@@ -167,7 +167,7 @@ public struct BitcoinPlain: ButtonStyle {
             .font(Font.body.bold())
             .padding()
             .frame(width: width, height: height)
-            .background(stateBackgroundColor().cornerRadius(cornerRadius))
+            .background(stateBackgroundColor())
             .foregroundColor(stateTextColor())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
