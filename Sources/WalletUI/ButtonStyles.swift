@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 public struct NeumorphicButtonStyle: ButtonStyle {
+    @Environment(\.colorScheme) private var colorScheme
 
     public struct Appearance {
         public var cornerRadius: CGFloat = 12
@@ -19,8 +20,6 @@ public struct NeumorphicButtonStyle: ButtonStyle {
     }
 
     public let appearance: Appearance
-
-    public let colorScheme: ColorScheme
 
     private var buttonColor: Color {
         switch colorScheme {
@@ -129,8 +128,7 @@ public struct NeumorphicButtonStyle: ButtonStyle {
         )
     }
 
-    public init(colorScheme: ColorScheme, appearance: Appearance = Appearance()) {
-        self.colorScheme = colorScheme
+    public init(appearance: Appearance = Appearance()) {
         self.appearance = appearance
     }
 
