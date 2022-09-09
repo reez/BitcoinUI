@@ -39,7 +39,7 @@ public struct BitcoinFilled: ButtonStyle {
         self.disabledTextColor = Color.bitcoinNeutral5
     }
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
         configuration.label
             .padding()
