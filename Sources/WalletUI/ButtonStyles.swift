@@ -10,6 +10,11 @@ import SwiftUI
 
 public let defaultButtonWidth = 315.0
 public let defaultButtonHeight = 48.0
+public let defaultCornerRadius = 5.0
+public let defaultTintColor = Color.bitcoinOrange
+public let defaultTextColor = Color.bitcoinWhite
+public let defaultDisabledFillColor = Color.bitcoinNeutral2
+public let defaultDisabledTextColor = Color.bitcoinNeutral5
 
 public struct BitcoinFilled: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
@@ -17,15 +22,20 @@ public struct BitcoinFilled: ButtonStyle {
     
     let width: CGFloat
     let height: CGFloat
-    let cornerRadius = 5.0
-    let tintColor = Color.bitcoinOrange
+    let cornerRadius: CGFloat
+    let tintColor: Color
     let textColor = Color.bitcoinWhite
-    let disabledColor = Color.bitcoinNeutral2
+    let disabledFillColor = Color.bitcoinNeutral2
     let disabledTextColor = Color.bitcoinNeutral5
     
-    public init(width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight) {
+    public init(width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight, cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor, textColor: Color = defaultTextColor, disabledFilleColor: Color = defaultDisabledFillColor, disabledTextColor: Color = defaultDisabledTextColor) {
         self.width = width
         self.height = height
+        self.cornerRadius = cornerRadius
+        self.tintColor = tintColor
+        self.textColor = textColor
+        self.disabledColor = disabledFilleColor
+        self.disabledTextColor = disabledTextColor
     }
 
     public func makeBody(configuration: Configuration) -> some View {
@@ -40,7 +50,7 @@ public struct BitcoinFilled: ButtonStyle {
     }
 
     private func stateBackgroundColor(configuration: Configuration) -> Color {
-        return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+        return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledFillColor
     }
     
     private func stateTextColor() -> Color {
