@@ -42,7 +42,7 @@ public struct BitcoinFilled: ButtonStyle {
         let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
         configuration.label
             .padding()
-            .frame(width: width, height: 46)
+            .frame(width: width, height: height)
             .background(stateBackgroundColor.opacity(0.8).cornerRadius(cornerRadius))
             .foregroundColor(stateTextColor())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
