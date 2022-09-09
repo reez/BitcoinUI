@@ -20,7 +20,7 @@ public struct BitcoinFilled: ButtonStyle {
     let disabledTextColor = Color.bitcoinNeutral5
     
     public init(width: CGFloat = 315.0) {
-        self.width
+        self.width = width
     }
 
     public func makeBody(configuration: Configuration) -> some View {
