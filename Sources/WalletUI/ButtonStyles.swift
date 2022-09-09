@@ -110,8 +110,9 @@ public struct BitcoinOutlined: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: 46)
+            .frame(width: width, height: height)
             .background(stateBackgroundColor().cornerRadius(cornerRadius))
             .foregroundColor(stateTextColor())
             .overlay(
