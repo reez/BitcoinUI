@@ -34,7 +34,7 @@ public struct BitcoinFilled: ButtonStyle {
         self.cornerRadius = cornerRadius
         self.tintColor = tintColor
         self.textColor = textColor
-        self.disabledColor = disabledFilleColor
+        self.disabledFillColor = disabledFilleColor
         self.disabledTextColor = disabledTextColor
     }
 
