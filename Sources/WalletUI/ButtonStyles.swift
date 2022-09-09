@@ -92,7 +92,7 @@ public struct BitcoinOutlined: ButtonStyle {
         self.disabledColor = disabledColor
     }
 
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
             .frame(width: width, height: 46)
@@ -105,13 +105,13 @@ public struct BitcoinOutlined: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
     }
-    func stateBackgroundColor() -> Color {
+    private func stateBackgroundColor() -> Color {
         return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
     }
-    func stateBorderColor(configuration: Configuration) -> Color {
+    private func stateBorderColor(configuration: Configuration) -> Color {
         return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
     }
-    func stateTextColor() -> Color {
+    private func stateTextColor() -> Color {
         return isEnabled ? tintColor : disabledColor
     }
 }
