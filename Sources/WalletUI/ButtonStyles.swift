@@ -58,7 +58,7 @@ public struct BitcoinFilled: ButtonStyle {
     public func makeBody(configuration: Configuration) -> some View {
         let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
         configuration.label
-            .font(.system.bold())
+            .fontWeight(.bold)
             .padding()
             .frame(width: width, height: height)
             .background(stateBackgroundColor.opacity(0.8).cornerRadius(cornerRadius))
