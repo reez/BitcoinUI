@@ -12,7 +12,7 @@ public struct BitcoinFilled: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
     
-    var width = 315.0
+    let width: CGFloat?
     let cornerRadius = 5.0
     let tintColor = Color.bitcoinOrange
     let textColor = Color.bitcoinWhite
@@ -20,7 +20,7 @@ public struct BitcoinFilled: ButtonStyle {
     let disabledTextColor = Color.bitcoinNeutral5
     
     public init(width: CGFloat?) {
-        self.width = width ?? self.width
+        self.width = width ?? 315.0
     }
 
     public func makeBody(configuration: Configuration) -> some View {
