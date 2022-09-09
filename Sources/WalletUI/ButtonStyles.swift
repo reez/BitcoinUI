@@ -23,12 +23,21 @@ import SwiftUI
 /// - Parameter disabledColor: The disabled background color of the button (optional, default is .bitcoinNeutral4)
 struct BitcoinFilled: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
-    var width = 315.0
-    var cornerRadius = 5.0
-    var tintColor = Color.bitcoinOrange
-    var textColor = Color.bitcoinWhite
-    var disabledColor = Color.bitcoinNeutral2
-    var disabledTextColor = Color.bitcoinNeutral5
+    let width = 315.0
+    let cornerRadius = 5.0
+    let tintColor = Color.bitcoinOrange
+    let textColor = Color.bitcoinWhite
+    let disabledColor = Color.bitcoinNeutral2
+    let disabledTextColor = Color.bitcoinNeutral5
+    
+    public init(width: CGFloat?) {
+        self.width = width ?? 315.0
+        self.cornerRadius = 5.0
+        self.tintColor = Color.bitcoinOrange
+        self.textColor = Color.bitcoinWhite
+        self.disabledColor = Color.bitcoinNeutral2
+        self.disabledTextColor = Color.bitcoinNeutral5
+    }
     
     func makeBody(configuration: Configuration) -> some View {
         let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
