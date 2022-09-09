@@ -24,9 +24,9 @@ public struct BitcoinFilled: ButtonStyle {
     let height: CGFloat
     let cornerRadius: CGFloat
     let tintColor: Color
-    let textColor = Color.bitcoinWhite
-    let disabledFillColor = Color.bitcoinNeutral2
-    let disabledTextColor = Color.bitcoinNeutral5
+    let textColor: Color
+    let disabledFillColor: Color
+    let disabledTextColor: Color
     
     public init(width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight, cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor, textColor: Color = defaultTextColor, disabledFilleColor: Color = defaultDisabledFillColor, disabledTextColor: Color = defaultDisabledTextColor) {
         self.width = width
