@@ -16,7 +16,7 @@ public extension Text {
 
 public struct BitcoinTitle1: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
-    public init(){}
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 36, weight: .semibold))
@@ -26,6 +26,7 @@ public struct BitcoinTitle1: ViewModifier {
 
 public struct BitcoinTitle2: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 28, weight: .semibold))
@@ -35,6 +36,7 @@ public struct BitcoinTitle2: ViewModifier {
 
 public struct BitcoinTitle3: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 24, weight: .semibold))
@@ -44,6 +46,7 @@ public struct BitcoinTitle3: ViewModifier {
 
 public struct BitcoinTitle4: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 21, weight: .semibold))
@@ -53,6 +56,7 @@ public struct BitcoinTitle4: ViewModifier {
 
 public struct BitcoinTitle5: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 18, weight: .semibold))
@@ -62,6 +66,7 @@ public struct BitcoinTitle5: ViewModifier {
 
 public struct BitcoinBody1: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 24, weight: .regular))
@@ -71,6 +76,7 @@ public struct BitcoinBody1: ViewModifier {
 
 public struct BitcoinBody2: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 21, weight: .regular))
@@ -80,6 +86,7 @@ public struct BitcoinBody2: ViewModifier {
 
 public struct BitcoinBody3: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 18, weight: .regular))
@@ -89,6 +96,7 @@ public struct BitcoinBody3: ViewModifier {
 
 public struct BitcoinBody4: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 15, weight: .regular))
@@ -98,6 +106,7 @@ public struct BitcoinBody4: ViewModifier {
 
 public struct BitcoinBody5: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init() {}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 13, weight: .regular))
