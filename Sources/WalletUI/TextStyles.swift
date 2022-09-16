@@ -61,7 +61,7 @@ public struct BitcoinTitle5: ViewModifier {
 
 public struct BitcoinBody1: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .font(.system(size: 24, weight: .regular))
             .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
