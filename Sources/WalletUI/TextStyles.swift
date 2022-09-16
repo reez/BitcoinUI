@@ -16,6 +16,7 @@ public extension Text {
 
 public struct BitcoinTitle1: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    public init(){}
     public func body(content: Content) -> some View {
         content
             .font(.system(size: 36, weight: .semibold))
