@@ -18,6 +18,8 @@ The design system in the kit includes the basics:
 
 - Colors (Light+Dark Mode)
 - Icons
+- Button styles (SwiftUI, Light+Dark Mode)
+- Text styles (SwiftUI, Light+Dark Mode)
 
 Example code implementations via Swift Previews:
 - General UI elements (buttons, toggles...)
@@ -118,6 +120,44 @@ let image = BitcoinUIImage(named: "coldcard")
 let imageView = UIImageView(image: image)
 imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
 view.addSubview(imageView)
+```
+
+### Button Styles
+
+Three button styles are implemented in SwiftUI; BitcoinFilled, BitcoinOutlined and BitcoinPlain.
+They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
+
+SwiftUI
+
+```swift
+Button("Filled button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinFilled())
+
+Button("Outlined button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinOutlined())
+
+Button("Plain button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinPlain())
+```
+
+### Text Styles
+
+Ten text styles are implemented in SwiftUI; BitcoinTitle1 - BitcoinTitle5 and BitcoinBody1 - BitcoinBody5
+
+SwiftUI
+
+```swift
+Text("Title")
+    .textStyle(BitcoinTitle1())
+
+Text("Body")
+    .textStyle(BitcoinBody1())
 ```
 
 ## Requirements
