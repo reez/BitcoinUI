@@ -78,7 +78,7 @@ It also includes some example code implementations via Swift Previews of detaile
 - Transaction management
 - Coin mixing
 
-<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="400" alt='hardware-wallet-interaction' />
+<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="800" width="384" alt='hardware-wallet-interaction' />
 
 
 ## Basic Usage
@@ -126,6 +126,9 @@ view.addSubview(imageView)
 
 Three button styles are implemented in SwiftUI; BitcoinFilled, BitcoinOutlined and BitcoinPlain.
 They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
+
+<img src="https://github.com/reez/WalletUI/blob/main/Docs/button-dark.png?raw=true" height="400" alt='button-dark' />
+
 
 SwiftUI
 
