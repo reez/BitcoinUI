@@ -195,3 +195,59 @@ public struct BitcoinPlain: ButtonStyle {
     return isEnabled ? tintColor : disabledColor
   }
 }
+
+
+struct ButtonStylesView: View {
+  var body: some View {
+
+    ZStack {
+      Color(UIColor.systemBackground)
+
+      VStack {
+
+        Text("Button Styles")
+          .underline()
+          .font(.largeTitle)
+          .fontWeight(.semibold)
+          .padding(.horizontal, .wallet_grid_horizontal_10())
+          .padding(.vertical, .wallet_grid_vertical_20())
+          .padding(.top, .wallet_grid_vertical_20())
+          .padding(.top, .wallet_grid_vertical_20())
+          
+          Spacer()
+
+          Button("BitcoinFilled") {}
+              .buttonStyle(BitcoinFilled())
+              .padding()
+          
+          Button("BitcoinPlain") {}
+              .buttonStyle(BitcoinPlain())
+              .padding()
+
+          Button("BitcoinOutlined") {}
+              .buttonStyle(BitcoinOutlined())
+              .padding()
+
+          Spacer()
+
+      }
+      .padding(.horizontal, .wallet_grid_horizontal_10())
+      .padding(.vertical, .wallet_grid_vertical_20())
+
+    }
+    .edgesIgnoringSafeArea(.all)
+
+  }
+}
+
+struct ButtonStylesView_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+        ButtonStylesView()
+        .environment(\.colorScheme, .light)
+        ButtonStylesView()
+        .environment(\.colorScheme, .dark)
+
+    }
+  }
+}
