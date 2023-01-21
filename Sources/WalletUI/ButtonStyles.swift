@@ -196,7 +196,6 @@ public struct BitcoinPlain: ButtonStyle {
   }
 }
 
-
 struct ButtonStylesView: View {
   var body: some View {
 
@@ -213,22 +212,22 @@ struct ButtonStylesView: View {
           .padding(.vertical, .wallet_grid_vertical_20())
           .padding(.top, .wallet_grid_vertical_20())
           .padding(.top, .wallet_grid_vertical_20())
-          
-          Spacer()
 
-          Button("BitcoinFilled") {}
-              .buttonStyle(BitcoinFilled())
-              .padding()
-          
-          Button("BitcoinPlain") {}
-              .buttonStyle(BitcoinPlain())
-              .padding()
+        Spacer()
 
-          Button("BitcoinOutlined") {}
-              .buttonStyle(BitcoinOutlined())
-              .padding()
+        Button("BitcoinFilled") {}
+          .buttonStyle(BitcoinFilled())
+          .padding()
 
-          Spacer()
+        Button("BitcoinPlain") {}
+          .buttonStyle(BitcoinPlain())
+          .padding()
+
+        Button("BitcoinOutlined") {}
+          .buttonStyle(BitcoinOutlined())
+          .padding()
+
+        Spacer()
 
       }
       .padding(.horizontal, .wallet_grid_horizontal_10())
@@ -243,9 +242,9 @@ struct ButtonStylesView: View {
 struct ButtonStylesView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-        ButtonStylesView()
+      ButtonStylesView()
         .environment(\.colorScheme, .light)
-        ButtonStylesView()
+      ButtonStylesView()
         .environment(\.colorScheme, .dark)
 
     }
