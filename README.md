@@ -124,7 +124,7 @@ view.addSubview(imageView)
 
 ### Button Styles
 
-Four button styles are implemented in SwiftUI; BitcoinCapsule, BitcoinFilled, BitcoinOutlined and BitcoinPlain.
+Five button styles are implemented in SwiftUI; BitcoinCapsuleFilled, BitcoinFilled, BitcoinCapsuleOutlined, BitcoinOutlined, and BitcoinPlain.
 They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
 
 <img src="https://github.com/reez/WalletUI/blob/main/Docs/button-dark.png?raw=true" height="400" alt='button-dark' />
@@ -133,15 +133,20 @@ They have a number of optional parameters, including: width, height, cornerRadiu
 SwiftUI
 
 ```swift    
-Button("Capsule button") {
+Button("Capsule filled button") {
     print("Button pressed!")
 }
-.buttonStyle(BitcoinCapsule())
+.buttonStyle(BitcoinCapsuleFilled())
             
 Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
+
+Button("Capsule outlined button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinCapsuleOutlined())
 
 Button("Outlined button") {
     print("Button pressed!")

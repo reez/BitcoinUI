@@ -17,13 +17,13 @@ public let defaultDisabledFillColor = Color.bitcoinNeutral2
 public let defaultDisabledTextColor = Color.bitcoinNeutral5
 public let defaultDisabledOutlineColor = Color.bitcoinNeutral4
 
-/// A `ButtonStyle` corresponding to a Capsule type not currently  in the Bitcoin Wallet UI Kit
+/// A `ButtonStyle` corresponding to a Filled Capsule type not currently  in the Bitcoin Wallet UI Kit
 ///
 /// ```swift
 /// Button("Label") {
 ///     print("Button pressed!")
 /// }
-///.buttonStyle(BitcoinFilled())
+///.buttonStyle(BitcoinCapsuleFilled())
 /// ```
 /// - Parameter width: The width of the button (optional, default is 315.0)
 /// - Parameter height: The width of the button (optional, default is 48.0)
@@ -33,51 +33,51 @@ public let defaultDisabledOutlineColor = Color.bitcoinNeutral4
 /// - Parameter disabledFillColor: The disabled background color of the button (optional, default is .bitcoinNeutral2)
 /// - Parameter disabledTextColor: The disabled text color of the button (optional, default is .bitcoinNeutral5)
 ///
-public struct BitcoinCapsule: ButtonStyle {
-  @Environment(\.isEnabled) private var isEnabled
+public struct BitcoinCapsuleFilled: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
 
-  let width: CGFloat
-  let height: CGFloat
-  let tintColor: Color
-  let textColor: Color
-  let disabledFillColor: Color
-  let disabledTextColor: Color
+    let width: CGFloat
+    let height: CGFloat
+    let tintColor: Color
+    let textColor: Color
+    let disabledFillColor: Color
+    let disabledTextColor: Color
 
-  public init(
-    width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-    tintColor: Color = defaultTintColor,
-    textColor: Color = defaultTextColor, disabledFillColor: Color = defaultDisabledFillColor,
-    disabledTextColor: Color = defaultDisabledTextColor
-  ) {
-    self.width = width
-    self.height = height
-    self.tintColor = tintColor
-    self.textColor = textColor
-    self.disabledFillColor = disabledFillColor
-    self.disabledTextColor = disabledTextColor
-  }
+    public init(
+        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+        tintColor: Color = defaultTintColor,
+        textColor: Color = defaultTextColor, disabledFillColor: Color = defaultDisabledFillColor,
+        disabledTextColor: Color = defaultDisabledTextColor
+    ) {
+        self.width = width
+        self.height = height
+        self.tintColor = tintColor
+        self.textColor = textColor
+        self.disabledFillColor = disabledFillColor
+        self.disabledTextColor = disabledTextColor
+    }
 
-  public func makeBody(configuration: Configuration) -> some View {
-    let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
-    configuration.label
-      .font(Font.body.bold())
-      .padding()
-      .frame(width: width, height: height)
-      .background(stateBackgroundColor.opacity(0.8))
-      .clipShape(Capsule())
-      .foregroundColor(stateTextColor())
-      .scaleEffect(configuration.isPressed ? 0.95 : 1)
-      .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-  }
+    public func makeBody(configuration: Configuration) -> some View {
+        let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
+        configuration.label
+            .font(Font.body.bold())
+            .padding()
+            .frame(width: width, height: height)
+            .background(stateBackgroundColor.opacity(0.8))
+            .clipShape(Capsule())
+            .foregroundColor(stateTextColor())
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+    }
 
-  private func stateBackgroundColor(configuration: Configuration) -> Color {
-    return isEnabled
-      ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledFillColor
-  }
+    private func stateBackgroundColor(configuration: Configuration) -> Color {
+        return isEnabled
+            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledFillColor
+    }
 
-  private func stateTextColor() -> Color {
-    return isEnabled ? textColor : disabledTextColor
-  }
+    private func stateTextColor() -> Color {
+        return isEnabled ? textColor : disabledTextColor
+    }
 }
 
 /// A `ButtonStyle` corresponding to the Filled type in the Bitcoin Wallet UI Kit
@@ -143,6 +143,66 @@ public struct BitcoinFilled: ButtonStyle {
   private func stateTextColor() -> Color {
     return isEnabled ? textColor : disabledTextColor
   }
+}
+
+/// A `ButtonStyle` corresponding to a Capsule Outline type not yet in the Bitcoin Wallet UI Kit
+///
+/// ```swift
+/// Button("Label") {
+///     print("Button pressed!")
+/// }
+///.buttonStyle(BitcoinCapsuleOutlined())
+/// ```
+/// - Parameter width: The width of the button (optional, default is 315.0)
+/// - Parameter height: The width of the button (optional, default is 48.0)
+/// - Parameter cornerRadius: The corner radius of the button (optional, default is 5.0)
+/// - Parameter tintColor: The border and text color of the button (optional, default is .bitcoinOrange)
+/// - Parameter disabledColor: The disabled color of the button (optional, default is .bitcoinNeutral4)
+///
+public struct BitcoinCapsuleOutlined: ButtonStyle {
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.isEnabled) private var isEnabled
+
+    let width: CGFloat
+    let height: CGFloat
+    let tintColor: Color
+    let disabledColor: Color
+
+    public init(
+        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+        tintColor: Color = defaultTintColor,
+        disabledColor: Color = defaultDisabledOutlineColor
+    ) {
+        self.width = width
+        self.height = height
+        self.tintColor = tintColor
+        self.disabledColor = disabledColor
+    }
+
+    public func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(Font.body.bold())
+            .padding()
+            .frame(width: width, height: height)
+            .background(stateBackgroundColor())
+            .clipShape(Capsule())
+            .foregroundColor(stateTextColor())
+            .overlay(
+                Capsule()
+                    .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
+            )
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+    }
+    private func stateBackgroundColor() -> Color {
+        return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
+    }
+    private func stateBorderColor(configuration: Configuration) -> Color {
+        return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+    }
+    private func stateTextColor() -> Color {
+        return isEnabled ? tintColor : disabledColor
+    }
 }
 
 /// A `ButtonStyle` corresponding to the Outline type in the Bitcoin Wallet UI Kit
@@ -278,8 +338,8 @@ struct ButtonStylesView: View {
 
         Spacer()
 
-        Button("BitcoinCapsule") {}
-          .buttonStyle(BitcoinCapsule())
+        Button("BitcoinCapsuleFilled") {}
+          .buttonStyle(BitcoinCapsuleFilled())
           .padding()
 
         Button("BitcoinFilled") {}
@@ -290,6 +350,10 @@ struct ButtonStylesView: View {
           .buttonStyle(BitcoinPlain())
           .padding()
 
+        Button("BitcoinCapsuleOutlined") {}
+          .buttonStyle(BitcoinCapsuleOutlined())
+          .padding()
+          
         Button("BitcoinOutlined") {}
           .buttonStyle(BitcoinOutlined())
           .padding()
