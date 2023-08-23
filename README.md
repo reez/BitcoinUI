@@ -158,6 +158,11 @@ Button("Plain button") {
 }
 .buttonStyle(BitcoinPlain())
 ```
+
+### Text Styles
+
+Ten text styles are implemented in SwiftUI; BitcoinTitle1 - BitcoinTitle5 and BitcoinBody1 - BitcoinBody5
+
 SwiftUI
 
 ```swift
