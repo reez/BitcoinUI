@@ -338,8 +338,8 @@ struct ButtonStylesView: View {
 
         Spacer()
 
-        Button("BitcoinCapsule") {}
-          .buttonStyle(BitcoinCapsule())
+        Button("BitcoinCapsuleFilled") {}
+          .buttonStyle(BitcoinCapsuleFilled())
           .padding()
 
         Button("BitcoinFilled") {}
@@ -350,6 +350,10 @@ struct ButtonStylesView: View {
           .buttonStyle(BitcoinPlain())
           .padding()
 
+        Button("BitcoinCapsuleOutlined") {}
+          .buttonStyle(BitcoinCapsuleOutlined())
+          .padding()
+          
         Button("BitcoinOutlined") {}
           .buttonStyle(BitcoinOutlined())
           .padding()
