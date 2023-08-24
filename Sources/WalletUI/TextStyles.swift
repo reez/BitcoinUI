@@ -132,31 +132,31 @@ struct TextStylesView: View {
           .padding(.top, .wallet_grid_vertical_20())
 
         Spacer()
-          
-          Text("Title")
-              .textStyle(BitcoinTitle1())
-              .padding()
-          
-          Text("Body")
-              .textStyle(BitcoinBody1())
-              .padding()
-          
-          Text("Body")
-              .textStyle(BitcoinBody2())
-              .padding()
-          
-          Text("Body")
-              .textStyle(BitcoinBody3())
-              .padding()
-          
-          Text("Body")
-              .textStyle(BitcoinBody4())
-              .padding()
-          
-          Text("Body")
-              .textStyle(BitcoinBody5())
-              .padding()
-          
+
+        Text("Title")
+          .textStyle(BitcoinTitle1())
+          .padding()
+
+        Text("Body")
+          .textStyle(BitcoinBody1())
+          .padding()
+
+        Text("Body")
+          .textStyle(BitcoinBody2())
+          .padding()
+
+        Text("Body")
+          .textStyle(BitcoinBody3())
+          .padding()
+
+        Text("Body")
+          .textStyle(BitcoinBody4())
+          .padding()
+
+        Text("Body")
+          .textStyle(BitcoinBody5())
+          .padding()
+
         Spacer()
 
       }
@@ -172,9 +172,9 @@ struct TextStylesView: View {
 struct TextStylesView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-        TextStylesView()
+      TextStylesView()
         .environment(\.colorScheme, .light)
-        TextStylesView()
+      TextStylesView()
         .environment(\.colorScheme, .dark)
     }
   }
