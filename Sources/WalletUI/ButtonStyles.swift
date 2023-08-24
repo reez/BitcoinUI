@@ -377,7 +377,6 @@ struct ButtonStylesView_Previews: PreviewProvider {
         .environment(\.colorScheme, .light)
       ButtonStylesView()
         .environment(\.colorScheme, .dark)
-
     }
   }
 }
