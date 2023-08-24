@@ -9,16 +9,6 @@ import Foundation
 
 extension CGFloat {
 
-  // Choose spacing in increment of 2
-  static func wallet_grid_2(_ n: Int) -> CGFloat {
-    return CGFloat(n) * 2
-  }
-
-  // Choose spacing in increment of 10
-  static func wallet_grid_10(_ n: Int) -> CGFloat {
-    return CGFloat(n) * 10
-  }
-
   // Choose horizontal spacing per Figma
   static func wallet_grid_horizontal_10() -> CGFloat {
     return CGFloat(1) * 10

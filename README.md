@@ -21,64 +21,42 @@ The design system in the kit includes the basics:
 - Text styles
 - Icons
 
-### Colors (Light+Dark Mode)
+### Colors
 
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-code-preview.png?raw=true' height='400' alt='colors-code-preview' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-dark.png?raw=true' height='400' alt='colors-code-preview' />
     </a>
 </p>
 
-### Hardware Illustrations
+### Buttons
+
+<p align='left'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/buttons-dark.png?raw=true' height='400' alt='colors-code-preview' />
+    </a>
+</p>
+
+### Text
+
+<p align='left'>
+    <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/text-dark.png?raw=true' height='400' alt='colors-code-preview' />
+    </a>
+</p>
+
+### Icons
 
 <p align='left'>
     <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-illustrations-code-preview.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-dark.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
-
-### Icons Filled
-
-<p align='left'>
-    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-filled-code-preview.png?raw=true' height='400' alt='icons-filled-code-preview' />
-    </a>
-</p>
-
-### Icons Outline
-
-<p align='left'>
-    <a href='https://github.com/BitcoinDesign/Bitcoin-Icons'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/icons-outline-code-preview.png?raw=true' height='400' alt='icons-outline-code-preview' />
-    </a>
-</p>
-
-Additionally, there are example code implementations via Swift Previews specific to Bitcoin wallets, such as:
-
-- Balance display
-- Transaction display
-- Address input
-- Fee selection
-
-<img src="https://github.com/reez/WalletUI/blob/main/Docs/coldcard-import.png?raw=true" height="400" alt='coldcard-import' />
-
-
-It also includes some example code implementations via Swift Previews of detailed user flows, such as:
-
-- Onboarding
-- Creation and import of single and multi signature wallets
-- Sending
-- Receiving
-- Settings
-- Transaction management
-- Coin mixing
-
-<img src="https://github.com/reez/WalletUI/blob/main/Docs/hardware-wallet-interaction.gif?raw=true" height="800" width="384" alt='hardware-wallet-interaction' />
 
 
 ## Basic Usage
 
-### Colors (Light+Dark Mode)
+### Colors
 
 SwiftUI
 ```swift
@@ -95,26 +73,6 @@ let label = UILabel()
 label.frame = CGRect(x: 200, y: 200, width: 200, height: 20)
 label.text = "Bitcoin Orange"
 label.textColor = .bitcoinOrange
-```
-
-### Icons
-
-SwiftUI
-
-```swift
-BitcoinImage(named: "coldcard")
-    .resizable()
-    .aspectRatio(contentMode: .fit)
-    .frame(height: 75.0)
-```
-
-UIKit
-
-```swift
-let image = BitcoinUIImage(named: "coldcard")
-let imageView = UIImageView(image: image)
-imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
-view.addSubview(imageView)
 ```
 
 ### Button Styles
@@ -137,21 +95,6 @@ Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
-
-Button("Capsule outlined button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinCapsuleOutlined())
-
-Button("Outlined button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinOutlined())
-
-Button("Plain button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinPlain())
 ```
 
 ### Text Styles
@@ -166,6 +109,26 @@ Text("Title")
 
 Text("Body")
     .textStyle(BitcoinBody1())
+```
+
+### Icons
+
+SwiftUI
+
+```swift
+BitcoinImage(named: "coldcard")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+    .frame(height: 75.0)
+```
+
+UIKit
+
+```swift
+let image = BitcoinUIImage(named: "coldcard")
+let imageView = UIImageView(image: image)
+imageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
+view.addSubview(imageView)
 ```
 
 ## Requirements

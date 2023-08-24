@@ -113,3 +113,69 @@ public struct BitcoinBody5: ViewModifier {
       .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
   }
 }
+
+struct TextStylesView: View {
+  var body: some View {
+
+    ZStack {
+      Color(UIColor.systemBackground)
+
+      VStack {
+
+        Text("Text Styles")
+          .underline()
+          .font(.largeTitle)
+          .fontWeight(.semibold)
+          .padding(.horizontal, .wallet_grid_horizontal_10())
+          .padding(.vertical, .wallet_grid_vertical_20())
+          .padding(.top, .wallet_grid_vertical_20())
+          .padding(.top, .wallet_grid_vertical_20())
+
+        Spacer()
+          
+          Text("Title")
+              .textStyle(BitcoinTitle1())
+              .padding()
+          
+          Text("Body")
+              .textStyle(BitcoinBody1())
+              .padding()
+          
+          Text("Body")
+              .textStyle(BitcoinBody2())
+              .padding()
+          
+          Text("Body")
+              .textStyle(BitcoinBody3())
+              .padding()
+          
+          Text("Body")
+              .textStyle(BitcoinBody4())
+              .padding()
+          
+          Text("Body")
+              .textStyle(BitcoinBody5())
+              .padding()
+          
+        Spacer()
+
+      }
+      .padding(.horizontal, .wallet_grid_horizontal_10())
+      .padding(.vertical, .wallet_grid_vertical_20())
+
+    }
+    .edgesIgnoringSafeArea(.all)
+
+  }
+}
+
+struct TextStylesView_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+        TextStylesView()
+        .environment(\.colorScheme, .light)
+        TextStylesView()
+        .environment(\.colorScheme, .dark)
+    }
+  }
+}
