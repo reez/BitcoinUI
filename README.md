@@ -21,38 +21,20 @@ The design system in the kit includes the basics:
 - Text styles
 - Icons
 
-### Colors
-
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-dark.png?raw=true' height='400' alt='colors-code-preview' />
     </a>
-</p>
-
-### Buttons
-
-<p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/buttons-dark.png?raw=true' height='400' alt='colors-code-preview' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/buttons-dark.png?raw=true' height='400' alt='buttons-code-preview' />
     </a>
-</p>
-
-### Text
-
-<p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/text-dark.png?raw=true' height='400' alt='colors-code-preview' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/text-dark.png?raw=true' height='400' alt='text-code-preview' />
     </a>
-</p>
-
-### Icons
-
-<p align='left'>
     <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-dark.png?raw=true' height='400' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
-
 
 ## Basic Usage
 
