@@ -11,7 +11,6 @@ WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/
 [Requirements](#requirements)<br>
 [Installation](#installation)<br>
 
-
 ## What's Included
 
 The design system in the kit includes the basics:
@@ -40,7 +39,8 @@ The design system in the kit includes the basics:
 
 ### Colors
 
-SwiftUI
+*SwiftUI*
+
 ```swift
 Text("Bitcoin Orange")
     .font(.caption)
@@ -48,7 +48,7 @@ Text("Bitcoin Orange")
     .multilineTextAlignment(.center)
 ```
 
-UIKit
+*UIKit*
 
 ```swift
 let label = UILabel()
@@ -62,7 +62,7 @@ label.textColor = .bitcoinOrange
 Five button styles are implemented in SwiftUI; BitcoinCapsuleFilled, BitcoinFilled, BitcoinCapsuleOutlined, BitcoinOutlined, and BitcoinPlain.
 They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
 
-SwiftUI
+*SwiftUI*
 
 ```swift    
 Button("Capsule filled button") {
@@ -80,7 +80,7 @@ Button("Filled button") {
 
 Ten text styles are implemented in SwiftUI; BitcoinTitle1 - BitcoinTitle5 and BitcoinBody1 - BitcoinBody5
 
-SwiftUI
+*SwiftUI*
 
 ```swift
 Text("Title")
@@ -92,7 +92,7 @@ Text("Body")
 
 ### Icons
 
-SwiftUI
+*SwiftUI*
 
 ```swift
 BitcoinImage(named: "coldcard")
@@ -101,7 +101,7 @@ BitcoinImage(named: "coldcard")
     .frame(height: 75.0)
 ```
 
-UIKit
+*UIKit*
 
 ```swift
 let image = BitcoinUIImage(named: "coldcard")
