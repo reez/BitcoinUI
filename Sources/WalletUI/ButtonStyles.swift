@@ -69,7 +69,7 @@ public struct BitcoinFilled: ButtonStyle {
       .padding()
       .frame(width: width, height: height)
       .background(
-          stateBackgroundColor.opacity(0.8)
+        stateBackgroundColor.opacity(0.8)
           .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))
       )
       .foregroundColor(stateTextColor())
@@ -102,55 +102,55 @@ public struct BitcoinFilled: ButtonStyle {
 /// - Parameter disabledColor: The disabled color of the button (optional, default is .bitcoinNeutral4)
 ///
 public struct BitcoinOutlined: ButtonStyle {
-    @Environment(\.colorScheme) private var colorScheme
-    @Environment(\.isEnabled) private var isEnabled
+  @Environment(\.colorScheme) private var colorScheme
+  @Environment(\.isEnabled) private var isEnabled
 
-    let width: CGFloat
-    let height: CGFloat
-    let cornerRadius: CGFloat
-    let tintColor: Color
-    let disabledColor: Color
-    let isCapsule: Bool
+  let width: CGFloat
+  let height: CGFloat
+  let cornerRadius: CGFloat
+  let tintColor: Color
+  let disabledColor: Color
+  let isCapsule: Bool
 
-    public init(
-        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-        cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
-        disabledColor: Color = defaultDisabledOutlineColor,
-        isCapsule: Bool = false
-    ) {
-        self.width = width
-        self.height = height
-        self.cornerRadius = cornerRadius
-        self.tintColor = tintColor
-        self.disabledColor = disabledColor
-        self.isCapsule = isCapsule
-    }
+  public init(
+    width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+    cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
+    disabledColor: Color = defaultDisabledOutlineColor,
+    isCapsule: Bool = false
+  ) {
+    self.width = width
+    self.height = height
+    self.cornerRadius = cornerRadius
+    self.tintColor = tintColor
+    self.disabledColor = disabledColor
+    self.isCapsule = isCapsule
+  }
 
-    public func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(Font.body.bold())
-            .padding()
-            .frame(width: width, height: height)
-            .background(stateBackgroundColor())
-            .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)) // Use CustomShape
-            .foregroundColor(stateTextColor())
-            .overlay(
-                CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius) // Use CustomShape
-                    .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
-            )
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-    }
+  public func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .font(Font.body.bold())
+      .padding()
+      .frame(width: width, height: height)
+      .background(stateBackgroundColor())
+      .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))  // Use CustomShape
+      .foregroundColor(stateTextColor())
+      .overlay(
+        CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)  // Use CustomShape
+          .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
+      )
+      .scaleEffect(configuration.isPressed ? 0.95 : 1)
+      .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+  }
 
-    private func stateBackgroundColor() -> Color {
-        return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
-    }
-    private func stateBorderColor(configuration: Configuration) -> Color {
-        return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
-    }
-    private func stateTextColor() -> Color {
-        return isEnabled ? tintColor : disabledColor
-    }
+  private func stateBackgroundColor() -> Color {
+    return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
+  }
+  private func stateBorderColor(configuration: Configuration) -> Color {
+    return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+  }
+  private func stateTextColor() -> Color {
+    return isEnabled ? tintColor : disabledColor
+  }
 }
 
 /// A `ButtonStyle` corresponding to the Plain type in the Bitcoin Wallet UI Kit
@@ -207,16 +207,16 @@ public struct BitcoinPlain: ButtonStyle {
 }
 
 private struct CustomShape: Shape {
-    var isCapsule: Bool
-    var cornerRadius: CGFloat
-    
-    func path(in rect: CGRect) -> Path {
-        if isCapsule {
-            return Capsule().path(in: rect)
-        } else {
-            return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
-        }
+  var isCapsule: Bool
+  var cornerRadius: CGFloat
+
+  func path(in rect: CGRect) -> Path {
+    if isCapsule {
+      return Capsule().path(in: rect)
+    } else {
+      return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
     }
+  }
 }
 
 struct ButtonStylesView: View {
@@ -237,27 +237,27 @@ struct ButtonStylesView: View {
           .padding(.top, .wallet_grid_vertical_20())
 
         Spacer()
-          
-          Button("BitcoinFilled") {}
-            .buttonStyle(BitcoinFilled())
-            .padding()
-          
-          Button("BitcoinFilled") {}
-            .buttonStyle(BitcoinFilled(isCapsule: true))
-            .padding()
-          
+
+        Button("BitcoinFilled") {}
+          .buttonStyle(BitcoinFilled())
+          .padding()
+
+        Button("BitcoinFilled") {}
+          .buttonStyle(BitcoinFilled(isCapsule: true))
+          .padding()
+
         Button("BitcoinPlain") {}
           .buttonStyle(BitcoinPlain())
           .padding()
-          
-          Button("BitcoinOutlined") {}
-            .buttonStyle(BitcoinOutlined())
-            .padding()
-          
-          Button("BitcoinOutlined") {}
-              .buttonStyle(BitcoinOutlined(isCapsule: true))
-            .padding()
-          
+
+        Button("BitcoinOutlined") {}
+          .buttonStyle(BitcoinOutlined())
+          .padding()
+
+        Button("BitcoinOutlined") {}
+          .buttonStyle(BitcoinOutlined(isCapsule: true))
+          .padding()
+
         Spacer()
 
       }
