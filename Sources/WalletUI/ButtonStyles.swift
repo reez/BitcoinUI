@@ -87,19 +87,6 @@ public struct BitcoinFilled: ButtonStyle {
   }
 }
 
-private struct CustomShape: Shape {
-    var isCapsule: Bool
-    var cornerRadius: CGFloat
-    
-    func path(in rect: CGRect) -> Path {
-        if isCapsule {
-            return Capsule().path(in: rect)
-        } else {
-            return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
-        }
-    }
-}
-
 /// A `ButtonStyle` corresponding to the Outline type in the Bitcoin Wallet UI Kit
 ///
 /// ```swift
@@ -217,6 +204,19 @@ public struct BitcoinPlain: ButtonStyle {
   private func stateTextColor() -> Color {
     return isEnabled ? tintColor : disabledColor
   }
+}
+
+private struct CustomShape: Shape {
+    var isCapsule: Bool
+    var cornerRadius: CGFloat
+    
+    func path(in rect: CGRect) -> Path {
+        if isCapsule {
+            return Capsule().path(in: rect)
+        } else {
+            return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
+        }
+    }
 }
 
 struct ButtonStylesView: View {
