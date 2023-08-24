@@ -25,7 +25,7 @@ The design system in the kit includes the basics:
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-dark.png?raw=true' height='200' alt='colors-code-preview' />
     </a>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/buttons-dark.png?raw=true' height='200' alt='buttons-code-preview' />
+        <img src='https://github.com/reez/WalletUI/blob/main/Docs/button-dark.png?raw=true' height='200' alt='buttons-code-preview' />
     </a>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
         <img src='https://github.com/reez/WalletUI/blob/main/Docs/text-dark.png?raw=true' height='200' alt='text-code-preview' />
@@ -65,15 +65,15 @@ They have a number of optional parameters, including: width, height, cornerRadiu
 *SwiftUI*
 
 ```swift    
-Button("Capsule filled button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinCapsuleFilled())
-            
 Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
+            
+Button("Outlined button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinOutlined())
 ```
 
 ### Text Styles
