@@ -80,9 +80,6 @@ label.textColor = .bitcoinOrange
 Five button styles are implemented in SwiftUI; BitcoinCapsuleFilled, BitcoinFilled, BitcoinCapsuleOutlined, BitcoinOutlined, and BitcoinPlain.
 They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
 
-<img src="https://github.com/reez/WalletUI/blob/main/Docs/button-dark.png?raw=true" height="400" alt='button-dark' />
-
-
 SwiftUI
 
 ```swift    
