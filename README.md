@@ -65,15 +65,15 @@ They have a number of optional parameters, including: width, height, cornerRadiu
 *SwiftUI*
 
 ```swift    
-Button("Capsule filled button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinCapsuleFilled())
-            
 Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
+            
+Button("Outlined button") {
+    print("Button pressed!")
+}
+.buttonStyle(BitcoinOutlined())
 ```
 
 ### Text Styles
