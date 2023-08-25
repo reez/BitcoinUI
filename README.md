@@ -2,7 +2,7 @@
 
 # WalletUI
 
-WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
+WalletUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
@@ -13,7 +13,7 @@ WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/
 
 ## What's Included
 
-The design system in the kit includes the basics:
+The design system in WalletUI includes:
 
 - Colors  
 - Button styles
@@ -59,8 +59,13 @@ label.textColor = .bitcoinOrange
 
 ### Button Styles
 
-Five button styles are implemented in SwiftUI; BitcoinCapsuleFilled, BitcoinFilled, BitcoinCapsuleOutlined, BitcoinOutlined, and BitcoinPlain.
-They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
+Three button styles (with a number of optional parameters) are implemented in SwiftUI:
+ 
+- `BitcoinFilled`
+
+- `BitcoinOutlined`
+
+- `BitcoinPlain`
 
 *SwiftUI*
 
@@ -69,25 +74,21 @@ Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
-            
-Button("Outlined button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinOutlined())
 ```
 
 ### Text Styles
 
-Ten text styles are implemented in SwiftUI; BitcoinTitle1 - BitcoinTitle5 and BitcoinBody1 - BitcoinBody5
+Ten text styles are implemented in SwiftUI: 
+
+- `BitcoinTitle1` - `BitcoinTitle5`
+
+- `BitcoinBody1` - `BitcoinBody5`
 
 *SwiftUI*
 
 ```swift
 Text("Title")
     .textStyle(BitcoinTitle1())
-
-Text("Body")
-    .textStyle(BitcoinBody1())
 ```
 
 ### Icons
