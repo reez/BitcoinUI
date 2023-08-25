@@ -13,7 +13,7 @@ WalletUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://githu
 
 ## What's Included
 
-The design system in the kit includes:
+The design system in WalletUI includes:
 
 - Colors  
 - Button styles
