@@ -2,7 +2,7 @@
 
 # WalletUI
 
-WalletUI is an iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
+WalletUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
 
 *Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
