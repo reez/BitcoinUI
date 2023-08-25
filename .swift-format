@@ -1,5 +1,7 @@
 {
     "version": 1,
-    "indentation": "spaces",
+    "indentation" : {
+        "spaces" : 4
+    },
     "indentWidth": 4
 }
