@@ -61,11 +61,11 @@ label.textColor = .bitcoinOrange
 
 Three button styles (with a number of optional parameters) are implemented in SwiftUI:
  
-- BitcoinFilled 
+- `BitcoinFilled`
 
-- BitcoinOutlined 
+- `BitcoinOutlined`
 
-- BitcoinPlain
+- `BitcoinPlain`
 
 *SwiftUI*
 
@@ -80,9 +80,9 @@ Button("Filled button") {
 
 Ten text styles are implemented in SwiftUI: 
 
-- BitcoinTitle1 - BitcoinTitle5
+- `BitcoinTitle1` - `BitcoinTitle5`
 
-- BitcoinBody1 - BitcoinBody5
+- `BitcoinBody1` - `BitcoinBody5`
 
 *SwiftUI*
 
