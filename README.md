@@ -59,8 +59,13 @@ label.textColor = .bitcoinOrange
 
 ### Button Styles
 
-Five button styles are implemented in SwiftUI; BitcoinCapsuleFilled, BitcoinFilled, BitcoinCapsuleOutlined, BitcoinOutlined, and BitcoinPlain.
-They have a number of optional parameters, including: width, height, cornerRadius, tintColor, textColor, disabledFillColor and disabledTextColor depending on the type.
+Three button styles (with a number of optional parameters) are implemented in SwiftUI:
+ 
+- BitcoinFilled 
+
+- BitcoinOutlined 
+
+- BitcoinPlain
 
 *SwiftUI*
 
@@ -69,11 +74,6 @@ Button("Filled button") {
     print("Button pressed!")
 }
 .buttonStyle(BitcoinFilled())
-            
-Button("Outlined button") {
-    print("Button pressed!")
-}
-.buttonStyle(BitcoinOutlined())
 ```
 
 ### Text Styles
@@ -85,9 +85,6 @@ Ten text styles are implemented in SwiftUI; BitcoinTitle1 - BitcoinTitle5 and Bi
 ```swift
 Text("Title")
     .textStyle(BitcoinTitle1())
-
-Text("Body")
-    .textStyle(BitcoinBody1())
 ```
 
 ### Icons
