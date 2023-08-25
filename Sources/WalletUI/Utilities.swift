@@ -9,14 +9,14 @@ import Foundation
 
 extension CGFloat {
 
-  // Choose horizontal spacing per Figma
-  static func wallet_grid_horizontal_10() -> CGFloat {
-    return CGFloat(1) * 10
-  }
+    // Choose horizontal spacing per Figma
+    static func wallet_grid_horizontal_10() -> CGFloat {
+        return CGFloat(1) * 10
+    }
 
-  // Choose vertical spacing per Figma
-  static func wallet_grid_vertical_20() -> CGFloat {
-    return CGFloat(1) * 20
-  }
+    // Choose vertical spacing per Figma
+    static func wallet_grid_vertical_20() -> CGFloat {
+        return CGFloat(1) * 20
+    }
 
 }

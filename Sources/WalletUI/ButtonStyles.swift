@@ -34,57 +34,57 @@ public let defaultDisabledOutlineColor = Color.bitcoinNeutral4
 /// - Parameter disabledTextColor: The disabled text color of the button (optional, default is .bitcoinNeutral5)
 ///
 public struct BitcoinFilled: ButtonStyle {
-  @Environment(\.colorScheme) private var colorScheme
-  @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.isEnabled) private var isEnabled
 
-  let width: CGFloat
-  let height: CGFloat
-  let cornerRadius: CGFloat
-  let tintColor: Color
-  let textColor: Color
-  let disabledFillColor: Color
-  let disabledTextColor: Color
-  let isCapsule: Bool
+    let width: CGFloat
+    let height: CGFloat
+    let cornerRadius: CGFloat
+    let tintColor: Color
+    let textColor: Color
+    let disabledFillColor: Color
+    let disabledTextColor: Color
+    let isCapsule: Bool
 
-  public init(
-    width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-    cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
-    textColor: Color = defaultTextColor, disabledFillColor: Color = defaultDisabledFillColor,
-    disabledTextColor: Color = defaultDisabledTextColor, isCapsule: Bool = false
-  ) {
-    self.width = width
-    self.height = height
-    self.cornerRadius = cornerRadius
-    self.tintColor = tintColor
-    self.textColor = textColor
-    self.disabledFillColor = disabledFillColor
-    self.disabledTextColor = disabledTextColor
-    self.isCapsule = isCapsule
-  }
+    public init(
+        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+        cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
+        textColor: Color = defaultTextColor, disabledFillColor: Color = defaultDisabledFillColor,
+        disabledTextColor: Color = defaultDisabledTextColor, isCapsule: Bool = false
+    ) {
+        self.width = width
+        self.height = height
+        self.cornerRadius = cornerRadius
+        self.tintColor = tintColor
+        self.textColor = textColor
+        self.disabledFillColor = disabledFillColor
+        self.disabledTextColor = disabledTextColor
+        self.isCapsule = isCapsule
+    }
 
-  public func makeBody(configuration: Configuration) -> some View {
-    let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
-    configuration.label
-      .font(Font.body.bold())
-      .padding()
-      .frame(width: width, height: height)
-      .background(
-        stateBackgroundColor.opacity(0.8)
-          .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))
-      )
-      .foregroundColor(stateTextColor())
-      .scaleEffect(configuration.isPressed ? 0.95 : 1)
-      .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-  }
+    public func makeBody(configuration: Configuration) -> some View {
+        let stateBackgroundColor = stateBackgroundColor(configuration: configuration)
+        configuration.label
+            .font(Font.body.bold())
+            .padding()
+            .frame(width: width, height: height)
+            .background(
+                stateBackgroundColor.opacity(0.8)
+                    .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))
+            )
+            .foregroundColor(stateTextColor())
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+    }
 
-  private func stateBackgroundColor(configuration: Configuration) -> Color {
-    return isEnabled
-      ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledFillColor
-  }
+    private func stateBackgroundColor(configuration: Configuration) -> Color {
+        return isEnabled
+            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledFillColor
+    }
 
-  private func stateTextColor() -> Color {
-    return isEnabled ? textColor : disabledTextColor
-  }
+    private func stateTextColor() -> Color {
+        return isEnabled ? textColor : disabledTextColor
+    }
 }
 
 /// A `ButtonStyle` corresponding to the Outline type in the Bitcoin Wallet UI Kit
@@ -102,55 +102,56 @@ public struct BitcoinFilled: ButtonStyle {
 /// - Parameter disabledColor: The disabled color of the button (optional, default is .bitcoinNeutral4)
 ///
 public struct BitcoinOutlined: ButtonStyle {
-  @Environment(\.colorScheme) private var colorScheme
-  @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.isEnabled) private var isEnabled
 
-  let width: CGFloat
-  let height: CGFloat
-  let cornerRadius: CGFloat
-  let tintColor: Color
-  let disabledColor: Color
-  let isCapsule: Bool
+    let width: CGFloat
+    let height: CGFloat
+    let cornerRadius: CGFloat
+    let tintColor: Color
+    let disabledColor: Color
+    let isCapsule: Bool
 
-  public init(
-    width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-    cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
-    disabledColor: Color = defaultDisabledOutlineColor,
-    isCapsule: Bool = false
-  ) {
-    self.width = width
-    self.height = height
-    self.cornerRadius = cornerRadius
-    self.tintColor = tintColor
-    self.disabledColor = disabledColor
-    self.isCapsule = isCapsule
-  }
+    public init(
+        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+        cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
+        disabledColor: Color = defaultDisabledOutlineColor,
+        isCapsule: Bool = false
+    ) {
+        self.width = width
+        self.height = height
+        self.cornerRadius = cornerRadius
+        self.tintColor = tintColor
+        self.disabledColor = disabledColor
+        self.isCapsule = isCapsule
+    }
 
-  public func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .font(Font.body.bold())
-      .padding()
-      .frame(width: width, height: height)
-      .background(stateBackgroundColor())
-      .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))  // Use CustomShape
-      .foregroundColor(stateTextColor())
-      .overlay(
-        CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)  // Use CustomShape
-          .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
-      )
-      .scaleEffect(configuration.isPressed ? 0.95 : 1)
-      .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-  }
+    public func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(Font.body.bold())
+            .padding()
+            .frame(width: width, height: height)
+            .background(stateBackgroundColor())
+            .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))  // Use CustomShape
+            .foregroundColor(stateTextColor())
+            .overlay(
+                CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)  // Use CustomShape
+                    .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
+            )
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+    }
 
-  private func stateBackgroundColor() -> Color {
-    return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
-  }
-  private func stateBorderColor(configuration: Configuration) -> Color {
-    return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
-  }
-  private func stateTextColor() -> Color {
-    return isEnabled ? tintColor : disabledColor
-  }
+    private func stateBackgroundColor() -> Color {
+        return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
+    }
+    private func stateBorderColor(configuration: Configuration) -> Color {
+        return isEnabled
+            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+    }
+    private func stateTextColor() -> Color {
+        return isEnabled ? tintColor : disabledColor
+    }
 }
 
 /// A `ButtonStyle` corresponding to the Plain type in the Bitcoin Wallet UI Kit
@@ -167,116 +168,117 @@ public struct BitcoinOutlined: ButtonStyle {
 /// - Parameter disabledColor: The disabled text color of the button (optional, default is .bitcoinNeutral4)
 ///
 public struct BitcoinPlain: ButtonStyle {
-  @Environment(\.colorScheme) private var colorScheme
-  @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.isEnabled) private var isEnabled
 
-  let width: CGFloat
-  let height: CGFloat
-  let tintColor: Color
-  let disabledColor: Color
+    let width: CGFloat
+    let height: CGFloat
+    let tintColor: Color
+    let disabledColor: Color
 
-  public init(
-    width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-    tintColor: Color = defaultTintColor, disabledColor: Color = defaultDisabledTextColor
-  ) {
-    self.width = width
-    self.height = height
-    self.tintColor = tintColor
-    self.disabledColor = disabledColor
-  }
+    public init(
+        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
+        tintColor: Color = defaultTintColor, disabledColor: Color = defaultDisabledTextColor
+    ) {
+        self.width = width
+        self.height = height
+        self.tintColor = tintColor
+        self.disabledColor = disabledColor
+    }
 
-  public func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .font(Font.body.bold())
-      .padding()
-      .frame(width: width, height: height)
-      .background(stateBackgroundColor())
-      .foregroundColor(stateTextColor())
-      .scaleEffect(configuration.isPressed ? 0.95 : 1)
-      .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-  }
-  private func stateBackgroundColor() -> Color {
-    return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
-  }
-  private func stateBorderColor(configuration: Configuration) -> Color {
-    return isEnabled ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
-  }
-  private func stateTextColor() -> Color {
-    return isEnabled ? tintColor : disabledColor
-  }
+    public func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(Font.body.bold())
+            .padding()
+            .frame(width: width, height: height)
+            .background(stateBackgroundColor())
+            .foregroundColor(stateTextColor())
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+    }
+    private func stateBackgroundColor() -> Color {
+        return colorScheme == .dark ? .bitcoinBlack : .bitcoinWhite
+    }
+    private func stateBorderColor(configuration: Configuration) -> Color {
+        return isEnabled
+            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+    }
+    private func stateTextColor() -> Color {
+        return isEnabled ? tintColor : disabledColor
+    }
 }
 
 private struct CustomShape: Shape {
-  var isCapsule: Bool
-  var cornerRadius: CGFloat
+    var isCapsule: Bool
+    var cornerRadius: CGFloat
 
-  func path(in rect: CGRect) -> Path {
-    if isCapsule {
-      return Capsule().path(in: rect)
-    } else {
-      return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
+    func path(in rect: CGRect) -> Path {
+        if isCapsule {
+            return Capsule().path(in: rect)
+        } else {
+            return RoundedRectangle(cornerRadius: cornerRadius).path(in: rect)
+        }
     }
-  }
 }
 
 struct ButtonStylesView: View {
-  var body: some View {
+    var body: some View {
 
-    ZStack {
-      Color(UIColor.systemBackground)
+        ZStack {
+            Color(UIColor.systemBackground)
 
-      VStack {
+            VStack {
 
-        Text("Button Styles")
-          .underline()
-          .font(.largeTitle)
-          .fontWeight(.semibold)
-          .padding(.horizontal, .wallet_grid_horizontal_10())
-          .padding(.vertical, .wallet_grid_vertical_20())
-          .padding(.top, .wallet_grid_vertical_20())
-          .padding(.top, .wallet_grid_vertical_20())
+                Text("Button Styles")
+                    .underline()
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, .wallet_grid_horizontal_10())
+                    .padding(.vertical, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
+                    .padding(.top, .wallet_grid_vertical_20())
 
-        Spacer()
+                Spacer()
 
-        Button("BitcoinFilled") {}
-          .buttonStyle(BitcoinFilled())
-          .padding()
+                Button("BitcoinFilled") {}
+                    .buttonStyle(BitcoinFilled())
+                    .padding()
 
-        Button("BitcoinFilled") {}
-          .buttonStyle(BitcoinFilled(isCapsule: true))
-          .padding()
+                Button("BitcoinFilled") {}
+                    .buttonStyle(BitcoinFilled(isCapsule: true))
+                    .padding()
 
-        Button("BitcoinPlain") {}
-          .buttonStyle(BitcoinPlain())
-          .padding()
+                Button("BitcoinPlain") {}
+                    .buttonStyle(BitcoinPlain())
+                    .padding()
 
-        Button("BitcoinOutlined") {}
-          .buttonStyle(BitcoinOutlined())
-          .padding()
+                Button("BitcoinOutlined") {}
+                    .buttonStyle(BitcoinOutlined())
+                    .padding()
 
-        Button("BitcoinOutlined") {}
-          .buttonStyle(BitcoinOutlined(isCapsule: true))
-          .padding()
+                Button("BitcoinOutlined") {}
+                    .buttonStyle(BitcoinOutlined(isCapsule: true))
+                    .padding()
 
-        Spacer()
+                Spacer()
 
-      }
-      .padding(.horizontal, .wallet_grid_horizontal_10())
-      .padding(.vertical, .wallet_grid_vertical_20())
+            }
+            .padding(.horizontal, .wallet_grid_horizontal_10())
+            .padding(.vertical, .wallet_grid_vertical_20())
+
+        }
+        .edgesIgnoringSafeArea(.all)
 
     }
-    .edgesIgnoringSafeArea(.all)
-
-  }
 }
 
 struct ButtonStylesView_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      ButtonStylesView()
-        .environment(\.colorScheme, .light)
-      ButtonStylesView()
-        .environment(\.colorScheme, .dark)
+    static var previews: some View {
+        Group {
+            ButtonStylesView()
+                .environment(\.colorScheme, .light)
+            ButtonStylesView()
+                .environment(\.colorScheme, .dark)
+        }
     }
-  }
 }
