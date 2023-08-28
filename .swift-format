@@ -3,5 +3,6 @@
     "indentation" : {
         "spaces" : 4
     },
-    "indentWidth": 4
+    "indentWidth": 4,
+    "maximumBlankLines": 1
 }
