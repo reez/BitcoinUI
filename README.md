@@ -1,10 +1,10 @@
 ![cover image](/Docs/bitcoin-wallet-ui-kit-themes.png)
 
-# WalletUI
+# BitcoinUI
 
-WalletUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
+BitcoinUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://github.com/GBKS/bitcoin-wallet-ui-kit).
 
-*Both WalletUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
+*Both BitcoinUI and its reference Bitcoin Wallet UI Kit are Work In Progress.*
 
 [What's Included](#whats-included)<br>
 [Basic Usage](#basic-usage)<br>
@@ -13,7 +13,7 @@ WalletUI is a native iOS implementation of [Bitcoin Wallet UI Kit](https://githu
 
 ## What's Included
 
-The design system in WalletUI includes:
+The design system in BitcoinUI includes:
 
 - Colors  
 - Button styles
@@ -22,16 +22,16 @@ The design system in WalletUI includes:
 
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/colors-dark.png?raw=true' height='200' alt='colors-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/colors-dark.png?raw=true' height='200' alt='colors-code-preview' />
     </a>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/button-dark.png?raw=true' height='200' alt='buttons-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/button-dark.png?raw=true' height='200' alt='buttons-code-preview' />
     </a>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/text-dark.png?raw=true' height='200' alt='text-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/text-dark.png?raw=true' height='200' alt='text-code-preview' />
     </a>
     <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
-        <img src='https://github.com/reez/WalletUI/blob/main/Docs/hardware-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/hardware-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
 
@@ -113,14 +113,14 @@ view.addSubview(imageView)
 
 ## Requirements
 
-WalletUI currently requires minimum deployment targets of iOS 15.
+BitcoinUI currently requires minimum deployment targets of iOS 15.
 
 ## Installation
 
-You can add WalletUI to an Xcode project by adding it as a package dependency.
+You can add BitcoinUI to an Xcode project by adding it as a package dependency.
 
   1. From the **File** menu, select **Add Packages…**
-  2. Enter "https://github.com/reez/WalletUI" into the package repository URL text field
+  2. Enter "https://github.com/reez/BitcoinUI" into the package repository URL text field
   3. Depending on how your project is structured:
-      - If you have a single application target that needs access to the library, then add **WalletUI** directly to your application.
-      - If you want to use this library from multiple targets you must create a shared framework that depends on **WalletUI** and then depend on that framework in all of your targets.
+      - If you have a single application target that needs access to the library, then add **BitcoinUI** directly to your application.
+      - If you want to use this library from multiple targets you must create a shared framework that depends on **BitcoinUI** and then depend on that framework in all of your targets.

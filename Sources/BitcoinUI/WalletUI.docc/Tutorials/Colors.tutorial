@@ -21,7 +21,7 @@
             }
             
             @Step {
-                Here is what using a Bitcoin `Color` would look like. Just `import WalletUI`.
+                Here is what using a Bitcoin `Color` would look like. Just `import BitcoinUI`.
                 @Code(name: "Colors.swift", file: 01-02-colors.swift) {
                     @Image(source: 01-02-colors-preview-500.png, alt: "01-02-colors-preview")
                 }

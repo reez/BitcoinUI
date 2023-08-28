@@ -32,7 +32,7 @@ public func BitcoinImage(named: String) -> Image {
 /// - Returns: The  specific Bitcoin `UIImage`
 public func BitcoinUIImage(named: String) -> UIImage {
     guard let image = UIImage(named: named, in: .module, compatibleWith: nil) else {
-        assertionFailure("*No WalletUI Image Found*")
+        assertionFailure("*No BitcoinUI Image Found*")
         return UIImage()
     }
     return image
