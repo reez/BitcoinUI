@@ -1,8 +1,8 @@
 import XCTest
 
-@testable import WalletUI
+@testable import BitcoinUI
 
-final class WalletUITests: XCTestCase {
+final class BitcoinUITests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct

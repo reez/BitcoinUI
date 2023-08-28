@@ -1,6 +1,6 @@
-import WalletUITests
+import BitcoinUITests
 import XCTest
 
 var tests = [XCTestCaseEntry]()
-tests += WalletUITests.allTests()
+tests += BitcoinUITests.allTests()
 XCTMain(tests)
