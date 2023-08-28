@@ -1,5 +1,5 @@
 import SwiftUI
-import WalletUI
+import BitcoinUI
 
 struct ImagesTutorial: View {
     var body: some View {
