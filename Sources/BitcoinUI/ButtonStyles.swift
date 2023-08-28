@@ -47,10 +47,14 @@ public struct BitcoinFilled: ButtonStyle {
     let isCapsule: Bool
 
     public init(
-        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-        cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
-        textColor: Color = defaultTextColor, disabledFillColor: Color = defaultDisabledFillColor,
-        disabledTextColor: Color = defaultDisabledTextColor, isCapsule: Bool = false
+        width: CGFloat = defaultButtonWidth,
+        height: CGFloat = defaultButtonHeight,
+        cornerRadius: CGFloat = defaultCornerRadius,
+        tintColor: Color = defaultTintColor,
+        textColor: Color = defaultTextColor,
+        disabledFillColor: Color = defaultDisabledFillColor,
+        disabledTextColor: Color = defaultDisabledTextColor,
+        isCapsule: Bool = false
     ) {
         self.width = width
         self.height = height
@@ -113,8 +117,10 @@ public struct BitcoinOutlined: ButtonStyle {
     let isCapsule: Bool
 
     public init(
-        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-        cornerRadius: CGFloat = defaultCornerRadius, tintColor: Color = defaultTintColor,
+        width: CGFloat = defaultButtonWidth,
+        height: CGFloat = defaultButtonHeight,
+        cornerRadius: CGFloat = defaultCornerRadius,
+        tintColor: Color = defaultTintColor,
         disabledColor: Color = defaultDisabledOutlineColor,
         isCapsule: Bool = false
     ) {
@@ -177,8 +183,10 @@ public struct BitcoinPlain: ButtonStyle {
     let disabledColor: Color
 
     public init(
-        width: CGFloat = defaultButtonWidth, height: CGFloat = defaultButtonHeight,
-        tintColor: Color = defaultTintColor, disabledColor: Color = defaultDisabledTextColor
+        width: CGFloat = defaultButtonWidth,
+        height: CGFloat = defaultButtonHeight,
+        tintColor: Color = defaultTintColor,
+        disabledColor: Color = defaultDisabledTextColor
     ) {
         self.width = width
         self.height = height

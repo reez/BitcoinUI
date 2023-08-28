@@ -4,5 +4,6 @@
         "spaces" : 4
     },
     "indentWidth": 4,
-    "maximumBlankLines": 1
+    "maximumBlankLines": 1,
+    "lineBreakBeforeEachArgument": true
 }
