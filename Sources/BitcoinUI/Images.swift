@@ -58,14 +58,14 @@ struct IconView: View {
     }
 }
 
-struct HardwareIllustrationsView: View {
+struct IconsView: View {
     var body: some View {
 
         ZStack {
             Color(UIColor.systemBackground)
 
             VStack {
-                Text("Hardware Illustrations")
+                Text("Images")
                     .underline()
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -119,9 +119,9 @@ struct HardwareIllustrationsView: View {
 struct IconsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            HardwareIllustrationsView()
+            IconsView()
                 .environment(\.colorScheme, .light)
-            HardwareIllustrationsView()
+            IconsView()
                 .environment(\.colorScheme, .dark)
         }
     }
