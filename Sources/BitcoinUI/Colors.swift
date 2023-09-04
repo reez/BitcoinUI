@@ -404,6 +404,8 @@ struct ColorsView: View {
                     .padding(.vertical, .wallet_grid_vertical_20())
                     .padding(.top, .wallet_grid_vertical_20())
                     .padding(.top, .wallet_grid_vertical_20())
+                
+                Spacer()
 
                 HStack {
                     ColorView(color: .bitcoinWhite, colorLabel: "White")
@@ -434,6 +436,8 @@ struct ColorsView: View {
                 }
                 .padding(.horizontal, .wallet_grid_horizontal_10())
                 .padding(.vertical, .wallet_grid_vertical_20())
+                
+                Spacer()
 
             }
             .padding(.horizontal, .wallet_grid_horizontal_10())
