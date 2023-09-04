@@ -31,7 +31,7 @@ The design system in BitcoinUI includes:
         <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/text-dark.png?raw=true' height='200' alt='text-code-preview' />
     </a>
     <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
-        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/hardware-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/icon-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
 
