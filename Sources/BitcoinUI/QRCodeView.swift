@@ -25,7 +25,11 @@ public enum QRCodeType {
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
     let screenBounds = UIScreen.main.bounds
-    var qrCodeType: QRCodeType
+    public var qrCodeType: QRCodeType
+    
+    public init(qrCodeType: QRCodeType) {
+          self.qrCodeType = qrCodeType
+      }
 
     public var body: some View {
         Image(uiImage: generateQRCode(from: qrCodeType.qrString))
@@ -37,7 +41,7 @@ public struct QRCodeView: View {
             .gesture(dragGesture())
     }
 
-    func generateQRCode(from string: String) -> UIImage {
+    private func generateQRCode(from string: String) -> UIImage {
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
         let data = Data(string.utf8)
@@ -51,20 +55,20 @@ public struct QRCodeView: View {
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
 
-    func dragGesture() -> some Gesture {
+    private func dragGesture() -> some Gesture {
         DragGesture()
             .onChanged(handleDragChanged(_:))
             .onEnded(handleDragEnded(_:))
     }
 
-    func handleDragChanged(_ value: DragGesture.Value) {
+    private func handleDragChanged(_ value: DragGesture.Value) {
         let translation = value.translation
         let multiplier: CGFloat = 0.05
         viewState.width = -translation.width * multiplier
         viewState.height = -translation.height * multiplier
     }
 
-    func handleDragEnded(_ value: DragGesture.Value) {
+    private func handleDragEnded(_ value: DragGesture.Value) {
         withAnimation {
             self.viewState = .zero
         }
