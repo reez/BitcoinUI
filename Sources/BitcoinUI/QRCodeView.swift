@@ -26,10 +26,10 @@ public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
     let screenBounds = UIScreen.main.bounds
     public var qrCodeType: QRCodeType
-    
+
     public init(qrCodeType: QRCodeType) {
-          self.qrCodeType = qrCodeType
-      }
+        self.qrCodeType = qrCodeType
+    }
 
     public var body: some View {
         Image(uiImage: generateQRCode(from: qrCodeType.qrString))
