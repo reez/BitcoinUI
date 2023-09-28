@@ -5,13 +5,13 @@
 //  Created by Matthew Ramsden on 9/28/23.
 //
 
-import SwiftUI
 import CoreImage.CIFilterBuiltins
+import SwiftUI
 
 enum QRCodeType {
     case bitcoin(String)
     case lightning(String)
-    
+
     var qrString: String {
         switch self {
         case .bitcoin(let address):
@@ -26,7 +26,7 @@ struct QRCodeView: View {
     @State private var viewState = CGSize.zero
     let screenBounds = UIScreen.main.bounds
     var qrCodeType: QRCodeType
-    
+
     var body: some View {
         Image(uiImage: generateQRCode(from: qrCodeType.qrString))
             .interpolation(.none)
@@ -36,7 +36,7 @@ struct QRCodeView: View {
             .applyFidgetEffect(viewState: $viewState)
             .gesture(dragGesture())
     }
-    
+
     private func generateQRCode(from string: String) -> UIImage {
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
@@ -50,7 +50,7 @@ struct QRCodeView: View {
         }
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
-    
+
     private func dragGesture() -> some Gesture {
         DragGesture()
             .onChanged(handleDragChanged(_:))
