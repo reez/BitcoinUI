@@ -8,7 +8,7 @@
 import CoreImage.CIFilterBuiltins
 import SwiftUI
 
-enum QRCodeType {
+public enum QRCodeType {
     case bitcoin(String)
     case lightning(String)
 
@@ -22,12 +22,12 @@ enum QRCodeType {
     }
 }
 
-struct QRCodeView: View {
+public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
     let screenBounds = UIScreen.main.bounds
     var qrCodeType: QRCodeType
 
-    var body: some View {
+    public var body: some View {
         Image(uiImage: generateQRCode(from: qrCodeType.qrString))
             .interpolation(.none)
             .resizable()
@@ -37,7 +37,7 @@ struct QRCodeView: View {
             .gesture(dragGesture())
     }
 
-    private func generateQRCode(from string: String) -> UIImage {
+    func generateQRCode(from string: String) -> UIImage {
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
         let data = Data(string.utf8)
@@ -51,20 +51,20 @@ struct QRCodeView: View {
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
 
-    private func dragGesture() -> some Gesture {
+    func dragGesture() -> some Gesture {
         DragGesture()
             .onChanged(handleDragChanged(_:))
             .onEnded(handleDragEnded(_:))
     }
 
-    private func handleDragChanged(_ value: DragGesture.Value) {
+    func handleDragChanged(_ value: DragGesture.Value) {
         let translation = value.translation
         let multiplier: CGFloat = 0.05
         viewState.width = -translation.width * multiplier
         viewState.height = -translation.height * multiplier
     }
 
-    private func handleDragEnded(_ value: DragGesture.Value) {
+    func handleDragEnded(_ value: DragGesture.Value) {
         withAnimation {
             self.viewState = .zero
         }
