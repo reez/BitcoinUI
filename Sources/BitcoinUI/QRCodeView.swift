@@ -75,6 +75,13 @@ public struct QRCodeView: View {
     }
 }
 
+struct QRCodeView_Previews: PreviewProvider {
+    static var previews: some View {
+        QRCodeView(qrCodeType: .lightning("bitcoinqrcode"))
+        QRCodeView(qrCodeType: .lightning("lightingqrcode"))
+    }
+}
+
 #Preview {
     QRCodeView(qrCodeType: .bitcoin("bitcoinqrcode"))
 }
