@@ -9,7 +9,12 @@ import SwiftUI
 
 public struct SeedPhraseView: View {
     public var words: [String]
-    public var preferredWordsPerRow: Int = 3
+    public var preferredWordsPerRow: Int
+
+    public init(words: [String], preferredWordsPerRow: Int) {
+        self.words = words
+        self.preferredWordsPerRow = preferredWordsPerRow
+    }
 
     public var body: some View {
         let capsuleWidth: CGFloat = {
@@ -66,18 +71,21 @@ public struct SeedPhraseView: View {
             }
         }
         .padding(.horizontal, 20)
-        
+
     }
 }
 
 struct SeedPhraseView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SeedPhraseView(words: [
-                "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
-                "kiwi",
-                "lemon", "mango", "nectarine",
-            ])
+            SeedPhraseView(
+                words: [
+                    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
+                    "kiwi",
+                    "lemon", "mango", "nectarine",
+                ],
+                preferredWordsPerRow: 3
+            )
             SeedPhraseView(
                 words: [
                     "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
@@ -99,10 +107,13 @@ struct SeedPhraseView_Previews: PreviewProvider {
 }
 
 #Preview {
-    SeedPhraseView(words: [
-        "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-        "lemon", "mango", "nectarine",
-    ])
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 3
+    )
 }
 
 #Preview {
