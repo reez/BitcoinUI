@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct SeedPhraseView: View {
-    var words: [String]
-    var preferredWordsPerRow: Int = 3
+public struct SeedPhraseView: View {
+    public var words: [String]
+    public var preferredWordsPerRow: Int = 3
 
-    var body: some View {
+    public var body: some View {
         let capsuleWidth: CGFloat = {
             switch preferredWordsPerRow {
             case 2:
@@ -66,6 +66,7 @@ struct SeedPhraseView: View {
             }
         }
         .padding(.horizontal, 20)
+        
     }
 }
 
