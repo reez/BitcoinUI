@@ -10,10 +10,20 @@ import SwiftUI
 public struct SeedPhraseView: View {
     public var words: [String]
     public var preferredWordsPerRow: Int
+    public var usePaging: Bool
+    public var wordsPerPage: Int
+    @State private var currentPage = 0
 
-    public init(words: [String], preferredWordsPerRow: Int) {
+    public init(
+        words: [String],
+        preferredWordsPerRow: Int,
+        usePaging: Bool = false,
+        wordsPerPage: Int = 6
+    ) {
         self.words = words
         self.preferredWordsPerRow = preferredWordsPerRow
+        self.usePaging = usePaging
+        self.wordsPerPage = wordsPerPage
     }
 
     public var body: some View {
@@ -30,49 +40,141 @@ public struct SeedPhraseView: View {
             }
         }()
 
-        VStack(alignment: .leading, spacing: 8) {
-            ForEach(0..<words.count, id: \.self) { index in
-                if index % preferredWordsPerRow == 0 {
-                    HStack(spacing: 8) {
-                        ForEach(index..<(index + preferredWordsPerRow), id: \.self) { innerIndex in
-                            if innerIndex < words.count {
-                                HStack(alignment: .center) {
-                                    Text("\(innerIndex + 1)")
-                                        .font(
-                                            .system(
-                                                size: 14
-                                            )
-                                        )
-                                        .foregroundColor(.secondary)
-                                        .frame(minWidth: 20, alignment: .leading)
-                                    Divider()
-                                        .frame(height: 20)
-                                        .background(Color.secondary.opacity(0.2))
-                                    Text(words[innerIndex])
-                                        .font(
-                                            .system(
-                                                size: 16,
-                                                weight: .medium
-                                            )
-                                        )
-                                        .frame(maxWidth: .infinity, alignment: .leading)
+        if usePaging {
+            let chunks = words.chunked(into: wordsPerPage)
+
+            TabView(selection: $currentPage) {
+                ForEach(0..<chunks.count, id: \.self) { pageIndex in
+                    HStack(spacing: 16) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(0..<(chunks[pageIndex].count / 2), id: \.self) { index in
+                                let wordIndex = pageIndex * 6 + index
+                                WordCapsule(
+                                    index: wordIndex,
+                                    word: chunks[pageIndex][index],
+                                    capsuleWidth: capsuleWidth
+                                )
+                            }
+                        }
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(
+                                (chunks[pageIndex].count / 2)..<chunks[pageIndex].count,
+                                id: \.self
+                            ) { index in
+                                let wordIndex = pageIndex * 6 + index
+                                WordCapsule(
+                                    index: wordIndex,
+                                    word: chunks[pageIndex][index],
+                                    capsuleWidth: capsuleWidth
+                                )
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .tag(pageIndex)
+                }
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+        } else {
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(0..<words.count, id: \.self) { index in
+                    if index % preferredWordsPerRow == 0 {
+                        HStack(spacing: 8) {
+                            ForEach(index..<(index + preferredWordsPerRow), id: \.self) {
+                                innerIndex in
+                                if innerIndex < words.count {
+                                    WordCapsule(
+                                        index: innerIndex,
+                                        word: words[innerIndex],
+                                        capsuleWidth: capsuleWidth
+                                    )
                                 }
-                                .padding(.horizontal, 10)
-                                .padding(.vertical, 5)
-                                .frame(width: capsuleWidth)
-                                .background(Capsule().fill(Color.secondary.opacity(0.2)))
-                                .foregroundColor(.primary)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.5)
                             }
                         }
                     }
                 }
             }
+            .padding(.horizontal, 20)
         }
-        .padding(.horizontal, 20)
-
     }
+}
+
+struct WordCapsule: View {
+    let index: Int
+    let word: String
+    let capsuleWidth: CGFloat
+
+    var body: some View {
+        HStack(alignment: .center) {
+            Text("\(index + 1)")
+                .font(.system(size: 14))
+                .foregroundColor(.secondary)
+                .frame(minWidth: 20, alignment: .leading)
+            Divider()
+                .frame(height: 20)
+                .background(Color.secondary.opacity(0.2))
+            Text(word)
+                .font(.system(size: 16, weight: .medium))
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
+        .frame(width: capsuleWidth)
+        .background(Capsule().fill(Color.secondary.opacity(0.2)))
+        .foregroundColor(.primary)
+        .lineLimit(1)
+        .minimumScaleFactor(0.5)
+    }
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        stride(from: 0, to: count, by: size).map {
+            Array(self[$0..<Swift.min($0 + size, count)])
+        }
+    }
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 3
+    )
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 3,
+        usePaging: true
+    )
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 2
+    )
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 4
+    )
 }
 
 struct SeedPhraseView_Previews: PreviewProvider {
@@ -104,34 +206,4 @@ struct SeedPhraseView_Previews: PreviewProvider {
             )
         }
     }
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 3
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 2
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 4
-    )
 }
