@@ -35,7 +35,10 @@ The design system in BitcoinUI includes:
         <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/icon-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
     </a>
     <a href='https://bitcoin.design/assets/images/guide/glossary/address/address-expanded@2x.png'>
-        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/address-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/address-dark.png?raw=true' height='200' alt='address-code-preview' />
+    </a>
+    <a href='https://bitcoin.design/assets/images/guide/daily-spending-wallet/backup-and-recovery/manual-backup/manual-backup-recovery-phrase-full.png'>
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/words-dark.png?raw=true' height='200' alt='words-code-preview' />
     </a>
 </p>
 
