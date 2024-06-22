@@ -19,6 +19,7 @@ The design system in BitcoinUI includes:
 - Button styles
 - Text styles
 - Icons
+- Views
 
 <p align='left'>
     <a href='https://www.figma.com/community/file/916680391812923706/Bitcoin-Wallet-UI-Kit-(work-in-progress)'>
@@ -32,6 +33,9 @@ The design system in BitcoinUI includes:
     </a>
     <a href='https://github.com/GBKS/bitcoin-hardware-illustrations'>
         <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/icon-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
+    </a>
+    <a href='https://bitcoin.design/assets/images/guide/glossary/address/address-expanded@2x.png'>
+        <img src='https://github.com/reez/BitcoinUI/blob/main/Docs/address-dark.png?raw=true' height='200' alt='hardware-illustrations-code-preview' />
     </a>
 </p>
 
