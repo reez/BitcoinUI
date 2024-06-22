@@ -48,7 +48,7 @@ public struct SeedPhraseView: View {
                     HStack(spacing: 16) {
                         VStack(alignment: .leading, spacing: 8) {
                             ForEach(0..<(chunks[pageIndex].count / 2), id: \.self) { index in
-                                let wordIndex = pageIndex * 6 + index
+                                let wordIndex = pageIndex * wordsPerPage + index
                                 WordCapsule(
                                     index: wordIndex,
                                     word: chunks[pageIndex][index],
@@ -61,7 +61,7 @@ public struct SeedPhraseView: View {
                                 (chunks[pageIndex].count / 2)..<chunks[pageIndex].count,
                                 id: \.self
                             ) { index in
-                                let wordIndex = pageIndex * 6 + index
+                                let wordIndex = pageIndex * wordsPerPage + index
                                 WordCapsule(
                                     index: wordIndex,
                                     word: chunks[pageIndex][index],
@@ -139,6 +139,30 @@ extension Array {
 #Preview {
     SeedPhraseView(
         words: [
+            "paddle", "train", "boil", "catch", "trim", "plastic",
+            "wolf", "hazard", "govern", "oval", "drama", "gun",
+            "swim", "accuse", "degree", "teach", "game", "penalty",
+            "social", "hard", "crush", "media", "radar", "click",
+        ],
+        preferredWordsPerRow: 2,
+        usePaging: true,
+        wordsPerPage: 4
+    )
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
+            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
+            "lemon", "mango", "nectarine",
+        ],
+        preferredWordsPerRow: 3
+    )
+}
+
+#Preview {
+    SeedPhraseView(
+        words: [
             "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
             "lemon", "mango", "nectarine",
         ],
@@ -183,26 +207,9 @@ struct SeedPhraseView_Previews: PreviewProvider {
             SeedPhraseView(
                 words: [
                     "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
-                    "kiwi",
-                    "lemon", "mango", "nectarine",
+                    "kiwi", "lemon", "mango", "nectarine",
                 ],
                 preferredWordsPerRow: 3
-            )
-            SeedPhraseView(
-                words: [
-                    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
-                    "kiwi",
-                    "lemon", "mango", "nectarine",
-                ],
-                preferredWordsPerRow: 2
-            )
-            SeedPhraseView(
-                words: [
-                    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
-                    "kiwi",
-                    "lemon", "mango", "nectarine",
-                ],
-                preferredWordsPerRow: 4
             )
         }
     }
