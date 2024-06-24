@@ -451,12 +451,10 @@ struct ColorsView: View {
 
 struct ColorsView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ColorsView()
-                .environment(\.colorScheme, .light)
-            ColorsView()
-                .environment(\.colorScheme, .dark)
-
-        }
+        ColorsView()
     }
+}
+
+#Preview {
+    ColorsView()
 }

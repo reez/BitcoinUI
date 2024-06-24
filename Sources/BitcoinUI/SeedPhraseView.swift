@@ -128,11 +128,19 @@ struct WordCapsule: View {
     }
 }
 
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        stride(from: 0, to: count, by: size).map {
-            Array(self[$0..<Swift.min($0 + size, count)])
-        }
+struct SeedPhraseView_Previews: PreviewProvider {
+    static var previews: some View {
+        SeedPhraseView(
+            words: [
+                "paddle", "train", "boil", "catch", "trim", "plastic",
+                "wolf", "hazard", "govern", "oval", "drama", "gun",
+                "swim", "accuse", "degree", "teach", "game", "penalty",
+                "social", "hard", "crush", "media", "radar", "click",
+            ],
+            preferredWordsPerRow: 2,
+            usePaging: true,
+            wordsPerPage: 4
+        )
     }
 }
 
@@ -148,69 +156,4 @@ extension Array {
         usePaging: true,
         wordsPerPage: 4
     )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 3
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 3
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 3,
-        usePaging: true
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 2
-    )
-}
-
-#Preview {
-    SeedPhraseView(
-        words: [
-            "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi",
-            "lemon", "mango", "nectarine",
-        ],
-        preferredWordsPerRow: 4
-    )
-}
-
-struct SeedPhraseView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            SeedPhraseView(
-                words: [
-                    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
-                    "kiwi", "lemon", "mango", "nectarine",
-                ],
-                preferredWordsPerRow: 3
-            )
-        }
-    }
 }

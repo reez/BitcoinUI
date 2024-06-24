@@ -36,7 +36,7 @@ public struct AddressFormattedView: View {
             ),
             spacing: spacing
         ) {
-            let chunks = chunkedAddress()
+            let chunks = address.chunked(into: 4)
             ForEach(chunks.indices, id: \.self) { index in
                 Text(chunks[index])
                     .font(.system(size: 20, weight: .medium, design: .monospaced))
@@ -46,27 +46,17 @@ public struct AddressFormattedView: View {
     }
 }
 
-extension AddressFormattedView {
-    private func chunkedAddress() -> [String] {
-        let chunkSize = 4
-        return stride(from: 0, to: address.count, by: chunkSize).map {
-            let start = address.index(address.startIndex, offsetBy: $0)
-            let end =
-                address.index(start, offsetBy: chunkSize, limitedBy: address.endIndex)
-                ?? address.endIndex
-            return String(address[start..<end])
-        }
-    }
-}
-
 struct AddressFormattedView_Previews: PreviewProvider {
     static var previews: some View {
         AddressFormattedView(
-            address: "tb1pw6y0vtmsn46epvz0j8ddc46ketmp28t82p22hcrrkch3a0jhu40qe267dl"
+            address:
+                "tb1pw6y0vtmsn46epvz0j8ddc46ketmp28t82p22hcrrkch3a0jhu40qe267dl"
         )
     }
 }
 
 #Preview {
-    AddressFormattedView(address: "tb1pw6y0vtmsn46epvz0j8ddc46ketmp28t82p22hcrrkch3a0jhu40qe267dl")
+    AddressFormattedView(
+        address: "tb1pw6y0vtmsn46epvz0j8ddc46ketmp28t82p22hcrrkch3a0jhu40qe267dl"
+    )
 }

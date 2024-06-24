@@ -118,11 +118,10 @@ struct IconsView: View {
 
 struct IconsView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            IconsView()
-                .environment(\.colorScheme, .light)
-            IconsView()
-                .environment(\.colorScheme, .dark)
-        }
+        IconsView()
     }
+}
+
+#Preview {
+    IconsView()
 }
