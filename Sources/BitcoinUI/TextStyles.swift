@@ -171,11 +171,10 @@ struct TextStylesView: View {
 
 struct TextStylesView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            TextStylesView()
-                .environment(\.colorScheme, .light)
-            TextStylesView()
-                .environment(\.colorScheme, .dark)
-        }
+        TextStylesView()
     }
+}
+
+#Preview {
+    TextStylesView()
 }

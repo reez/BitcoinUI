@@ -8,6 +8,14 @@
 import Foundation
 import SwiftUI
 
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        stride(from: 0, to: count, by: size).map {
+            Array(self[$0..<Swift.min($0 + size, count)])
+        }
+    }
+}
+
 extension CGFloat {
 
     // Choose horizontal spacing per Figma
@@ -20,6 +28,16 @@ extension CGFloat {
         return CGFloat(1) * 20
     }
 
+}
+
+extension String {
+    func chunked(into size: Int) -> [String] {
+        return stride(from: 0, to: self.count, by: size).map {
+            let start = self.index(self.startIndex, offsetBy: $0)
+            let end = self.index(start, offsetBy: size, limitedBy: self.endIndex) ?? self.endIndex
+            return String(self[start..<end])
+        }
+    }
 }
 
 extension View {

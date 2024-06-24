@@ -282,11 +282,10 @@ struct ButtonStylesView: View {
 
 struct ButtonStylesView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ButtonStylesView()
-                .environment(\.colorScheme, .light)
-            ButtonStylesView()
-                .environment(\.colorScheme, .dark)
-        }
+        ButtonStylesView()
     }
+}
+
+#Preview {
+    ButtonStylesView()
 }
