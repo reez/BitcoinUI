@@ -110,7 +110,7 @@ struct WordCapsule: View {
             Text("\(index + 1)")
                 .font(.system(size: 14))
                 .foregroundColor(.secondary)
-                .frame(minWidth: 20, alignment: .leading)
+                .frame(minWidth: 20, alignment: .trailing)
             Divider()
                 .frame(height: 20)
                 .background(Color.secondary.opacity(0.2))
