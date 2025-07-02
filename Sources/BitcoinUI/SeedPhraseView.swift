@@ -74,8 +74,10 @@ public struct SeedPhraseView: View {
                     .tag(pageIndex)
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            #if os(iOS)
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
+            #endif
         } else {
             VStack(alignment: .leading, spacing: 8) {
                 ForEach(0..<words.count, id: \.self) { index in

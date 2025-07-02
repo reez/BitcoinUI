@@ -230,7 +230,7 @@ struct ButtonStylesView: View {
     var body: some View {
 
         ZStack {
-            Color(UIColor.systemBackground)
+            Color.bitcoinNeutral1
 
             VStack {
 

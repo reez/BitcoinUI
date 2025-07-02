@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 
+#if canImport(UIKit)
+    import UIKit
+#elseif canImport(AppKit)
+    import AppKit
+#endif
+
 /// A function that returns a Bitcoin Icon `Image`
 ///
 /// This is similar to `Image` but returns a Bitcoin specific `BitcoinImage`
@@ -21,22 +27,25 @@ public func BitcoinImage(named: String) -> Image {
     return Image(named, bundle: Bundle.module)
 }
 
-/// A function that returns a Bitcoin Icon `UIImage`
-///
-/// This is similar to `UIImage` but returns a Bitcoin specific `BitcoinUIImage`
-///
-/// ```swift
-/// BitcoinUIImage(named: "coldcard")
-/// ```
-/// - Parameter named: The name of the Bitcoin Icon you would like to return.
-/// - Returns: The  specific Bitcoin `UIImage`
-public func BitcoinUIImage(named: String) -> UIImage {
-    guard let image = UIImage(named: named, in: .module, compatibleWith: nil) else {
-        assertionFailure("*No BitcoinUI Image Found*")
-        return UIImage()
+#if canImport(UIKit)
+    public func BitcoinUIImage(named: String) -> UIImage {
+        guard let image = UIImage(named: named, in: .module, compatibleWith: nil) else {
+            assertionFailure("*No BitcoinUI Image Found*")
+            return UIImage()
+        }
+        return image
     }
-    return image
-}
+#endif
+
+#if canImport(AppKit)
+    public func BitcoinNSImage(named: String) -> NSImage {
+        guard let image = Bundle.module.image(forResource: named) else {
+            assertionFailure("*No BitcoinUI Image Found*")
+            return NSImage()
+        }
+        return image
+    }
+#endif
 
 struct IconView: View {
     let named: String
@@ -47,7 +56,7 @@ struct IconView: View {
             BitcoinImage(named: named)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color(UIColor.label))
+                .foregroundColor(.primary)
             Text(named)
                 .font(.caption)
                 .foregroundColor(.bitcoinNeutral5)
@@ -62,7 +71,7 @@ struct IconsView: View {
     var body: some View {
 
         ZStack {
-            Color(UIColor.systemBackground)
+            Color.bitcoinNeutral1
 
             VStack {
                 Text("Images")
