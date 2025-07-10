@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "BitcoinUI",
     platforms: [
-        .iOS(.v16)
+        .iOS(.v16),
+        .macOS(.v13),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -24,7 +25,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "BitcoinUI",
-            dependencies: []
+            dependencies: [],
+            resources: [.process("Images.xcassets")]
         ),
         .testTarget(
             name: "BitcoinUITests",

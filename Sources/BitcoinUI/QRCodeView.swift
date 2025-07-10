@@ -8,6 +8,12 @@
 import CoreImage.CIFilterBuiltins
 import SwiftUI
 
+#if canImport(UIKit)
+    import UIKit
+#elseif canImport(AppKit)
+    import AppKit
+#endif
+
 public enum QRCodeType {
     case bitcoin(String)
     case lightning(String)
@@ -27,7 +33,6 @@ public enum QRCodeType {
 
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
-    let screenBounds = UIScreen.main.bounds
     public var qrCodeType: QRCodeType
 
     public init(qrCodeType: QRCodeType) {
@@ -35,7 +40,7 @@ public struct QRCodeView: View {
     }
 
     public var body: some View {
-        Image(uiImage: generateQRCode(from: qrCodeType.qrString))
+        generateQRCodeImage(from: qrCodeType.qrString)
             .interpolation(.none)
             .resizable()
             .scaledToFit()
@@ -44,18 +49,24 @@ public struct QRCodeView: View {
             .gesture(dragGesture())
     }
 
-    private func generateQRCode(from string: String) -> UIImage {
+    private func generateQRCodeImage(from string: String) -> Image {
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
         let data = Data(string.utf8)
         filter.setValue(data, forKey: "inputMessage")
 
         if let outputImage = filter.outputImage {
-            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-                return UIImage(cgImage: cgimg)
+            if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
+                #if canImport(UIKit)
+                    return Image(uiImage: UIImage(cgImage: cgImage))
+                #elseif canImport(AppKit)
+                    let size = CGSize(width: cgImage.width, height: cgImage.height)
+                    let nsImage = NSImage(cgImage: cgImage, size: size)
+                    return Image(nsImage: nsImage)
+                #endif
             }
         }
-        return UIImage(systemName: "xmark.circle") ?? UIImage()
+        return Image(systemName: "xmark.circle")
     }
 
     private func dragGesture() -> some Gesture {
