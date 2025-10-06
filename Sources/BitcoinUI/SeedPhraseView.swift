@@ -21,55 +21,25 @@ public struct SeedPhraseView: View {
         wordsPerPage: Int = 6
     ) {
         self.words = words
-        self.preferredWordsPerRow = preferredWordsPerRow
+        self.preferredWordsPerRow = max(1, preferredWordsPerRow)
         self.usePaging = usePaging
-        self.wordsPerPage = wordsPerPage
+        self.wordsPerPage = max(1, wordsPerPage)
     }
 
     public var body: some View {
-        let capsuleWidth: CGFloat = {
-            switch preferredWordsPerRow {
-            case 2:
-                return 120
-            case 3:
-                return 100
-            case 4:
-                return 80
-            default:
-                return 100
-            }
-        }()
+        let capsuleWidth = capsuleWidth(for: preferredWordsPerRow)
 
         if usePaging {
-            let chunks = words.chunked(into: wordsPerPage)
+            let pages = words.chunked(into: wordsPerPage)
 
             TabView(selection: $currentPage) {
-                ForEach(0..<chunks.count, id: \.self) { pageIndex in
-                    HStack(spacing: 16) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            ForEach(0..<(chunks[pageIndex].count / 2), id: \.self) { index in
-                                let wordIndex = pageIndex * wordsPerPage + index
-                                WordCapsule(
-                                    index: wordIndex,
-                                    word: chunks[pageIndex][index],
-                                    capsuleWidth: capsuleWidth
-                                )
-                            }
-                        }
-                        VStack(alignment: .leading, spacing: 8) {
-                            ForEach(
-                                (chunks[pageIndex].count / 2)..<chunks[pageIndex].count,
-                                id: \.self
-                            ) { index in
-                                let wordIndex = pageIndex * wordsPerPage + index
-                                WordCapsule(
-                                    index: wordIndex,
-                                    word: chunks[pageIndex][index],
-                                    capsuleWidth: capsuleWidth
-                                )
-                            }
-                        }
-                    }
+                ForEach(Array(pages.enumerated()), id: \.offset) { pageIndex, pageWords in
+                    WordGrid(
+                        words: pageWords,
+                        startIndex: pageIndex * wordsPerPage,
+                        preferredWordsPerRow: preferredWordsPerRow,
+                        capsuleWidth: capsuleWidth
+                    )
                     .padding(.horizontal, 20)
                     .tag(pageIndex)
                 }
@@ -79,26 +49,62 @@ public struct SeedPhraseView: View {
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
             #endif
         } else {
-            VStack(alignment: .leading, spacing: 8) {
-                ForEach(0..<words.count, id: \.self) { index in
-                    if index % preferredWordsPerRow == 0 {
-                        HStack(spacing: 8) {
-                            ForEach(index..<(index + preferredWordsPerRow), id: \.self) {
-                                innerIndex in
-                                if innerIndex < words.count {
-                                    WordCapsule(
-                                        index: innerIndex,
-                                        word: words[innerIndex],
-                                        capsuleWidth: capsuleWidth
-                                    )
-                                }
-                            }
-                        }
+            WordGrid(
+                words: words,
+                startIndex: 0,
+                preferredWordsPerRow: preferredWordsPerRow,
+                capsuleWidth: capsuleWidth
+            )
+            .padding(.horizontal, 20)
+        }
+    }
+
+    private func capsuleWidth(for preferredWordsPerRow: Int) -> CGFloat {
+        switch preferredWordsPerRow {
+        case 2:
+            return 120
+        case 3:
+            return 100
+        case 4:
+            return 80
+        default:
+            return 100
+        }
+    }
+}
+
+private struct WordGrid: View {
+    private let rows: [[WordEntry]]
+    private let capsuleWidth: CGFloat
+
+    init(words: [String], startIndex: Int, preferredWordsPerRow: Int, capsuleWidth: CGFloat) {
+        let entries = words.enumerated().map { offset, word in
+            WordEntry(index: startIndex + offset, word: word)
+        }
+        self.rows = entries.chunked(into: preferredWordsPerRow)
+        self.capsuleWidth = capsuleWidth
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ForEach(rows.indices, id: \.self) { rowIndex in
+                HStack(spacing: 8) {
+                    ForEach(rows[rowIndex]) { entry in
+                        WordCapsule(
+                            index: entry.index,
+                            word: entry.word,
+                            capsuleWidth: capsuleWidth
+                        )
                     }
                 }
             }
-            .padding(.horizontal, 20)
         }
+    }
+
+    private struct WordEntry: Identifiable {
+        let index: Int
+        let word: String
+        var id: Int { index }
     }
 }
 
