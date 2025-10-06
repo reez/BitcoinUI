@@ -120,7 +120,7 @@ view.addSubview(imageView)
 
 ## Requirements
 
-BitcoinUI currently requires minimum deployment targets of iOS 15.
+BitcoinUI currently requires minimum deployment targets of iOS 16 and macOS 13.
 
 ## Installation
 
