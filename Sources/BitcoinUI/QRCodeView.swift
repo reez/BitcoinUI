@@ -40,10 +40,21 @@ public struct QRCodeView: View {
     }
 
     public var body: some View {
-        generateQRCodeImage(from: qrCodeType.qrString)
+        let quietZone: CGFloat = 24
+        let cornerRadius: CGFloat = 20
+
+        return generateQRCodeImage(from: qrCodeType.qrString)
             .interpolation(.none)
             .resizable()
             .scaledToFit()
+            .padding(quietZone)
+            .background(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .fill(Color.white)
+            )
+            .clipShape(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            )
             .padding()
             .applyFidgetEffect(viewState: $viewState)
             .gesture(dragGesture())
