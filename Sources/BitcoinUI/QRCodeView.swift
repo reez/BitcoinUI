@@ -34,16 +34,34 @@ public enum QRCodeType {
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
     public var qrCodeType: QRCodeType
+    private let cornerRadius: CGFloat
+    private let quietZone: CGFloat
 
-    public init(qrCodeType: QRCodeType) {
+    public init(
+        qrCodeType: QRCodeType,
+        cornerRadius: CGFloat = 0,
+        quietZone: CGFloat = 24
+    ) {
         self.qrCodeType = qrCodeType
+        self.cornerRadius = cornerRadius
+        self.quietZone = quietZone
     }
 
     public var body: some View {
-        generateQRCodeImage(from: qrCodeType.qrString)
+        let resolvedCornerRadius = max(cornerRadius, 0)
+
+        return generateQRCodeImage(from: qrCodeType.qrString)
             .interpolation(.none)
             .resizable()
             .scaledToFit()
+            .padding(quietZone)
+            .background(
+                RoundedRectangle(cornerRadius: resolvedCornerRadius, style: .continuous)
+                    .fill(Color.white)
+            )
+            .clipShape(
+                RoundedRectangle(cornerRadius: resolvedCornerRadius, style: .continuous)
+            )
             .padding()
             .applyFidgetEffect(viewState: $viewState)
             .gesture(dragGesture())
@@ -91,7 +109,7 @@ public struct QRCodeView: View {
 
 struct QRCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        QRCodeView(qrCodeType: .lightning("bitcoinqrcode"))
+        QRCodeView(qrCodeType: .lightning("bitcoinqrcode"), cornerRadius: 20)
         QRCodeView(qrCodeType: .lightning("lightingqrcode"))
         QRCodeView(
             qrCodeType:
@@ -103,7 +121,7 @@ struct QRCodeView_Previews: PreviewProvider {
 }
 
 #Preview {
-    QRCodeView(qrCodeType: .bitcoin("bitcoinqrcode"))
+    QRCodeView(qrCodeType: .bitcoin("bitcoinqrcode"), cornerRadius: 20)
 }
 #Preview {
     QRCodeView(qrCodeType: .lightning("lightingqrcode"))
