@@ -182,7 +182,6 @@ public struct BitcoinOutlined: ButtonStyle {
 /// - Parameter disabledColor: The disabled text color of the button (optional, default is .bitcoinNeutral4)
 ///
 public struct BitcoinPlain: ButtonStyle {
-    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -215,10 +214,6 @@ public struct BitcoinPlain: ButtonStyle {
                 reduceMotion ? nil : .easeOut(duration: 0.1),
                 value: configuration.isPressed
             )
-    }
-    private func stateBorderColor(configuration: Configuration) -> Color {
-        return isEnabled
-            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
     }
     private func stateTextColor() -> Color {
         return isEnabled ? tintColor : disabledColor
