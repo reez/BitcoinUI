@@ -1,5 +1,5 @@
 ---
-description: iOS-only Bitcoin UI review (SwiftUI, HIG, accessibility, Bitcoin best practices)
+description: Bitcoin UI review (iOS)
 ---
 
 # BitcoinUI Review
