@@ -40,6 +40,7 @@ public enum QRCodeErrorCorrectionLevel: String {
 
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
+    @State private var cachedImage: Image?
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     public var qrCodeType: QRCodeType
     private let cornerRadius: CGFloat
@@ -71,7 +72,7 @@ public struct QRCodeView: View {
         let resolvedCornerRadius = max(cornerRadius, 0)
         let qrString = normalizedQRCodeString()
 
-        return generateQRCodeImage(from: qrString)
+        return (cachedImage ?? generateQRCodeImage(from: qrString))
             .interpolation(.none)
             .resizable()
             .scaledToFit()
@@ -86,6 +87,12 @@ public struct QRCodeView: View {
             .padding()
             .applyFidgetEffect(viewState: $viewState, reduceMotion: reduceMotion)
             .gesture(dragGesture())
+            .onAppear {
+                cachedImage = generateQRCodeImage(from: qrString)
+            }
+            .onChange(of: qrString) { _ in
+                cachedImage = generateQRCodeImage(from: qrString)
+            }
     }
 
     private func generateQRCodeImage(from string: String) -> Image {
