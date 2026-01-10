@@ -39,13 +39,13 @@ CRITICAL (X issues)
 ------------------
 [UX] Line 42: Missing warning for fee > amount
   Fix: Add a warning state when fee >= 50% of amount.
-  Reference: Fees (Bitcoin Design Guide)
+  Reference: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
 
 SERIOUS (X issues)
 ------------------
 [A11Y] Line 18: Icon-only button has no label
   Fix: Add accessibilityLabel("Close")
-  Reference: iOS HIG / VoiceOver
+  Reference: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
 
 MODERATE (X issues)
 ------------------
@@ -65,5 +65,6 @@ SUMMARY: X critical, X serious, X moderate, X info
 1. Read the file(s) first before making assessments.
 2. Be specific with line numbers and code snippets.
 3. Provide fixes, not just problems.
-4. Suggest BitcoinUI components when they fit the pattern.
-5. Do not modify code unless asked; offer to fix if appropriate.
+4. Include a direct URL in each Reference line.
+5. Suggest BitcoinUI components when they fit the pattern.
+6. Do not modify code unless asked; offer to fix if appropriate.
