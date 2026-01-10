@@ -131,3 +131,27 @@ You can add BitcoinUI to an Xcode project by adding it as a package dependency.
   3. Depending on how your project is structured:
       - If you have a single application target that needs access to the library, then add **BitcoinUI** directly to your application.
       - If you want to use this library from multiple targets you must create a shared framework that depends on **BitcoinUI** and then depend on that framework in all of your targets.
+
+## UI Review Tools
+
+BitcoinUI ships with AI review prompts for Bitcoin-specific UX and iOS HIG checks.
+
+### Codex (skill)
+
+1. Link the skill into your Codex skills directory:
+
+```sh
+ln -s "$(pwd)/skills/bitcoinui" "$CODEX_HOME/skills/bitcoinui"
+```
+
+2. In Codex, run `/bitcoinui` and pass a SwiftUI file to review.
+
+### Claude (command)
+
+1. Copy the command file into your Claude commands directory:
+
+```sh
+cp commands/bitcoinui.md /path/to/claude/commands/bitcoinui.md
+```
+
+2. In Claude, run `/bitcoinui` and pass a SwiftUI file to review.
