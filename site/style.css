@@ -52,7 +52,7 @@ h1 {
   font-size: 16px;
   line-height: 1.4;
   color: var(--muted);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .divider {
@@ -67,6 +67,24 @@ h1 {
   font-size: 13px;
 }
 
+.footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--orange);
+}
+
 .block {
   padding: 20px 0;
   border-top: 1px solid var(--border);
@@ -77,11 +95,12 @@ h1 {
   padding-top: 0;
 }
 
+
 h2 {
   margin: 0 0 12px;
   font-size: 16px;
   color: var(--fg);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 pre {
@@ -105,15 +124,20 @@ code {
 }
 
 @media (max-width: 640px) {
-  .terminal-body {
-    padding: 22px 18px 28px;
-  }
-
-  .nav {
-    gap: 10px 16px;
+  .panel-body {
+    padding: 24px 18px 28px;
   }
 
   pre {
     padding: 12px;
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 10px 16px;
   }
 }

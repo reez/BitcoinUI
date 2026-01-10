@@ -20,10 +20,13 @@ Review iOS SwiftUI code and screens for Bitcoin-specific UX correctness, iOS HIG
 1. Read the target file(s) before commenting.
 2. Apply the rubric in `references/bitcoinui-rubric.md`.
 3. Report issues by severity with line numbers, a short snippet, and a concrete fix. Include a direct URL in each Reference line.
+4. For Bitcoin-specific issues, include at least one Bitcoin Design Guide or BIP URL in the Reference line.
 4. Suggest BitcoinUI components when they would reduce errors or improve consistency.
 5. Do not modify code unless the user asks; offer to fix if appropriate.
 
 ## Output Format
+
+Start directly with the `BITCOINUI REVIEW` block; do not add any preamble text before it.
 
 ```
 ═══════════════════════════════════════════════════
