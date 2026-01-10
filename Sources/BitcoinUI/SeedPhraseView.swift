@@ -143,6 +143,9 @@ struct WordCapsule: View {
         .foregroundStyle(.primary)
         .lineLimit(1)
         .minimumScaleFactor(0.5)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Word \(index + 1)"))
+        .accessibilityValue(Text(word))
     }
 }
 

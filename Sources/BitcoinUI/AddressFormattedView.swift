@@ -30,6 +30,8 @@ public struct AddressFormattedView: View {
     public var body: some View {
         let scaledGridItemSize = gridItemSize * gridScale
         let scaledSpacing = spacing * gridScale
+        let chunks = address.chunked(into: 4)
+        let accessibleAddress = chunks.joined(separator: " ")
         LazyVGrid(
             columns: Array(
                 repeating: GridItem(
@@ -40,13 +42,15 @@ public struct AddressFormattedView: View {
             ),
             spacing: scaledSpacing
         ) {
-            let chunks = address.chunked(into: 4)
             ForEach(chunks.indices, id: \.self) { index in
                 Text(chunks[index])
                     .font(.system(size: fontSize, weight: .medium, design: .monospaced))
                     .foregroundStyle(index % 2 == 0 ? .primary : .secondary)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Bitcoin address"))
+        .accessibilityValue(Text(accessibleAddress))
     }
 }
 
