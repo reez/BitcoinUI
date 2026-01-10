@@ -33,6 +33,7 @@ public enum QRCodeType {
 
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     public var qrCodeType: QRCodeType
     private let cornerRadius: CGFloat
     private let quietZone: CGFloat
@@ -63,7 +64,7 @@ public struct QRCodeView: View {
                 RoundedRectangle(cornerRadius: resolvedCornerRadius, style: .continuous)
             )
             .padding()
-            .applyFidgetEffect(viewState: $viewState)
+            .applyFidgetEffect(viewState: $viewState, reduceMotion: reduceMotion)
             .gesture(dragGesture())
     }
 
