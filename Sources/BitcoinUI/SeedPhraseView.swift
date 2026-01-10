@@ -12,7 +12,11 @@ public struct SeedPhraseView: View {
     public var preferredWordsPerRow: Int
     public var usePaging: Bool
     public var wordsPerPage: Int
+    public var privacySensitive: Bool
+    public var showsCaptureWarning: Bool
+    public var captureWarningText: String
     @State private var currentPage = 0
+    @State private var isScreenCaptured = false
     @ScaledMetric(relativeTo: .body) private var capsuleScale: CGFloat = 1
     @ScaledMetric(relativeTo: .body) private var horizontalPadding: CGFloat = 20
 
@@ -20,45 +24,70 @@ public struct SeedPhraseView: View {
         words: [String],
         preferredWordsPerRow: Int,
         usePaging: Bool = false,
-        wordsPerPage: Int = 6
+        wordsPerPage: Int = 6,
+        privacySensitive: Bool = false,
+        showsCaptureWarning: Bool = false,
+        captureWarningText: String =
+            "Screen recording or mirroring is active. Your recovery phrase is hidden."
     ) {
         self.words = words
         self.preferredWordsPerRow = max(1, preferredWordsPerRow)
         self.usePaging = usePaging
         self.wordsPerPage = max(1, wordsPerPage)
+        self.privacySensitive = privacySensitive
+        self.showsCaptureWarning = showsCaptureWarning
+        self.captureWarningText = captureWarningText
     }
 
     public var body: some View {
         let capsuleWidth = capsuleWidth(for: preferredWordsPerRow) * capsuleScale
 
-        if usePaging {
-            let pages = words.chunked(into: wordsPerPage)
+        Group {
+            if usePaging {
+                let pages = words.chunked(into: wordsPerPage)
 
-            TabView(selection: $currentPage) {
-                ForEach(Array(pages.enumerated()), id: \.offset) { pageIndex, pageWords in
-                    WordGrid(
-                        words: pageWords,
-                        startIndex: pageIndex * wordsPerPage,
-                        preferredWordsPerRow: preferredWordsPerRow,
-                        capsuleWidth: capsuleWidth
-                    )
-                    .padding(.horizontal, horizontalPadding)
-                    .tag(pageIndex)
+                TabView(selection: $currentPage) {
+                    ForEach(Array(pages.enumerated()), id: \.offset) { pageIndex, pageWords in
+                        WordGrid(
+                            words: pageWords,
+                            startIndex: pageIndex * wordsPerPage,
+                            preferredWordsPerRow: preferredWordsPerRow,
+                            capsuleWidth: capsuleWidth
+                        )
+                        .padding(.horizontal, horizontalPadding)
+                        .tag(pageIndex)
+                    }
                 }
+                #if os(iOS)
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                    .indexViewStyle(.page(backgroundDisplayMode: .always))
+                #endif
+            } else {
+                WordGrid(
+                    words: words,
+                    startIndex: 0,
+                    preferredWordsPerRow: preferredWordsPerRow,
+                    capsuleWidth: capsuleWidth
+                )
+                .padding(.horizontal, horizontalPadding)
             }
-            #if os(iOS)
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
-            #endif
-        } else {
-            WordGrid(
-                words: words,
-                startIndex: 0,
-                preferredWordsPerRow: preferredWordsPerRow,
-                capsuleWidth: capsuleWidth
-            )
-            .padding(.horizontal, horizontalPadding)
         }
+        .applyPrivacySensitive(privacySensitive)
+        .overlay {
+            if showsCaptureWarning && isScreenCaptured {
+                ScreenCaptureWarning(text: captureWarningText)
+            }
+        }
+        .onAppear {
+            updateScreenCaptureState()
+        }
+        #if os(iOS)
+            .onReceive(
+                NotificationCenter.default.publisher(for: UIScreen.capturedDidChangeNotification)
+            ) { _ in
+                updateScreenCaptureState()
+            }
+        #endif
     }
 
     private func capsuleWidth(for preferredWordsPerRow: Int) -> CGFloat {
@@ -72,6 +101,18 @@ public struct SeedPhraseView: View {
         default:
             return 100
         }
+    }
+
+    private func updateScreenCaptureState() {
+        guard showsCaptureWarning else {
+            isScreenCaptured = false
+            return
+        }
+        #if os(iOS)
+            isScreenCaptured = UIScreen.main.isCaptured
+        #else
+            isScreenCaptured = false
+        #endif
     }
 }
 
@@ -112,6 +153,26 @@ private struct WordGrid: View {
     }
 }
 
+private struct ScreenCaptureWarning: View {
+    let text: String
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.85)
+            VStack {
+                Image(systemName: "eye.slash")
+                    .font(.largeTitle)
+                Text(text)
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+            }
+            .foregroundStyle(.white)
+            .padding()
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
 struct WordCapsule: View {
     let index: Int
     let word: String
@@ -146,6 +207,17 @@ struct WordCapsule: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("Word \(index + 1)"))
         .accessibilityValue(Text(word))
+    }
+}
+
+extension View {
+    @ViewBuilder
+    fileprivate func applyPrivacySensitive(_ enabled: Bool) -> some View {
+        if enabled {
+            self.privacySensitive()
+        } else {
+            self
+        }
     }
 }
 
