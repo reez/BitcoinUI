@@ -36,7 +36,8 @@ public struct AddressFormattedView: View {
             columns: Array(
                 repeating: GridItem(
                     .fixed(scaledGridItemSize),
-                    spacing: scaledSpacing
+                    spacing: scaledSpacing,
+                    alignment: .leading
                 ),
                 count: columns
             ),
