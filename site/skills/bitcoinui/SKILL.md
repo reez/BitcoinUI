@@ -1,6 +1,6 @@
 ---
 name: bitcoinui
-description: iOS-only design and accessibility review for Bitcoin apps or SwiftUI code. Use when asked to review iOS UI against Bitcoin Design Guide best practices, iOS HIG, accessibility, or BitcoinUI component usage.
+description: Bitcoin UI review (iOS)
 ---
 
 # BitcoinUI Review
