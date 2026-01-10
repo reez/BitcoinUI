@@ -11,9 +11,9 @@ Review iOS SwiftUI code and screens for Bitcoin-specific UX correctness, iOS HIG
 
 ## Quick Start
 
-- If `$ARGUMENTS` is provided, review those file(s) directly.
-- If `$ARGUMENTS` is empty, ask which file(s) to review. This skill is SwiftUI-first; for UIKit or mixed codebases, ask for specific files/screens.
-- Do not scan the whole repo without user consent.
+- If `$ARGUMENTS` is a file or list of files, review those directly.
+- If `$ARGUMENTS` is a folder, ask which SwiftUI files/screens to review. This skill is SwiftUI-first; for UIKit or mixed codebases, ask for specific files/screens.
+- If `$ARGUMENTS` is empty, ask which file(s) to review. Do not scan the whole repo without user consent.
 
 ## Review Workflow
 
