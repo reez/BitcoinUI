@@ -31,40 +31,68 @@ public enum QRCodeType {
     }
 }
 
+public enum QRCodeErrorCorrectionLevel: String {
+    case low = "L"
+    case medium = "M"
+    case quartile = "Q"
+    case high = "H"
+}
+
 public struct QRCodeView: View {
     @State private var viewState = CGSize.zero
+    @State private var cachedImage: Image?
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     public var qrCodeType: QRCodeType
     private let cornerRadius: CGFloat
     private let quietZone: CGFloat
+    private let errorCorrectionLevel: QRCodeErrorCorrectionLevel
+    private let foregroundColor: Color
+    private let backgroundColor: Color
+    private let uppercasesBech32: Bool
 
     public init(
         qrCodeType: QRCodeType,
         cornerRadius: CGFloat = 0,
-        quietZone: CGFloat = 24
+        quietZone: CGFloat = 24,
+        errorCorrectionLevel: QRCodeErrorCorrectionLevel = .medium,
+        foregroundColor: Color = .black,
+        backgroundColor: Color = .white,
+        uppercasesBech32: Bool = false
     ) {
         self.qrCodeType = qrCodeType
         self.cornerRadius = cornerRadius
         self.quietZone = quietZone
+        self.errorCorrectionLevel = errorCorrectionLevel
+        self.foregroundColor = foregroundColor
+        self.backgroundColor = backgroundColor
+        self.uppercasesBech32 = uppercasesBech32
     }
 
     public var body: some View {
         let resolvedCornerRadius = max(cornerRadius, 0)
+        let qrString = normalizedQRCodeString()
 
-        return generateQRCodeImage(from: qrCodeType.qrString)
+        return (cachedImage ?? generateQRCodeImage(from: qrString))
             .interpolation(.none)
             .resizable()
             .scaledToFit()
             .padding(quietZone)
             .background(
                 RoundedRectangle(cornerRadius: resolvedCornerRadius, style: .continuous)
-                    .fill(Color.white)
+                    .fill(backgroundColor)
             )
             .clipShape(
                 RoundedRectangle(cornerRadius: resolvedCornerRadius, style: .continuous)
             )
             .padding()
-            .applyFidgetEffect(viewState: $viewState)
+            .applyFidgetEffect(viewState: $viewState, reduceMotion: reduceMotion)
             .gesture(dragGesture())
+            .onAppear {
+                cachedImage = generateQRCodeImage(from: qrString)
+            }
+            .onChange(of: qrString) { _ in
+                cachedImage = generateQRCodeImage(from: qrString)
+            }
     }
 
     private func generateQRCodeImage(from string: String) -> Image {
@@ -72,9 +100,11 @@ public struct QRCodeView: View {
         let filter = CIFilter.qrCodeGenerator()
         let data = Data(string.utf8)
         filter.setValue(data, forKey: "inputMessage")
+        filter.setValue(errorCorrectionLevel.rawValue, forKey: "inputCorrectionLevel")
 
         if let outputImage = filter.outputImage {
-            if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
+            let coloredImage = applyColors(to: outputImage) ?? outputImage
+            if let cgImage = context.createCGImage(coloredImage, from: coloredImage.extent) {
                 #if canImport(UIKit)
                     return Image(uiImage: UIImage(cgImage: cgImage))
                 #elseif canImport(AppKit)
@@ -85,6 +115,80 @@ public struct QRCodeView: View {
             }
         }
         return Image(systemName: "xmark.circle")
+    }
+
+    private func applyColors(to image: CIImage) -> CIImage? {
+        let filter = CIFilter.falseColor()
+        filter.inputImage = image
+        filter.color0 = ciColor(from: foregroundColor)
+        filter.color1 = ciColor(from: backgroundColor)
+        return filter.outputImage
+    }
+
+    private func ciColor(from color: Color) -> CIColor {
+        #if canImport(UIKit)
+            return CIColor(color: UIColor(color))
+        #elseif canImport(AppKit)
+            return CIColor(color: NSColor(color)) ?? CIColor(red: 0, green: 0, blue: 0)
+        #endif
+    }
+
+    private func normalizedQRCodeString() -> String {
+        guard uppercasesBech32 else {
+            return qrCodeType.qrString
+        }
+        return uppercasedBech32(in: qrCodeType.qrString)
+    }
+
+    private func uppercasedBech32(in string: String) -> String {
+        guard let schemeSeparator = string.firstIndex(of: ":") else {
+            return string
+        }
+
+        let scheme = string[..<schemeSeparator].lowercased()
+        let schemePrefix = string[..<string.index(after: schemeSeparator)]
+        let remainder = String(string[string.index(after: schemeSeparator)...])
+
+        switch scheme {
+        case "bitcoin":
+            return schemePrefix + uppercasedBitcoinURI(remainder)
+        case "lightning":
+            return schemePrefix + remainder.uppercased()
+        default:
+            return string
+        }
+    }
+
+    private func uppercasedBitcoinURI(_ uri: String) -> String {
+        let parts = uri.split(separator: "?", maxSplits: 1, omittingEmptySubsequences: false)
+        let address = String(parts[0]).uppercased()
+        guard parts.count > 1 else {
+            return address
+        }
+
+        let query = String(parts[1])
+        let updatedQuery =
+            query
+            .split(separator: "&", omittingEmptySubsequences: false)
+            .map { pair -> String in
+                let keyValue = pair.split(
+                    separator: "=",
+                    maxSplits: 1,
+                    omittingEmptySubsequences: false
+                )
+                guard keyValue.count == 2 else {
+                    return String(pair)
+                }
+                let key = String(keyValue[0])
+                let value = String(keyValue[1])
+                if key.lowercased() == "lightning" {
+                    return "\(key)=\(value.uppercased())"
+                }
+                return String(pair)
+            }
+            .joined(separator: "&")
+
+        return "\(address)?\(updatedQuery)"
     }
 
     private func dragGesture() -> some Gesture {

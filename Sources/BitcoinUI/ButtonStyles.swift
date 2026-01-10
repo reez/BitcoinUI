@@ -36,6 +36,7 @@ public let defaultDisabledOutlineColor = Color.bitcoinNeutral4
 public struct BitcoinFilled: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     let width: CGFloat
     let height: CGFloat
@@ -71,14 +72,17 @@ public struct BitcoinFilled: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(
                 stateBackgroundColor.opacity(0.8)
                     .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))
             )
-            .foregroundColor(stateTextColor())
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+            .foregroundStyle(stateTextColor())
+            .scaleEffect(reduceMotion ? 1 : (configuration.isPressed ? 0.95 : 1))
+            .animation(
+                reduceMotion ? nil : .easeOut(duration: 0.1),
+                value: configuration.isPressed
+            )
     }
 
     private func stateBackgroundColor(configuration: Configuration) -> Color {
@@ -108,6 +112,7 @@ public struct BitcoinFilled: ButtonStyle {
 public struct BitcoinOutlined: ButtonStyle {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     let width: CGFloat
     let height: CGFloat
@@ -136,16 +141,19 @@ public struct BitcoinOutlined: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(stateBackgroundColor())
             .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))  // Use CustomShape
-            .foregroundColor(stateTextColor())
+            .foregroundStyle(stateTextColor())
             .overlay(
                 CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)  // Use CustomShape
                     .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
             )
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
+            .scaleEffect(reduceMotion ? 1 : (configuration.isPressed ? 0.95 : 1))
+            .animation(
+                reduceMotion ? nil : .easeOut(duration: 0.1),
+                value: configuration.isPressed
+            )
     }
 
     private func stateBackgroundColor() -> Color {
@@ -174,8 +182,8 @@ public struct BitcoinOutlined: ButtonStyle {
 /// - Parameter disabledColor: The disabled text color of the button (optional, default is .bitcoinNeutral4)
 ///
 public struct BitcoinPlain: ButtonStyle {
-    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     let width: CGFloat
     let height: CGFloat
@@ -198,15 +206,14 @@ public struct BitcoinPlain: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(Color.clear)
-            .foregroundColor(stateTextColor())
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
-    }
-    private func stateBorderColor(configuration: Configuration) -> Color {
-        return isEnabled
-            ? configuration.isPressed ? tintColor.opacity(0.8) : tintColor : disabledColor
+            .foregroundStyle(stateTextColor())
+            .scaleEffect(reduceMotion ? 1 : (configuration.isPressed ? 0.95 : 1))
+            .animation(
+                reduceMotion ? nil : .easeOut(duration: 0.1),
+                value: configuration.isPressed
+            )
     }
     private func stateTextColor() -> Color {
         return isEnabled ? tintColor : disabledColor
