@@ -12,6 +12,8 @@ public struct AddressFormattedView: View {
     public let columns: Int
     public let spacing: CGFloat
     public let gridItemSize: CGFloat
+    @ScaledMetric(relativeTo: .body) private var gridScale: CGFloat = 1
+    @ScaledMetric(relativeTo: .body) private var fontSize: CGFloat = 20
 
     public init(
         address: String,
@@ -26,21 +28,23 @@ public struct AddressFormattedView: View {
     }
 
     public var body: some View {
+        let scaledGridItemSize = gridItemSize * gridScale
+        let scaledSpacing = spacing * gridScale
         LazyVGrid(
             columns: Array(
                 repeating: GridItem(
-                    .fixed(gridItemSize),
-                    spacing: spacing
+                    .fixed(scaledGridItemSize),
+                    spacing: scaledSpacing
                 ),
                 count: columns
             ),
-            spacing: spacing
+            spacing: scaledSpacing
         ) {
             let chunks = address.chunked(into: 4)
             ForEach(chunks.indices, id: \.self) { index in
                 Text(chunks[index])
-                    .font(.system(size: 20, weight: .medium, design: .monospaced))
-                    .foregroundColor(index % 2 == 0 ? .primary : .secondary)
+                    .font(.system(size: fontSize, weight: .medium, design: .monospaced))
+                    .foregroundStyle(index % 2 == 0 ? .primary : .secondary)
             }
         }
     }

@@ -13,6 +13,8 @@ public struct SeedPhraseView: View {
     public var usePaging: Bool
     public var wordsPerPage: Int
     @State private var currentPage = 0
+    @ScaledMetric(relativeTo: .body) private var capsuleScale: CGFloat = 1
+    @ScaledMetric(relativeTo: .body) private var horizontalPadding: CGFloat = 20
 
     public init(
         words: [String],
@@ -27,7 +29,7 @@ public struct SeedPhraseView: View {
     }
 
     public var body: some View {
-        let capsuleWidth = capsuleWidth(for: preferredWordsPerRow)
+        let capsuleWidth = capsuleWidth(for: preferredWordsPerRow) * capsuleScale
 
         if usePaging {
             let pages = words.chunked(into: wordsPerPage)
@@ -40,7 +42,7 @@ public struct SeedPhraseView: View {
                         preferredWordsPerRow: preferredWordsPerRow,
                         capsuleWidth: capsuleWidth
                     )
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, horizontalPadding)
                     .tag(pageIndex)
                 }
             }
@@ -55,7 +57,7 @@ public struct SeedPhraseView: View {
                 preferredWordsPerRow: preferredWordsPerRow,
                 capsuleWidth: capsuleWidth
             )
-            .padding(.horizontal, 20)
+            .padding(.horizontal, horizontalPadding)
         }
     }
 
@@ -76,6 +78,8 @@ public struct SeedPhraseView: View {
 private struct WordGrid: View {
     private let rows: [[WordEntry]]
     private let capsuleWidth: CGFloat
+    @ScaledMetric(relativeTo: .body) private var rowSpacing: CGFloat = 8
+    @ScaledMetric(relativeTo: .body) private var columnSpacing: CGFloat = 8
 
     init(words: [String], startIndex: Int, preferredWordsPerRow: Int, capsuleWidth: CGFloat) {
         let entries = words.enumerated().map { offset, word in
@@ -86,9 +90,9 @@ private struct WordGrid: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: rowSpacing) {
             ForEach(rows.indices, id: \.self) { rowIndex in
-                HStack(spacing: 8) {
+                HStack(spacing: columnSpacing) {
                     ForEach(rows[rowIndex]) { entry in
                         WordCapsule(
                             index: entry.index,
@@ -112,25 +116,31 @@ struct WordCapsule: View {
     let index: Int
     let word: String
     let capsuleWidth: CGFloat
+    @ScaledMetric(relativeTo: .body) private var indexFontSize: CGFloat = 14
+    @ScaledMetric(relativeTo: .body) private var wordFontSize: CGFloat = 16
+    @ScaledMetric(relativeTo: .body) private var dividerHeight: CGFloat = 20
+    @ScaledMetric(relativeTo: .body) private var indexMinWidth: CGFloat = 20
+    @ScaledMetric(relativeTo: .body) private var horizontalPadding: CGFloat = 10
+    @ScaledMetric(relativeTo: .body) private var verticalPadding: CGFloat = 5
 
     var body: some View {
         HStack(alignment: .center) {
             Text("\(index + 1)")
-                .font(.system(size: 14))
-                .foregroundColor(.secondary)
-                .frame(minWidth: 20, alignment: .trailing)
+                .font(.system(size: indexFontSize))
+                .foregroundStyle(.secondary)
+                .frame(minWidth: indexMinWidth, alignment: .trailing)
             Divider()
-                .frame(height: 20)
-                .background(Color.secondary.opacity(0.2))
+                .frame(height: dividerHeight)
+                .background(.secondary.opacity(0.2))
             Text(word)
-                .font(.system(size: 16, weight: .medium))
+                .font(.system(size: wordFontSize, weight: .medium))
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 5)
+        .padding(.horizontal, horizontalPadding)
+        .padding(.vertical, verticalPadding)
         .frame(width: capsuleWidth)
-        .background(Capsule().fill(Color.secondary.opacity(0.2)))
-        .foregroundColor(.primary)
+        .background(Capsule().fill(.secondary.opacity(0.2)))
+        .foregroundStyle(.primary)
         .lineLimit(1)
         .minimumScaleFactor(0.5)
     }

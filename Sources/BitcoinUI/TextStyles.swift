@@ -15,102 +15,112 @@ extension Text {
 }
 
 public struct BitcoinTitle1: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .largeTitle) private var size: CGFloat = 36
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 36, weight: .semibold))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinTitle2: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .title) private var size: CGFloat = 28
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 28, weight: .semibold))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinTitle3: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .title2) private var size: CGFloat = 24
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 24, weight: .semibold))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinTitle4: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .title3) private var size: CGFloat = 21
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 21, weight: .semibold))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinTitle5: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .headline) private var size: CGFloat = 18
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 18, weight: .semibold))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .semibold))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinBody1: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .body) private var size: CGFloat = 24
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 24, weight: .regular))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .regular))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinBody2: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .body) private var size: CGFloat = 21
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 21, weight: .regular))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .regular))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinBody3: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .body) private var size: CGFloat = 18
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 18, weight: .regular))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .regular))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinBody4: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .body) private var size: CGFloat = 15
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 15, weight: .regular))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .regular))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 
 public struct BitcoinBody5: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .body) private var size: CGFloat = 13
     public init() {}
     public func body(content: Content) -> some View {
         content
-            .font(.system(size: 13, weight: .regular))
-            .foregroundColor(colorScheme == .dark ? .bitcoinWhite : .bitcoinBlack)
+            .font(.system(size: size, weight: .regular))
+            .foregroundStyle(colorScheme == .dark ? Color.bitcoinWhite : Color.bitcoinBlack)
     }
 }
 

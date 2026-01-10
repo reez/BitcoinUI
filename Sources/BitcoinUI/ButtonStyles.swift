@@ -71,12 +71,12 @@ public struct BitcoinFilled: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(
                 stateBackgroundColor.opacity(0.8)
                     .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))
             )
-            .foregroundColor(stateTextColor())
+            .foregroundStyle(stateTextColor())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
     }
@@ -136,10 +136,10 @@ public struct BitcoinOutlined: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(stateBackgroundColor())
             .clipShape(CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius))  // Use CustomShape
-            .foregroundColor(stateTextColor())
+            .foregroundStyle(stateTextColor())
             .overlay(
                 CustomShape(isCapsule: isCapsule, cornerRadius: cornerRadius)  // Use CustomShape
                     .stroke(stateBorderColor(configuration: configuration), lineWidth: 1.5)
@@ -198,9 +198,9 @@ public struct BitcoinPlain: ButtonStyle {
         configuration.label
             .font(Font.body.bold())
             .padding()
-            .frame(width: width, height: height)
+            .frame(minWidth: width, minHeight: height)
             .background(Color.clear)
-            .foregroundColor(stateTextColor())
+            .foregroundStyle(stateTextColor())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.easeOut(duration: 0.1), value: configuration.isPressed)
     }
