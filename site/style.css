@@ -61,6 +61,12 @@ h1 {
   margin: 0 0 20px;
 }
 
+.note {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .block {
   padding: 20px 0;
   border-top: 1px solid var(--border);

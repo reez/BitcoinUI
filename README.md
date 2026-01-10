@@ -144,7 +144,7 @@ BitcoinUI ships with AI review prompts for Bitcoin-specific UX and iOS HIG check
 curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
 ```
 
-2. In Codex, run `$bitcoinui` (file or folder).
+2. In Codex, run `$bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
 ### Claude (command)
 
@@ -154,4 +154,4 @@ curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
 curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
 ```
 
-2. In Claude, run `/bitcoinui` (file or folder).
+2. In Claude, run `/bitcoinui` (file or folder; folders review all SwiftUI files inside).
