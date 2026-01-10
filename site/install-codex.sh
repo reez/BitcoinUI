@@ -4,7 +4,7 @@ set -euo pipefail
 CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 SKILL_DIR="$CODEX_HOME/skills/bitcoinui"
 REF_DIR="$SKILL_DIR/references"
-BASE_URL="https://raw.githubusercontent.com/reez/BitcoinUI/main/skills/bitcoinui"
+BASE_URL="https://bitcoinui.ai/skills/bitcoinui"
 
 mkdir -p "$REF_DIR"
 
