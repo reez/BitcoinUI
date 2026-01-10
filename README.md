@@ -138,20 +138,20 @@ BitcoinUI ships with AI review prompts for Bitcoin-specific UX and iOS HIG check
 
 ### Codex (skill)
 
-1. Link the skill into your Codex skills directory:
+1. Install the skill:
 
 ```sh
-ln -s "$(pwd)/skills/bitcoinui" "$CODEX_HOME/skills/bitcoinui"
+curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
 ```
 
-2. In Codex, run `/bitcoinui` and pass a SwiftUI file to review.
+2. In Codex, run `/bitcoinui` (file or folder).
 
 ### Claude (command)
 
-1. Copy the command file into your Claude commands directory:
+1. Install the command file:
 
 ```sh
-cp commands/bitcoinui.md /path/to/claude/commands/bitcoinui.md
+curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
 ```
 
-2. In Claude, run `/bitcoinui` and pass a SwiftUI file to review.
+2. In Claude, run `/bitcoinui` (file or folder).
