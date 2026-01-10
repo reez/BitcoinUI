@@ -63,3 +63,27 @@
 - QR: `QRCodeView` with error correction and color controls.
 - Seed phrase: `SeedPhraseView` with privacy options.
 - Colors, buttons, text, icons: BitcoinUI styles and palette.
+
+## Reference Links
+
+### Bitcoin Design Guide
+
+- Human-readable addresses: https://bitcoin.design/guide/how-it-works/human-readable-addresses/
+- Manual backup (seed phrases): https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/manual-backup/
+- Recovery: https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/recovery/
+- Send fees: https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+- Units and symbols: https://bitcoin.design/guide/designing-products/units-and-symbols/
+
+### Bitcoin Protocol
+
+- BIP21 (URIs): https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki
+- BIP173 (bech32): https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki
+
+### Apple Human Interface Guidelines
+
+- Accessibility: https://developer.apple.com/design/human-interface-guidelines/accessibility
+- Alerts: https://developer.apple.com/design/human-interface-guidelines/alerts
+- Buttons (hit targets): https://developer.apple.com/design/human-interface-guidelines/buttons
+- Color (no color-only meaning): https://developer.apple.com/design/human-interface-guidelines/color
+- Motion (Reduce Motion): https://developer.apple.com/design/human-interface-guidelines/motion
+- Typography (Dynamic Type): https://developer.apple.com/design/human-interface-guidelines/typography

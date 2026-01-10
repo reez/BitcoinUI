@@ -19,7 +19,7 @@ Review iOS SwiftUI code and screens for Bitcoin-specific UX correctness, iOS HIG
 
 1. Read the target file(s) before commenting.
 2. Apply the rubric in `references/bitcoinui-rubric.md`.
-3. Report issues by severity with line numbers, a short snippet, and a concrete fix.
+3. Report issues by severity with line numbers, a short snippet, and a concrete fix. Include a direct URL in each Reference line.
 4. Suggest BitcoinUI components when they would reduce errors or improve consistency.
 5. Do not modify code unless the user asks; offer to fix if appropriate.
 
@@ -34,13 +34,13 @@ CRITICAL (X issues)
 ──────────────────
 [UX] Line 42: Missing warning for fee > amount
   Fix: Add a warning state when fee >= 50% of amount.
-  Reference: Fees (Bitcoin Design Guide)
+  Reference: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
 
 SERIOUS (X issues)
 ──────────────────
 [A11Y] Line 18: Icon-only button has no label
   Fix: Add accessibilityLabel("Close")
-  Reference: iOS HIG / VoiceOver
+  Reference: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
 
 MODERATE (X issues)
 ──────────────────
