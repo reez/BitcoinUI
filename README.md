@@ -32,35 +32,38 @@ Text("Bitcoin Orange")
 
 Install `bitcoinui` in your AI coding tool.
 
-### Codex (skill)
+### Claude
+
+```sh
+curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+claude
+/bitcoinui
+```
+
+### Codex
 
 1. Install the skill:
 
 ```sh
 curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
+codex
+$bitcoinui
 ```
 
 2. In Codex, run `$bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
-### Cursor (command)
+### Cursor
 
 1. Install the command file:
 
 ```sh
 curl -L -o ~/.cursor/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+cursor
+/bitcoinui
 ```
 
 2. In Cursor, run `/bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
-### Claude (command)
-
-1. Install the command file:
-
-```sh
-curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
-```
-
-2. In Claude, run `/bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
 Example output:
 
