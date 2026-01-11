@@ -15,7 +15,7 @@ Install `BitcoinUI` via Swift Package Manager with `https://github.com/reez/Bitc
 - Button styles
 - Text styles
 - Icons
-- Views (AddressFormattedView, QRCodeView, SeedPhraseView)
+- Views
 
 Example usage:
 
