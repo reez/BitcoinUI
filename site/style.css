@@ -103,6 +103,26 @@ h2 {
   font-weight: 300;
 }
 
+.section-title {
+  margin: 0 0 24px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-divider {
+  margin: 8px 0 20px;
+}
+
+.section-title,
+code {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
 pre {
   margin: 0 0 16px;
   padding: 14px 16px;
@@ -115,6 +135,7 @@ pre {
 code {
   font-family: inherit;
   font-size: 13px;
+  font-weight: 300;
   color: var(--fg);
   white-space: pre;
 }

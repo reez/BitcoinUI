@@ -15,7 +15,7 @@
             href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap"
             rel="stylesheet"
         >
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v=2">
     </head>
     <body>
         <main class="page">
@@ -24,33 +24,41 @@
                     <h1>Bitcoin UI iOS</h1>
                     <hr class="divider">
 
-                    <section class="block" id="claude">
-                        <h2>Claude</h2>
-                        <pre><code><span class="prompt">$</span> curl -L -o ~/.claude/commands/bitcoinui.md \
+                    <div class="section-group">
+                        <h2 class="section-title">Design Review</h2>
+                        <section class="block" id="claude">
+                            <h2>Claude</h2>
+                            <pre><code><span class="prompt">$</span> curl -L -o ~/.claude/commands/bitcoinui.md \
   https://bitcoinui.ai/bitcoinui.md
 <span class="prompt">$</span> claude
 <span class="prompt">&gt;</span> /bitcoinui</code></pre>
-                    </section>
+                        </section>
 
-                    <section class="block" id="codex">
-                        <h2>Codex</h2>
-                        <pre><code><span class="prompt">$</span> curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
+                        <section class="block" id="codex">
+                            <h2>Codex</h2>
+                            <pre><code><span class="prompt">$</span> curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
 <span class="prompt">$</span> codex
 <span class="prompt">&gt;</span> $bitcoinui</code></pre>
-                    </section>
+                        </section>
 
-                    <section class="block" id="cursor">
-                        <h2>Cursor</h2>
-                        <pre><code><span class="prompt">$</span> curl -L -o ~/.cursor/commands/bitcoinui.md \
+                        <section class="block" id="cursor">
+                            <h2>Cursor</h2>
+                            <pre><code><span class="prompt">$</span> curl -L -o ~/.cursor/commands/bitcoinui.md \
   https://bitcoinui.ai/bitcoinui.md
 <span class="prompt">$</span> cursor
 <span class="prompt">&gt;</span> /bitcoinui</code></pre>
-                    </section>
+                        </section>
+                    </div>
 
-                    <section class="block" id="xcode">
-                        <h2>Xcode</h2>
-                        <pre><code><span class="prompt">&gt;</span> https://github.com/reez/BitcoinUI</code></pre>
-                    </section>
+                    <hr class="divider section-divider">
+
+                    <div class="section-group">
+                        <h2 class="section-title">Swift Package</h2>
+                        <section class="block" id="xcode">
+                            <h2>Xcode</h2>
+                            <pre><code><span class="prompt">&gt;</span> https://github.com/reez/BitcoinUI</code></pre>
+                        </section>
+                    </div>
 
                     <footer class="footer">
                         <a href="https://github.com/reez/BitcoinUI">GitHub</a>
