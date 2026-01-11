@@ -15,9 +15,7 @@ Install `BitcoinUI` via Swift Package Manager with `https://github.com/reez/Bitc
 - Button styles
 - Text styles
 - Icons
-- Views
-
-(Is there anything else included than these? is this up to date and accurate?)
+- Views (AddressFormattedView, QRCodeView, SeedPhraseView)
 
 Example usage:
 
@@ -65,3 +63,25 @@ curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
 2. In Claude, run `/bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
 Example output:
+
+```
+===============================================
+BITCOINUI REVIEW: SendFeeView.swift
+===============================================
+
+SERIOUS (1 issue)
+------------------
+[UX] Line 88: Fee picker lacks a high-fee warning
+  Fix: Add a warning when fee >= 50% of amount.
+  Reference: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+
+MODERATE (1 issue)
+------------------
+[A11Y] Line 42: Icon-only close button has no label
+  Fix: Add accessibilityLabel("Close")
+  Reference: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
+
+===============================================
+SUMMARY: 0 critical, 1 serious, 1 moderate, 0 info
+===============================================
+```
