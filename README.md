@@ -146,6 +146,16 @@ curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
 
 2. In Codex, run `$bitcoinui` (file or folder; folders review all SwiftUI files inside).
 
+### Cursor (command)
+
+1. Install the command file:
+
+```sh
+curl -L -o ~/.cursor/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+```
+
+2. In Cursor, run `/bitcoinui` (file or folder; folders review all SwiftUI files inside).
+
 ### Claude (command)
 
 1. Install the command file:
