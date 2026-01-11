@@ -31,6 +31,7 @@ If `$ARGUMENTS` is empty, ask: "Using the bitcoinui command for an iOS review. W
 ## Output Format
 
 Start directly with the `BITCOINUI REVIEW` block; do not add any preamble text before it.
+Omit any severity section with 0 issues (including INFO).
 
 ```
 ===============================================
@@ -70,4 +71,5 @@ SUMMARY: X critical, X serious, X moderate, X info
 4. Include a direct URL in each Reference line.
 5. For Bitcoin-specific issues, include at least one Bitcoin Design Guide or BIP URL in the Reference line.
 6. Suggest BitcoinUI components when they fit the pattern.
-7. Do not modify code unless asked; offer to fix if appropriate.
+7. INFO is for optional polish/consistency notes; skip it if there are no meaningful suggestions.
+8. Do not modify code unless asked; offer to fix if appropriate.
