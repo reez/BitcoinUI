@@ -35,7 +35,7 @@ Install `bitcoinui` in your AI coding tool.
 ### [Claude](https://code.claude.com/docs/en/slash-commands)
 
 ```sh
-curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+curl -fsSL https://bitcoinui.ai/install.sh | bash
 claude
 /bitcoinui
 ```
@@ -43,7 +43,7 @@ claude
 ### [Codex](https://github.com/openai/codex/blob/main/docs/skills.md)
 
 ```sh
-curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
+curl -fsSL https://bitcoinui.ai/install.sh | bash
 codex
 $bitcoinui
 ```
@@ -51,7 +51,7 @@ $bitcoinui
 ### [Cursor](https://cursor.com/docs/agent/chat/commands)
 
 ```sh
-curl -L -o ~/.cursor/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+curl -fsSL https://bitcoinui.ai/install.sh | bash
 cursor
 /bitcoinui
 ```
@@ -59,7 +59,7 @@ cursor
 ### [OpenCode](https://opencode.ai/docs/commands/)
 
 ```sh
-curl -L -o ~/.config/opencode/command/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+curl -fsSL https://bitcoinui.ai/install.sh | bash
 opencode
 /bitcoinui
 ```
