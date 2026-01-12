@@ -4,6 +4,7 @@
   --bg-alt: #111111;
   --fg: #f5f5f5;
   --muted: #b7b7b7;
+  --muted-2: #8f8f8f;
   --border: #262626;
   --orange: #f7931a;
   --green: #00c853;
@@ -140,12 +141,37 @@ pre {
   overflow-x: auto;
 }
 
+#flow .note {
+  color: var(--muted-2);
+  font-size: 12px;
+}
+
+.output-block {
+  margin-top: 10px;
+  padding: 18px 18px 20px;
+  background: #0f0f0f;
+  border-color: #2d2d2d;
+  color: var(--muted-2);
+}
+
 code {
   font-family: inherit;
   font-size: 13px;
   font-weight: 300;
   color: var(--fg);
   white-space: pre;
+}
+
+.output-block code {
+  line-height: 1.5;
+  color: inherit;
+  font-size: 10px;
+}
+
+.output-block,
+.output-block code,
+.output-block .prompt {
+  color: var(--muted-2);
 }
 
 .prompt {

@@ -20,7 +20,7 @@
             href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap"
             rel="stylesheet"
         >
-        <link rel="stylesheet" href="style.css?v=2">
+        <link rel="stylesheet" href="style.css?v=6">
     </head>
     <body>
         <main class="page">
@@ -58,6 +58,18 @@
                             <pre><code><span class="prompt">$</span> curl -L -o ~/.config/opencode/command/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
 <span class="prompt">$</span> opencode
 <span class="prompt">&gt;</span> /bitcoinui</code></pre>
+                        </section>
+
+                        <section class="block" id="flow">
+                            <p class="note">INSTALL -&gt; RUN /bitcoinui -&gt; GET A DESIGN REVIEW</p>
+                            <pre class="output-block"><code>BITCOINUI REVIEW: SendFeeView.swift
+===================================
+SERIOUS (1 issue)
+----------------
+[UX] Line 88: Fee picker lacks a high-fee warning
+Fix: Add a warning when fee &gt;= 50% of amount.
+Reference: Bitcoin Design Guide - Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+SUMMARY: 0 critical, 1 serious, 0 moderate</code></pre>
                         </section>
                     </div>
 
