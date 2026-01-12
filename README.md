@@ -32,7 +32,7 @@ Text("Bitcoin Orange")
 
 Install `bitcoinui` in your AI coding tool.
 
-### Claude
+### [Claude](https://code.claude.com/docs/en/slash-commands)
 
 ```sh
 curl -L -o ~/.claude/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
@@ -40,7 +40,7 @@ claude
 /bitcoinui
 ```
 
-### Codex
+### [Codex](https://github.com/openai/codex/blob/main/docs/skills.md)
 
 ```sh
 curl -fsSL https://bitcoinui.ai/install-codex.sh | bash
@@ -48,11 +48,19 @@ codex
 $bitcoinui
 ```
 
-### Cursor
+### [Cursor](https://cursor.com/docs/agent/chat/commands)
 
 ```sh
 curl -L -o ~/.cursor/commands/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
 cursor
+/bitcoinui
+```
+
+### [OpenCode](https://opencode.ai/docs/commands/)
+
+```sh
+curl -L -o ~/.config/opencode/command/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+opencode
 /bitcoinui
 ```
 
