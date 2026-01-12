@@ -103,6 +103,14 @@ h2 {
   font-weight: 300;
 }
 
+h2 a {
+  color: inherit;
+}
+
+h2 a:hover {
+  color: var(--orange);
+}
+
 .section-title {
   margin: 0 0 24px;
   font-size: 13px;
