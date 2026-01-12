@@ -71,19 +71,19 @@ Example output:
 BITCOINUI REVIEW: SendFeeView.swift
 ===============================================
 
-SERIOUS (1 issue)
+MEDIUM (1 issue)
 ------------------
 [UX] Line 88: Fee picker lacks a high-fee warning
   Fix: Add a warning when fee >= 50% of amount.
   Reference: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
 
-MODERATE (1 issue)
+LOW (1 issue)
 ------------------
 [A11Y] Line 42: Icon-only close button has no label
   Fix: Add accessibilityLabel("Close")
   Reference: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
 
 ===============================================
-SUMMARY: 0 critical, 1 serious, 1 moderate, 0 info
+SUMMARY: 0 high, 1 medium, 1 low
 ===============================================
 ```

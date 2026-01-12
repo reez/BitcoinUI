@@ -31,35 +31,31 @@ If `$ARGUMENTS` is empty, ask: "Using the bitcoinui command for an iOS review. W
 ## Output Format
 
 Start directly with the `BITCOINUI REVIEW` block; do not add any preamble text before it.
-Omit any severity section with 0 issues (including INFO).
+Omit any severity section with 0 issues (including LOW).
 
 ```
 ===============================================
 BITCOINUI REVIEW: [filename]
 ===============================================
 
-CRITICAL (X issues)
+HIGH (X issues)
 ------------------
 [UX] Line 42: Missing warning for fee > amount
   Fix: Add a warning state when fee >= 50% of amount.
   Reference: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
 
-SERIOUS (X issues)
+MEDIUM (X issues)
 ------------------
 [A11Y] Line 18: Icon-only button has no label
   Fix: Add accessibilityLabel("Close")
   Reference: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
 
-MODERATE (X issues)
+LOW (X issues)
 ------------------
 ...
 
-INFO (X issues)
---------------
-...
-
 ===============================================
-SUMMARY: X critical, X serious, X moderate, X info
+SUMMARY: X high, X medium, X low
 ===============================================
 ```
 
@@ -71,5 +67,5 @@ SUMMARY: X critical, X serious, X moderate, X info
 4. Include a direct URL in each Reference line.
 5. For Bitcoin-specific issues, include at least one Bitcoin Design Guide or BIP URL in the Reference line.
 6. Suggest BitcoinUI components when they fit the pattern.
-7. INFO is for optional polish/consistency notes; skip it if there are no meaningful suggestions.
+7. LOW is for optional polish/consistency notes; skip it if there are no meaningful suggestions.
 8. Do not modify code unless asked; offer to fix if appropriate.
