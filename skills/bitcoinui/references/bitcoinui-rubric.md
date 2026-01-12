@@ -8,10 +8,9 @@
 
 ## Severity
 
-- Critical: could cause loss of funds, irreversible mistakes, or misleading safety.
-- Serious: likely user error, accessibility blockers, or major HIG violations.
-- Moderate: clarity or consistency issues.
-- Info: polish suggestions.
+- High: could cause loss of funds, irreversible mistakes, or misleading safety.
+- Medium: likely user error, accessibility blockers, or major HIG violations.
+- Low: clarity or consistency issues and polish suggestions.
 
 ## Bitcoin-Specific Checks
 
