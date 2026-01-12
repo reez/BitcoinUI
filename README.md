@@ -56,6 +56,14 @@ cursor
 /bitcoinui
 ```
 
+### OpenCode
+
+```sh
+curl -L -o ~/.config/opencode/command/bitcoinui.md https://bitcoinui.ai/bitcoinui.md
+opencode
+/bitcoinui
+```
+
 Example output:
 
 ```
