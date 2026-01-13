@@ -20,14 +20,14 @@
             href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap"
             rel="stylesheet"
         >
-        <link rel="stylesheet" href="style.css?v=6">
+        <link rel="stylesheet" href="style.css?v=7">
     </head>
     <body>
         <main class="page">
             <div class="panel">
                 <div class="panel-body">
                     <h1>Bitcoin UI</h1>
-                    <p class="note">AI DESIGN REVIEW &amp; LIBRARY FOR BITCOIN IOS APPS</p>
+                    <p class="note">DESIGN REVIEW &amp; LIBRARY FOR BITCOIN IOS APPS</p>
                     <hr class="divider">
 
                     <div class="section-group">
@@ -61,15 +61,21 @@
                         </section>
 
                         <section class="block" id="flow">
-                            <p class="note"><em>INSTALL -&gt; RUN BITCOINUI -&gt; GET A DESIGN REVIEW</em></p>
-                            <pre class="output-block"><code>BITCOINUI REVIEW: SendFeeView.swift
-===================================
-MEDIUM (1 issue)
----------------
-[UX] Line 88: Fee picker lacks a high-fee warning
-Fix: Add a warning when fee &gt;= 50% of amount.
-Reference: Bitcoin Design Guide - Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
-SUMMARY: 0 high, 1 medium, 0 low</code></pre>
+                            <p class="note"><em>install -&gt; run bitcoinui -&gt; get a design review</em></p>
+                            <pre class="output-block"><code>BITCOINUI
+
+SendFeeView.swift
+Findings: 0 high, 2 medium, 0 low
+
+Medium
+
+1) [UX L88] Fee picker lacks a high-fee warning
+   Fix: Add a warning when fee &gt;= 50% of amount.
+   Ref: Bitcoin Design Guide - Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+2) [A11Y L142] Icon-only button has no label
+   Fix: Add an accessibilityLabel("Close") and include visible text.
+   Ref: iOS HIG - Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility</code></pre>
+
                         </section>
                     </div>
 

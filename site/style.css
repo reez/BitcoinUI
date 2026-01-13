@@ -109,7 +109,7 @@ h2 a {
 }
 
 h2 a:hover {
-  color: var(--orange);
+  color: var(--green);
 }
 
 .section-title {
