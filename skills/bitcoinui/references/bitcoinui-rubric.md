@@ -21,6 +21,7 @@
 - Validate addresses; block sending on invalid input; subtle valid state is ok.
 - Avoid address reuse; warn when reusing.
 - Mention compatibility if users must choose formats (bc1q, bc1p, 3, 1).
+- Only cite Human-readable addresses guidance when Lightning/DNS-style handles are explicitly present.
 
 ### QR Codes
 
@@ -67,11 +68,24 @@
 
 ### Bitcoin Design Guide
 
-- Human-readable addresses: https://bitcoin.design/guide/how-it-works/human-readable-addresses/
+- Transactions: https://bitcoin.design/guide/how-it-works/transactions/
+- Human-readable addresses (Lightning/DNS only): https://bitcoin.design/guide/how-it-works/human-readable-addresses/
 - Manual backup (seed phrases): https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/manual-backup/
 - Recovery: https://bitcoin.design/guide/daily-spending-wallet/backup-and-recovery/recovery/
 - Send fees: https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+- Sending bitcoin (send flows only): https://bitcoin.design/guide/daily-spending-wallet/sending/
 - Units and symbols: https://bitcoin.design/guide/designing-products/units-and-symbols/
+- Requesting bitcoin (receive/request flows only): https://bitcoin.design/guide/daily-spending-wallet/requesting/
+- Receiving bitcoin (receive/request flows only): https://bitcoin.design/guide/daily-spending-wallet/requesting/receiving/
+- How it works (use only if feature is present):
+  - Payment request formats: https://bitcoin.design/guide/how-it-works/payment-request-formats/
+  - Coin selection: https://bitcoin.design/guide/how-it-works/coin-selection/
+  - Wallet privacy: https://bitcoin.design/guide/how-it-works/wallet-privacy/
+  - Silent payments: https://bitcoin.design/guide/how-it-works/silent-payments/
+  - Sign in with bitcoin: https://bitcoin.design/guide/how-it-works/sign-in-with-bitcoin/
+  - Wallet selector: https://bitcoin.design/guide/how-it-works/wallet-selector/
+  - Nodes: https://bitcoin.design/guide/how-it-works/nodes/
+  - Lightning services: https://bitcoin.design/guide/how-it-works/lightning-services/
 
 ### Bitcoin Protocol
 
