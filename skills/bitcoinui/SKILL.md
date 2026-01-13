@@ -29,26 +29,31 @@ Review iOS SwiftUI code and screens for Bitcoin-specific UX correctness, iOS HIG
 ## Output Format
 
 Start directly with the `BITCOINUI` block; do not add any preamble text before it.
+If a folder is reviewed, list each file as its own section (file path + findings + severities).
+Omit any file section with 0 findings (do not list zero-findings files).
 Omit any severity section with 0 findings (including Low).
 
 ```
 BITCOINUI
 
-[file-or-folder]
-Findings: X high, X medium, X low
-
-High
-1) [UX L42] Missing warning for fee > amount
-   Fix: Add a warning state when fee >= 50% of amount.
-   Ref: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+SendFeeView.swift
+Findings: 0 high, 2 medium, 0 low
 
 Medium
-1) [A11Y L18] Icon-only button has no label
+1) [UX L88] Fee picker lacks a high-fee warning
+   Fix: Add a warning when fee >= 50% of amount.
+   Ref: Bitcoin Design Guide — Send fees https://bitcoin.design/guide/daily-spending-wallet/sending/send-fees/
+2) [A11Y L42] Icon-only close button has no label
    Fix: Add accessibilityLabel("Close")
    Ref: iOS HIG — Accessibility https://developer.apple.com/design/human-interface-guidelines/accessibility
 
-Low
-1) ...
+ReceiveView.swift
+Findings: 0 high, 1 medium, 0 low
+
+Medium
+1) [QR L19] QR payload uses uri directly; bech32 should be uppercased for QR only
+   Fix: Uppercase only the bech32 address for QR encoding.
+   Ref: BIP173 https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki
 ```
 
 ## References
