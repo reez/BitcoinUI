@@ -4,3 +4,5 @@
 /*.xcodeproj
 xcuserdata/
 AGENTS.md
+Demo.swiftpm/.build
+.claude
