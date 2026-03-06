@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		35C47B2B2E19EFD8F23EF916 /* BitcoinUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6B11C3BFDEC3F38F6907EA34 /* BitcoinUI */; };
+		3DC2973F6A461014810F7551 /* SeedPhrasesDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4991E001B4261AC706DB2E /* SeedPhrasesDemoView.swift */; };
 		3F9F15AC7DBBED6446811312 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376510D5BA52EBE4C0667E6 /* ContentView.swift */; };
+		6675346D138D75E5B5E27A86 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD999E918A6CEAE408D93B08 /* AddressView.swift */; };
+		86CB226A25B435ACACED4AA4 /* TextStylesDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34F1DA4859C42192A67E246 /* TextStylesDemoView.swift */; };
 		87E4587B2DE439C6339E9ECC /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF36C68B50A12726B1B9B3D /* DemoApp.swift */; };
-		9F31E154B447B10AE10006EF /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B87FF0913D6BE903044C6 /* ButtonsView.swift */; };
+		ADC1660ECBBF6A93FD3410CD /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13435783C64ADBBEB45E94F5 /* ButtonsView.swift */; };
+		C91C03C35ADD039051A92075 /* ComponentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726AAFF07141D681B449458 /* ComponentSection.swift */; };
+		E23FC183965794AB6C809F48 /* ColorsDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11933D15AFE190BCA80E253F /* ColorsDemoView.swift */; };
+		EFBC04A282D1E523BAAB5ACE /* ImagesDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143E8CC564DCC5F15A293 /* ImagesDemoView.swift */; };
+		FA6F016DE424AEFA2599C42D /* QRCodeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E307BC3F87902D5663118 /* QRCodeDemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11933D15AFE190BCA80E253F /* ColorsDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDemoView.swift; sourceTree = "<group>"; };
+		13435783C64ADBBEB45E94F5 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		20F4AF675AD6F7A10AB46782 /* BitcoinUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BitcoinUI; path = ..; sourceTree = SOURCE_ROOT; };
-		3F8B87FF0913D6BE903044C6 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		3C4991E001B4261AC706DB2E /* SeedPhrasesDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedPhrasesDemoView.swift; sourceTree = "<group>"; };
+		5726AAFF07141D681B449458 /* ComponentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentSection.swift; sourceTree = "<group>"; };
 		6376510D5BA52EBE4C0667E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DF36C68B50A12726B1B9B3D /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
+		B47143E8CC564DCC5F15A293 /* ImagesDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDemoView.swift; sourceTree = "<group>"; };
+		B64E307BC3F87902D5663118 /* QRCodeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDemoView.swift; sourceTree = "<group>"; };
+		BD999E918A6CEAE408D93B08 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		E158E1D8DDD5F3DC89B171A3 /* Demo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34F1DA4859C42192A67E246 /* TextStylesDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylesDemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,21 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		20D12AFFC5038BCC5E0ECDCF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BD999E918A6CEAE408D93B08 /* AddressView.swift */,
+				13435783C64ADBBEB45E94F5 /* ButtonsView.swift */,
+				11933D15AFE190BCA80E253F /* ColorsDemoView.swift */,
+				5726AAFF07141D681B449458 /* ComponentSection.swift */,
+				B47143E8CC564DCC5F15A293 /* ImagesDemoView.swift */,
+				B64E307BC3F87902D5663118 /* QRCodeDemoView.swift */,
+				3C4991E001B4261AC706DB2E /* SeedPhrasesDemoView.swift */,
+				F34F1DA4859C42192A67E246 /* TextStylesDemoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		89EED0D913153940931D2FE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +81,9 @@
 		ACE36DE3FB2F24706FD66339 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3F8B87FF0913D6BE903044C6 /* ButtonsView.swift */,
 				6376510D5BA52EBE4C0667E6 /* ContentView.swift */,
 				6DF36C68B50A12726B1B9B3D /* DemoApp.swift */,
+				20D12AFFC5038BCC5E0ECDCF /* Components */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -126,9 +155,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F31E154B447B10AE10006EF /* ButtonsView.swift in Sources */,
+				6675346D138D75E5B5E27A86 /* AddressView.swift in Sources */,
+				ADC1660ECBBF6A93FD3410CD /* ButtonsView.swift in Sources */,
+				E23FC183965794AB6C809F48 /* ColorsDemoView.swift in Sources */,
+				C91C03C35ADD039051A92075 /* ComponentSection.swift in Sources */,
 				3F9F15AC7DBBED6446811312 /* ContentView.swift in Sources */,
 				87E4587B2DE439C6339E9ECC /* DemoApp.swift in Sources */,
+				EFBC04A282D1E523BAAB5ACE /* ImagesDemoView.swift in Sources */,
+				FA6F016DE424AEFA2599C42D /* QRCodeDemoView.swift in Sources */,
+				3DC2973F6A461014810F7551 /* SeedPhrasesDemoView.swift in Sources */,
+				86CB226A25B435ACACED4AA4 /* TextStylesDemoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
