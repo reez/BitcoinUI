@@ -3,6 +3,7 @@
 Bitcoin UI components and review for native iOS apps.
 
 [Swift Package](#swift-package)<br>
+[Demo App](#demo-app)<br>
 [Design Review](#design-review)<br>
 
 ## Swift Package
@@ -27,6 +28,12 @@ Text("Bitcoin Orange")
     .foregroundColor(.bitcoinOrange)
     .multilineTextAlignment(.center)
 ```
+
+## Demo App
+
+Open `Demo.swiftpm/Demo.xcodeproj` in Xcode, select an iOS Simulator, and press Run (⌘R).
+
+<img src="SnapshotsDemo/01.png" width="100"><img src="SnapshotsDemo/02.png" width="100"><img src="SnapshotsDemo/03.png" width="100"><img src="SnapshotsDemo/04.png" width="100"><img src="SnapshotsDemo/05.png" width="100"><img src="SnapshotsDemo/06.png" width="100"><img src="SnapshotsDemo/07.png" width="100"><img src="SnapshotsDemo/08.png" width="100">
 
 ## Design Review
 

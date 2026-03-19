@@ -1,0 +1,22 @@
+name: Demo
+options:
+  bundleIdPrefix: org.bitcoinui
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "16"
+packages:
+  BitcoinUI:
+    path: ../
+targets:
+  Demo:
+    type: application
+    platform: iOS
+    sources: Sources
+    settings:
+      base:
+        SWIFT_VERSION: "5"
+        PRODUCT_BUNDLE_IDENTIFIER: org.bitcoinui.demo
+        INFOPLIST_FILE: Info.plist
+    dependencies:
+      - package: BitcoinUI
+        product: BitcoinUI
