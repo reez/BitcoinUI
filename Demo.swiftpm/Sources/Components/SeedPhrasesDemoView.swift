@@ -1,5 +1,5 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct SeedPhrasesDemoView: View {
     private let words12 = [

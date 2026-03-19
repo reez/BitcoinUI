@@ -1,5 +1,5 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct TextStylesDemoView: View {
     var body: some View {

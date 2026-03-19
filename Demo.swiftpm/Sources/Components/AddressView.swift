@@ -1,5 +1,5 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct AddressView: View {
     let address = "tb1pw6y0vtmsn46epvz0j8ddc46ketmp28t82p22hcrrkch3a0jhu40qe267dl"

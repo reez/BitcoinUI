@@ -5,7 +5,7 @@ let package = Package(
     name: "Demo",
     platforms: [
         .iOS(.v16),
-        .macOS(.v13)
+        .macOS(.v13),
     ],
     dependencies: [
         .package(name: "BitcoinUI", path: "../")

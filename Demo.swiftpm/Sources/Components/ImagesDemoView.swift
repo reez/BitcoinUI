@@ -1,5 +1,5 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct ImagesDemoView: View {
     private let icons = [
@@ -10,7 +10,7 @@ struct ImagesDemoView: View {
     ]
 
     private let columns = [
-        GridItem(.adaptive(minimum: 80), spacing: 16),
+        GridItem(.adaptive(minimum: 80), spacing: 16)
     ]
 
     var body: some View {

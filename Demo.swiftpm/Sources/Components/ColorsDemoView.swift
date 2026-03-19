@@ -1,5 +1,5 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct ColorsDemoView: View {
     var body: some View {
@@ -35,7 +35,7 @@ struct ColorsDemoView: View {
 
                 ComponentSection("Special") {
                     colorRow([
-                        ("MyMattress", .bitcoinMyMattress),
+                        ("MyMattress", .bitcoinMyMattress)
                     ])
                 }
             }

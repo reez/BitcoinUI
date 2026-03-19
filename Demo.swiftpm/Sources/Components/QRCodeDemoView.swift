@@ -1,9 +1,10 @@
-import SwiftUI
 import BitcoinUI
+import SwiftUI
 
 struct QRCodeDemoView: View {
     private let address = "tb1q05g8l05sgqsnzuc2mrmq0chlq7ktxtce4js5dj"
-    private let invoice = "lntbs1234560u1pnf4qfudq4f4hkuerp0ys9wctvd3jhgnp4q235egp5u2nec2ddcza8eykpd3gl3g0es0m7gncarzeuwuw6xhpqq"
+    private let invoice =
+        "lntbs1234560u1pnf4qfudq4f4hkuerp0ys9wctvd3jhgnp4q235egp5u2nec2ddcza8eykpd3gl3g0es0m7gncarzeuwuw6xhpqq"
 
     var body: some View {
         ScrollView {
