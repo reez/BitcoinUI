@@ -1,6 +1,6 @@
 ---
 name: bitcoinui
-description: Bitcoin UI review (iOS)
+description: "Reviews iOS SwiftUI code for Bitcoin-specific UX correctness, accessibility, and iOS HIG alignment. Checks addresses, QR codes, seed phrases, fees, and units against the Bitcoin Design Guide and suggests BitcoinUI components. Use when reviewing Bitcoin wallet iOS screens, auditing SwiftUI views for Bitcoin UX issues, or checking mobile Bitcoin app interfaces for accessibility and design consistency."
 ---
 
 # BitcoinUI Review
