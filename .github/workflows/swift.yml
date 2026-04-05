@@ -9,12 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: macos-14
+    runs-on: macos-26
 
     steps:
     - uses: actions/checkout@v2
-    - name: Force Xcode 15
-      run: sudo xcode-select -switch /Applications/Xcode_15.2.app
 #    - name: Build
 #      run: xcodebuild -scheme WalletUI -sdk iphoneos
 #    - name: Run tests
